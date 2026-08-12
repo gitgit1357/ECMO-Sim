@@ -1,0 +1,20 @@
+{
+  "contract_id": "cbc.patient.myocardial-dysfunction.v1",
+  "status": "automated-passing-expert-review-pending",
+  "runtime_mechanism": "patient.set_myocardial_function",
+  "inputs": ["lv_contractility_scale", "rv_contractility_scale"],
+  "required_behavior": {
+    "lv": ["native_output_down", "map_down", "severe_left_filling_up"],
+    "rv": ["native_output_down", "pulmonary_flow_down", "map_down", "cvp_up", "severe_right_filling_up"],
+    "reversal": "return_scales_to_1_restores_isolated_equilibrium_toward_baseline"
+  },
+  "not_modeled": [
+    "validated_scale_to_clinical_severity_mapping",
+    "inotrope_response",
+    "arrhythmia",
+    "ischemia",
+    "myocarditis",
+    "regional_wall_motion",
+    "valve_disease"
+  ]
+}

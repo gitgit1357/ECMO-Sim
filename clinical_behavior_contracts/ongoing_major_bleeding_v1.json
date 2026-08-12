@@ -1,0 +1,70 @@
+{
+  "contract_id": "cbc.patient.ongoing-major-bleeding.v1",
+  "legacy_scenario_id": "ce-06-major-bleeding",
+  "status": "automated-behavior-contract",
+  "clinical_review_status": "expert-review-pending",
+  "preconditions": {
+    "weight_kg": 3.0,
+    "va_ecmo": true,
+    "rpm": 2200,
+    "sweep_gas_flow_ml_min": 600,
+    "bridge_clamp_position": 0.0,
+    "baseline_chatter": false
+  },
+  "stimulus": {
+    "loss_increment_fraction_of_baseline_blood_volume": 0.05,
+    "loss_increment_count": 3,
+    "partial_replacement_after_increment": 2,
+    "partial_replacement_fraction_of_one_increment": 0.5
+  },
+  "expected_during_serial_loss": [
+    "cumulative blood loss increases by each applied loss increment",
+    "blood volume and preload decrease as net loss accumulates",
+    "patient-directed ECMO flow decreases",
+    "drainage pressure becomes more negative",
+    "MAP decreases",
+    "CVP decreases"
+  ],
+  "expected_after_partial_replacement": [
+    "preload, flow, MAP, and CVP improve relative to the immediately preceding depleted state",
+    "drainage pressure becomes less negative",
+    "state remains below original euvolemic baseline because replacement has not caught up with loss",
+    "cumulative blood-loss ledger remains unchanged",
+    "cumulative input ledger increases only by delivered replacement"
+  ],
+  "expected_after_loss_resumes": [
+    "net volume deficit worsens again",
+    "preload, flow, MAP, and CVP deteriorate from the partially corrected state",
+    "drainage pressure becomes more negative again"
+  ],
+  "cessation_model": "no further calls to patient.record_blood_loss",
+  "expected_after_remaining_net_deficit_replacement": [
+    "preload returns approximately to baseline",
+    "patient-directed ECMO flow returns approximately to baseline",
+    "drainage pressure returns approximately to baseline",
+    "MAP returns approximately to baseline",
+    "CVP returns approximately to baseline"
+  ],
+  "tolerances": {
+    "recovery_relative": 0.01
+  },
+  "not_modeled": [
+    "persistent bleeding-rate state",
+    "surgical or hemostatic source control",
+    "hemoglobin/RBC-mass loss caused by bleeding",
+    "coagulation or platelet physiology",
+    "blood-component transfusion physiology"
+  ],
+  "future_retest_conditions": [
+    "persistent bleeding-rate mechanism added",
+    "source-control action added",
+    "hemoglobin/RBC-mass loss coupled to bleeding",
+    "coagulation/platelet model added",
+    "blood-component transfusion mechanism added"
+  ],
+  "notes": [
+    "Serial 5% loss increments are regression stimuli, not validated neonatal hemorrhage thresholds.",
+    "The contract tests cumulative authoritative volume-ledger state, not monitor-number patches.",
+    "Replacement that does not keep pace with ongoing loss may improve hemodynamics without resolving the net deficit."
+  ]
+}

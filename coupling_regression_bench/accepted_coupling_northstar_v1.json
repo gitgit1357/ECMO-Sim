@@ -1,0 +1,53 @@
+{
+  "schema": "cardiopulmonary-coupling-northstar-v1",
+  "scenarios": {
+    "neutral": {
+      "map_mmhg": 52.168,
+      "native_output_ml_min": 844.168,
+      "pulmonary_flow_ml_min": 844.455,
+      "mean_pa_mmhg": 17.092,
+      "pvr_multiplier": 1.0021,
+      "pao2_mmhg": 97.394,
+      "paco2_mmhg": 40.713,
+      "sao2_pct": 99.255,
+      "mixed_venous_sat_pct": 89.325,
+      "oxygen_delivery_ml_min": 187.721
+    },
+    "hypoxia_fio2_012": {
+      "map_mmhg": 50.148,
+      "native_output_ml_min": 810.219,
+      "pulmonary_flow_ml_min": 810.439,
+      "mean_pa_mmhg": 21.226,
+      "pvr_multiplier": 1.3897,
+      "pao2_mmhg": 36.788,
+      "paco2_mmhg": 40.713,
+      "sao2_pct": 79.321,
+      "mixed_venous_sat_pct": 68.103,
+      "oxygen_delivery_ml_min": 142.99
+    },
+    "low_compliance": {
+      "map_mmhg": 49.575,
+      "native_output_ml_min": 800.588,
+      "pulmonary_flow_ml_min": 800.863,
+      "mean_pa_mmhg": 22.401,
+      "pvr_multiplier": 1.5061,
+      "pao2_mmhg": 29.677,
+      "paco2_mmhg": 94.409,
+      "sao2_pct": 68.039,
+      "mixed_venous_sat_pct": 56.594,
+      "oxygen_delivery_ml_min": 121.148
+    },
+    "peep_8": {
+      "map_mmhg": 43.036,
+      "native_output_ml_min": 667.683,
+      "pulmonary_flow_ml_min": 667.783,
+      "mean_pa_mmhg": 16.823,
+      "pvr_multiplier": 1.1536,
+      "pao2_mmhg": 96.995,
+      "paco2_mmhg": 40.713,
+      "sao2_pct": 99.167,
+      "mixed_venous_sat_pct": 86.258,
+      "oxygen_delivery_ml_min": 148.337
+    }
+  }
+}

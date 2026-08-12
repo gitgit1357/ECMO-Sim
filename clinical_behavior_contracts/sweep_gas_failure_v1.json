@@ -1,0 +1,60 @@
+{
+  "contract_id": "cbc.ecmo.sweep-gas-failure.v1",
+  "scenario_family": "circuit-sweep-gas-failure",
+  "legacy_scenario_id": "ce-04-sweep-gas",
+  "status": "automated-behavior-contract",
+  "clinical_review_status": "expert-review-pending",
+  "preconditions": {
+    "weight_kg": 3.0,
+    "va_ecmo": true,
+    "rpm": 2200,
+    "sweep_gas_flow_ml_min": 600,
+    "fdo2": 1.0,
+    "bridge_clamp_position": 0.0,
+    "representative_inlet_venous_saturation": 0.65,
+    "representative_inlet_paco2_mmhg": 58.0
+  },
+  "stimulus": {
+    "failed_sweep_gas_flow_ml_min": 0.0,
+    "restored_sweep_gas_flow_ml_min": 600.0
+  },
+  "expected_at_membrane_boundary_after_complete_sweep_loss": [
+    "blood/circuit flow is materially unchanged",
+    "post-oxygenator pCO2 returns approximately to inlet pCO2",
+    "post-oxygenator O2 saturation returns approximately to inlet saturation",
+    "post-oxygenator pO2 returns approximately to the pO2 implied by inlet saturation"
+  ],
+  "expected_in_coupled_patient": [
+    "true patient pCO2 increases when sweep falls from baseline to zero",
+    "patient-directed ECMO blood flow is materially unchanged by sweep loss alone"
+  ],
+  "expected_after_sweep_restoration": [
+    "post-oxygenator pCO2 decreases from the no-sweep state",
+    "post-oxygenator oxygenation again exceeds representative venous inlet oxygenation",
+    "coupled patient pCO2 returns approximately toward its pre-failure state"
+  ],
+  "nonzero_sweep_control_rule": [
+    "at fixed blood flow and FdO2, increasing nonzero sweep primarily improves CO2 clearance",
+    "ordinary nonzero sweep titration does not materially change modeled oxygenation"
+  ],
+  "tolerances": {
+    "flow_relative": 0.005,
+    "gas_boundary_relative": 0.01,
+    "coupled_paco2_recovery_relative": 0.02,
+    "nonzero_sweep_po2_absolute_mmhg": 0.5
+  },
+  "allowed_exceptions": [
+    "this contract isolates complete sweep-gas flow loss and does not represent oxygenator thrombosis or blood-path obstruction",
+    "the current unified patient native venous saturation model can be near fully saturated, so the coupled-patient oxygenation consequence is not used as an acceptance assertion in v1",
+    "displayed patient gases may lag true state according to the dynamic display model",
+    "FdO2 failure with ongoing gas flow is a distinct fault and requires its own contract",
+    "gas-source disconnection and gas-line obstruction may share the zero-effective-sweep endpoint but can have different bedside observations",
+    "the model does not represent residual oxygen stored in the oxygenator/gas path; zero-sweep assertions represent a sustained post-transient effective-zero-sweep state rather than an instantaneous response"
+  ],
+  "notes": [
+    "Zero sweep is treated as zero effective gas-side flow across the membrane lung: no O2 addition and no CO2 removal.",
+    "The representative inlet gases are regression inputs for isolating membrane behavior, not patient treatment targets.",
+    "This contract asserts directional bedside coherence rather than exact gas-transfer performance for a specific oxygenator.",
+    "Evidence review clarifies that the zero-sweep boundary is a post-transient steady-state abstraction; transient residual-gas washout is outside v1."
+  ]
+}

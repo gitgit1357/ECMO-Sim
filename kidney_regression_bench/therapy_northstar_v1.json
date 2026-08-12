@@ -1,0 +1,18 @@
+{
+  "schema": "Renal Therapy NorthStar v1",
+  "principles": [
+    "generic effect-class controls only",
+    "no drug-specific pharmacokinetics",
+    "fluid balance separate from immediate intravascular fraction",
+    "renal vaso-tone changes renal flow without directly assigning MAP"
+  ],
+  "scenarios": [
+    "baseline",
+    "fluid_input",
+    "external_fluid_removal",
+    "diuretic_x2",
+    "renal_vasoconstriction",
+    "renal_vasodilation",
+    "reduced_function"
+  ]
+}

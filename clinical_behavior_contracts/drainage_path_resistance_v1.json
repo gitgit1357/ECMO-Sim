@@ -1,0 +1,57 @@
+{
+  "contract_id": "cbc.ecmo.drainage-path-resistance.v1",
+  "legacy_scenario_id": "lf-04-kink",
+  "legacy_complication_id": "drainage-cannula-kink",
+  "status": "automated-behavior-contract",
+  "clinical_review_status": "expert-review-pending",
+  "scope_decision": {
+    "cbc05a": "patient drainage-path resistance increase; executable now",
+    "cbc05b": "common pre-pump mechanical obstruction; blocked pending solved flow-limiting fault mechanism",
+    "cbc05c": "position-sensitive maldrainage; blocked pending explicit position state"
+  },
+  "preconditions": {
+    "rpm": 2200,
+    "elevated_rpm": 3000,
+    "bridge_clamp_position": 0.0,
+    "patient_arterial_pressure_mmhg": 45.0,
+    "patient_venous_pressure_mmhg": 5.0,
+    "native_venous_saturation": 0.65,
+    "native_venous_paco2_mmhg": 45.0,
+    "sweep_gas_flow_ml_min": 300.0
+  },
+  "stimulus": {
+    "drain_cannula_resistance_multiplier": 8.0,
+    "meaning": "regression stimulus only; not a percent occlusion or clinical severity scale"
+  },
+  "expected_fixed_rpm": [
+    "patient-directed ECMO flow decreases",
+    "total circuit flow decreases",
+    "fixed-shunt fraction increases",
+    "patient/junction pressure requirement increases"
+  ],
+  "expected_rpm_escalation": [
+    "patient flow may rise with RPM despite persistent obstruction",
+    "at the same elevated RPM obstructed patient flow remains below unobstructed patient flow",
+    "at the same elevated RPM obstructed shunt fraction remains above unobstructed shunt fraction",
+    "RPM escalation does not remove the resistance state"
+  ],
+  "p1_requirement": "no directional assertion in v1 because the always-open shunt can supply pump-inlet recirculation while patient drainage falls",
+  "restoration_model": "fresh immutable baseline CannulaHydraulicParameters; deterministic re-evaluation only",
+  "not_modeled": [
+    "persistent kink severity state",
+    "typed kink-relief action",
+    "common pre-pump mechanical obstruction with solved flow consequence",
+    "body/cannula position state",
+    "position-linked drainage resistance",
+    "intermittent cannula-wall apposition",
+    "device-specific validated drain-cannula pressure-flow curve"
+  ],
+  "future_retest_conditions": [
+    "mutable drainage-kink fault state added",
+    "typed kink-relief action added",
+    "position-sensitive cannula mechanism added",
+    "cannula-wall apposition mechanics added",
+    "device-specific drainage cannula hydraulics validated",
+    "common pre-pump obstruction participates in branched operating-point solve"
+  ]
+}

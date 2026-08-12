@@ -1,0 +1,42 @@
+{
+  "schema": "ecmo-cdi-sensor-northstar-v1",
+  "cases": {
+    "clamp_sweep_at_3000rpm": {
+      "0.00": {
+        "mixed_saturation": 0.65,
+        "recirculation_fraction": 0.0,
+        "mixed_paco2_mmhg": 55.0
+      },
+      "0.02": {
+        "mixed_saturation": 0.7368050501175122,
+        "recirculation_fraction": 0.25530897093385924,
+        "mixed_paco2_mmhg": 47.34932019045553
+      },
+      "0.05": {
+        "mixed_saturation": 0.8762857609864254,
+        "recirculation_fraction": 0.6655463558424274,
+        "mixed_paco2_mmhg": 39.71271606110173
+      },
+      "0.10": {
+        "mixed_saturation": 0.9483662149179045,
+        "recirculation_fraction": 0.8775476909350132,
+        "mixed_paco2_mmhg": 38.625919844433746
+      },
+      "0.20": {
+        "mixed_saturation": 0.977637826716434,
+        "recirculation_fraction": 0.9636406668130415,
+        "mixed_paco2_mmhg": 38.649112823030165
+      },
+      "0.50": {
+        "mixed_saturation": 0.9878865421505434,
+        "recirculation_fraction": 0.9937839475015978,
+        "mixed_paco2_mmhg": 38.682751943992265
+      },
+      "1.00": {
+        "mixed_saturation": 0.9894660237167174,
+        "recirculation_fraction": 0.9984294815197567,
+        "mixed_paco2_mmhg": 38.688026325043545
+      }
+    }
+  }
+}

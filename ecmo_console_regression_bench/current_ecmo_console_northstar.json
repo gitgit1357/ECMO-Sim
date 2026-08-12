@@ -1,0 +1,70 @@
+{
+  "schema": "ecmo-console-northstar-v1",
+  "cases": {
+    "baseline_bridge_closed": {
+      "solved_total_flow_ml_min": 630.4199954332848,
+      "solved_shunt_flow_ml_min": 253.98713361985585,
+      "solved_bridge_flow_ml_min": 0.0,
+      "solved_patient_flow_ml_min": 376.43286181342893,
+      "resolved_bridge_clamp_position": 0.0,
+      "resolved_fdo2": 1.0,
+      "post_oxygenator_saturation": 0.99,
+      "post_oxygenator_paco2_mmhg": 21.68887384264074,
+      "cdi_mixed_saturation": 0.65,
+      "cdi_recirculation_fraction": 0.0,
+      "cdi_mixed_paco2_mmhg": 55.0
+    },
+    "bridge_titrated_100": {
+      "solved_total_flow_ml_min": 689.2531197206513,
+      "solved_shunt_flow_ml_min": 235.0871262994651,
+      "solved_bridge_flow_ml_min": 99.99980106506148,
+      "solved_patient_flow_ml_min": 354.16619235612467,
+      "resolved_bridge_clamp_position": 0.01811965199641137,
+      "resolved_fdo2": 1.0,
+      "post_oxygenator_saturation": 0.99,
+      "post_oxygenator_paco2_mmhg": 24.532238013647106,
+      "cdi_mixed_saturation": 0.7248623473677606,
+      "cdi_recirculation_fraction": 0.22018337461106052,
+      "cdi_mixed_paco2_mmhg": 48.29150534899823
+    },
+    "hemofilter_active": {
+      "solved_total_flow_ml_min": 623.4899111150115,
+      "solved_shunt_flow_ml_min": 244.5290814163059,
+      "solved_bridge_flow_ml_min": 0.0,
+      "solved_patient_flow_ml_min": 378.9608296987056,
+      "resolved_bridge_clamp_position": 0.0,
+      "resolved_fdo2": 1.0,
+      "post_oxygenator_saturation": 0.99,
+      "post_oxygenator_paco2_mmhg": 21.31862099830152,
+      "cdi_mixed_saturation": 0.65,
+      "cdi_recirculation_fraction": 0.0,
+      "cdi_mixed_paco2_mmhg": 55.00000000000001
+    },
+    "ckrt_running": {
+      "solved_total_flow_ml_min": 630.4199954332848,
+      "solved_shunt_flow_ml_min": 253.98713361985585,
+      "solved_bridge_flow_ml_min": 0.0,
+      "solved_patient_flow_ml_min": 376.43286181342893,
+      "resolved_bridge_clamp_position": 0.0,
+      "resolved_fdo2": 1.0,
+      "post_oxygenator_saturation": 0.99,
+      "post_oxygenator_paco2_mmhg": 21.68887384264074,
+      "cdi_mixed_saturation": 0.65,
+      "cdi_recirculation_fraction": 0.0,
+      "cdi_mixed_paco2_mmhg": 55.0
+    },
+    "low_fdo2_low_sweep": {
+      "solved_total_flow_ml_min": 630.4199954332848,
+      "solved_shunt_flow_ml_min": 253.98713361985585,
+      "solved_bridge_flow_ml_min": 0.0,
+      "solved_patient_flow_ml_min": 376.43286181342893,
+      "resolved_bridge_clamp_position": 0.0,
+      "resolved_fdo2": 0.4,
+      "post_oxygenator_saturation": 0.65,
+      "post_oxygenator_paco2_mmhg": 49.448145640440124,
+      "cdi_mixed_saturation": 0.65,
+      "cdi_recirculation_fraction": 0.0,
+      "cdi_mixed_paco2_mmhg": 55.0
+    }
+  }
+}

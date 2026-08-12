@@ -1,0 +1,2259 @@
+{
+  "schema_version": "1.2",
+  "generated": "2026-08-11 Phase 10b FdO2-to-coupled-patient oxygenation via true venous inlet state",
+  "rows": [
+    {
+      "Feature": "Native circulation",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "Not rerun (slow batch timeout)",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "Y",
+      "Evidence": "src/neocirculation/core.py; tests/test_baseline.py",
+      "Notes": "Authoritative native hemodynamic model; GUI sees coupled outputs, not a standalone circulation page."
+    },
+    {
+      "Feature": "Cardiopulmonary coupling",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "Not rerun (slow batch timeout)",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "Y",
+      "Evidence": "src/neocoupling/core.py; tests/test_cardiopulmonary_coupling.py",
+      "Notes": "Lung/circulation coupling is live inside UnifiedNeonatalPatient."
+    },
+    {
+      "Feature": "Unified neonatal patient state",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "Prior verified",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "Y",
+      "Evidence": "src/neopatient/core.py; tests/test_unified_patient.py",
+      "Notes": "Single orchestration shell for circulation/lung/kidney plus vascular support."
+    },
+    {
+      "Feature": "Native physiology cache",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N/A",
+      "Test coverage": "Y",
+      "Fresh verification": "Prior verified",
+      "Clinical/behavior validation": "System-validated",
+      "Learner-operable": "N/A",
+      "Evidence": "src/neopatient/core.py; tests/test_native_physiology_cache.py",
+      "Notes": "Performance mechanism; not a clinical feature."
+    },
+    {
+      "Feature": "Async native physiology recompute",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Status-only",
+      "Test coverage": "Y",
+      "Fresh verification": "Prior verified",
+      "Clinical/behavior validation": "System-validated",
+      "Learner-operable": "N/A",
+      "Evidence": "src/neopatient/async_native.py; tests/test_native_physiology_async.py; P0B repair doc",
+      "Notes": "Process-worker path used by GUI configuration; stale revisions rejected."
+    },
+    {
+      "Feature": "Blood-volume / fluid ledger",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage confirmed",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "Y",
+      "Evidence": "src/neopatient/volume_ledger.py; tests/test_patient_volume_ledger.py",
+      "Notes": "Tracks intravascular volume, blood loss, sampling loss, third-space and CKRT removal."
+    },
+    {
+      "Feature": "Blood loss mechanism",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Current CBC PASS",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "N",
+      "Evidence": "UnifiedNeonatalPatient.record_blood_loss(); tests/test_patient_volume_ledger.py; tests/test_clinical_behavior_contract_hypovolemia.py",
+      "Notes": "Authoritative volume-loss mechanism now participates in the first Clinical Behavior Contract; no learner intervention UI yet. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Blood/fluid input mechanism",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2b fresh pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Y",
+      "Evidence": "UnifiedNeonatalPatient.add_intravascular_input(); src/neogui/ecmo_workspace.py; tests/test_interventions_phase2b.py; tests/test_clinical_behavior_contract_hypovolemia.py",
+      "Notes": "Authoritative generic intravascular volume input is now learner-operable on the Phase 2b Interventions tab. Fluid/blood-product composition is intentionally not modeled; CBC01 still protects isolated volume-response behavior. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Sampling loss",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage confirmed",
+      "Clinical/behavior validation": "Behavior contract pending",
+      "Learner-operable": "N",
+      "Evidence": "UnifiedNeonatalPatient.record_sampling_loss(); tests/test_patient_volume_ledger.py",
+      "Notes": "Authoritative sampling-loss mechanism exists. Phase 2c diagnostic collection does not yet assign a physical draw volume, so ordering a lab does not silently decrement blood volume."
+    },
+    {
+      "Feature": "Third-spacing / return",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage confirmed",
+      "Clinical/behavior validation": "Behavior contract pending",
+      "Learner-operable": "N",
+      "Evidence": "UnifiedNeonatalPatient.move_to_third_space()/return_from_third_space(); tests/test_patient_volume_ledger.py",
+      "Notes": "Backend volume mechanism, not learner-exposed."
+    },
+    {
+      "Feature": "Myocardial failure",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 4a focused + regression passing",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "N",
+      "Evidence": "src/neocirculation/failure.py; src/neocoupling/core.py; src/neopatient/ports.py; src/neopatient/core.py; src/neoscenarios/mechanisms.py; tests/test_phase4_myocardial_dysfunction.py",
+      "Notes": "Runtime LV/RV contractility mechanism integrated. Severe failure phenotype is directionally strong; exact scale-to-clinical-severity mapping remains provisional. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Airway PEEP",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC07 fresh pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "N",
+      "Evidence": "AirwayPort.peep_cmh2o; tests/test_clinical_behavior_contract_positive_airway_pressure.py; clinical_behavior_contracts/POSITIVE_AIRWAY_PRESSURE_HEMODYNAMICS_V1.md",
+      "Notes": "Authoritative native-patient input. CBC07 protects graded native hemodynamic effects and the non-volume interpretation of rising CVP; learner ventilator GUI remains absent. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Airway opening pressure",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage exists",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "N",
+      "Evidence": "AirwayPort.airway_opening_pressure_cmh2o; lung model tests",
+      "Notes": "Backend field exists and affects lung mechanics."
+    },
+    {
+      "Feature": "FiO2 - native airway",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage exists",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "N",
+      "Evidence": "AirwayPort.fio2; neocoupling/core.py",
+      "Notes": "Native lung FiO2 exists, but learner ventilator tab is reserved."
+    },
+    {
+      "Feature": "Ventilator rate/mode/Ti",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2d fresh pass + Tk smoke",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Y",
+      "Evidence": "src/neoventilator/core.py; src/neocoupling/core.py; src/neopatient/ports.py; src/neopatient/core.py; src/neogui/ecmo_workspace.py; tests/test_phase2d_ventilator.py; tests/test_ventilator_fixture.py",
+      "Notes": "Phase 2d promotes the deterministic pressure-control waveform from bench-only behavior into production. PIP/PEEP/rate/Ti/FiO2 drive the authoritative lung/cardiopulmonary solve; native/spontaneous remains the unchanged default. Volume control, pressure support/synchrony, alarms, ETCO2, and waveform display remain unavailable. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Native lung mechanics",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage exists",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "Y",
+      "Evidence": "src/neolung/core.py; tests/test_lung_standalone.py",
+      "Notes": "Integrated into coupled patient, displayed only through derived patient/ECMO values."
+    },
+    {
+      "Feature": "Native lung gas exchange",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage exists",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "Y",
+      "Evidence": "src/neolung/gas_exchange.py; coupling gas tests",
+      "Notes": "Reduced-order gas exchange integrated with patient."
+    },
+    {
+      "Feature": "Kidney physiology",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage exists; NorthStar runner schema issue",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "Y",
+      "Evidence": "src/neokidney/core.py; tests/test_kidney_live_coupling.py; P0B repair doc",
+      "Notes": "Live renal effects exist; kidney NorthStar regeneration harness has known schema mismatch."
+    },
+    {
+      "Feature": "Generic renal therapy modifiers",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage exists",
+      "Clinical/behavior validation": "Educational approximation",
+      "Learner-operable": "N",
+      "Evidence": "RenalTherapyPort; tests/test_renal_therapy.py",
+      "Notes": "Fluid in/out, diuretic multiplier, renal tone, renal function fraction."
+    },
+    {
+      "Feature": "CKRT net ultrafiltration",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 4c focused pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live; device/prescription bounds remain separately gated",
+      "Learner-operable": "Y",
+      "Evidence": "src/neoecmocoupling/time_step.py; src/neoecmo/fixed_shunt.py; src/neogui/ecmo_workspace.py; tests/test_interventions_phase2b.py; tests/test_clinical_behavior_contract_ckrt_net_ultrafiltration.py",
+      "Notes": "Phase 4c confirms the current phased CKRT scope is adequate for supported learner behavior: Phase 2b exposes Qb/net-UF; patient UF is gated by CKRT selection + Qb>0 and propagates through the authoritative volume/preload path. Solute/device physiology and clinically validated prescription bounds remain deferred until earned by a Behavior Contract or validation requirement. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "VA ECMO patient coupling",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Prior verified",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "Y",
+      "Evidence": "src/neoecmocoupling/*; dynamic/coupling/hydraulic/gas tests",
+      "Notes": "Live VA ECMO support affects MAP, gas exchange, native contribution and preload."
+    },
+    {
+      "Feature": "VV ECMO patient coupling",
+      "Implemented": "N",
+      "Integrated": "N",
+      "GUI-exposed": "N",
+      "Test coverage": "N",
+      "Fresh verification": "N/A",
+      "Clinical/behavior validation": "N",
+      "Learner-operable": "N",
+      "Evidence": "No Python VV coupling module; Phase1b ledger marks VV recirculation backlog",
+      "Notes": "Legacy scenarios exist, but current Python runtime has no authoritative VV patient-support path."
+    },
+    {
+      "Feature": "Pump RPM control",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage exists",
+      "Clinical/behavior validation": "Engineering/partial clinical",
+      "Learner-operable": "Y",
+      "Evidence": "neoecmo/pump.py; ecmo_console.py; GUI; pump tests",
+      "Notes": "Learner adjusts RPM; flow remains solved outcome."
+    },
+    {
+      "Feature": "Pump flow as outcome",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage exists",
+      "Clinical/behavior validation": "Engineering/partial clinical",
+      "Learner-operable": "Y",
+      "Evidence": "neoecmo pump/circuit solvers; tests/test_pump_head_bench.py",
+      "Notes": "Same RPM can produce different flow under different boundaries."
+    },
+    {
+      "Feature": "Drainage/preload limitation",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Current CBC PASS",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Y",
+      "Evidence": "neoecmocoupling/preload.py; tests/test_ecmo_preload_drainage_coupling.py; tests/test_clinical_behavior_contract_hypovolemia.py",
+      "Notes": "CBC v1 verifies volume loss lowers sustainable patient flow/MAP/CVP, makes drainage pressure more negative, and RPM escalation cannot overcome drainage limitation. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Cannula hydraulics",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 4b focused pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live; device-specific quantitative validation remains separately gated",
+      "Learner-operable": "Y",
+      "Evidence": "neoecmo/cannula.py; tests/test_cannula.py",
+      "Notes": "10Fr drain and 8Fr return stand-ins. Phase 4b found no additional model complexity earned for the supported drainage-path resistance behavior. Device-specific curves remain unvalidated; common pre-pump obstruction and position-sensitive maldrainage remain blocked until real mechanisms exist. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Oxygenator hydraulics",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 4b focused pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live; device-specific quantitative validation remains separately gated",
+      "Learner-operable": "Y",
+      "Evidence": "neoecmo/oxygenator.py; tests/test_oxygenator_hydraulics.py",
+      "Notes": "Reduced-order obstruction/low-flow behavior is adequate for the currently supported CBC03 hydraulic branch. Phase 4b explicitly declines deeper clot/Delta-P modeling without a demonstrated Behavior Contract failure; device-specific thresholds/curves remain outside scope. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Oxygenator gas exchange",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC02/CBC08 fresh pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live; device-specific quantitative validation remains separately gated; reduced-order/device-transfer proxy limitations remain",
+      "Learner-operable": "Y",
+      "Evidence": "src/neoecmo/oxygenator_gas_exchange.py; src/neoecmo/ecmo_console.py; tests/test_clinical_behavior_contract_sweep_gas_failure.py; tests/test_clinical_behavior_contract_fdo2.py; tests/test_ecmo_patient_gas_behavior.py",
+      "Notes": "Zero sweep disables O2 addition and CO2 removal. With nonzero fixed sweep, FdO2 governs modeled O2 transfer and paired post-oxy saturation/pO2 now derive from one coherent O2 state. Device-specific transfer magnitudes remain proxy/partial. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Sweep gas control",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC02 fresh pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Y",
+      "Evidence": "src/neoecmo/ecmo_console.py; src/neoscenarios/catalog.py; tests/test_clinical_behavior_contract_sweep_gas_failure.py",
+      "Notes": "Authoritative control. CBC02 covers complete zero-sweep failure and restoration; FdO2-only failure is distinct. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "ECMO FdO2 control",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC08 fresh pass",
+      "Clinical/behavior validation": "Automated/passing; external evidence packet complete; Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live; device-specific quantitative validation remains separately gated; reduced-order/device-transfer proxy limitations remain",
+      "Learner-operable": "Y",
+      "Evidence": "EcmoConsoleControls.fdo2; src/neoecmo/oxygenator_gas_exchange.py; tests/test_ecmo_console.py; tests/test_clinical_behavior_contract_fdo2.py; validation_packets/CBC08_FDO2_OXYGEN_FRACTION_EVIDENCE_REVIEW_2026-08-10.md",
+      "Notes": "Blender rounding 21-100%; learner-operable. CBC08 protects FdO2-specific oxygen-transfer direction and paired post-oxy saturation/pO2 coherence while fixed sweep preserves CO2 clearance and hydraulics. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Bridge hydraulics / clamp",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC09 fresh pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Y",
+      "Evidence": "src/neoecmo/bridge.py; src/neoecmo/main_circuit_full.py; tests/test_bridge_clamp_inverse_solver.py; tests/test_clinical_behavior_contract_bridge_recirculation.py",
+      "Notes": "Learner bridge management is titrate-by-watching-flow. CBC09 validates target-flow accuracy under live patient pressure boundaries and protects the distinction between bridge recirculation and patient-directed support. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Fixed shunt hydraulics",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage exists",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "Y",
+      "Evidence": "neoecmo/fixed_shunt.py; GUI; fixed-shunt tests",
+      "Notes": "Open/hemofilter/CKRT configurations supported."
+    },
+    {
+      "Feature": "Scuffing hemofilter",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC10 fresh pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Y",
+      "Evidence": "src/neoecmo/fixed_shunt.py; tests/test_fixed_shunt.py; tests/test_clinical_behavior_contract_fixed_shunt_configuration.py",
+      "Notes": "Inline filter resistance is learner-operable through shunt configuration. CBC10 protects OPEN/HEMOFILTER/CKRT hydraulic distinctions and confirms scuffing activity itself does not change resistance. Hemofilter net-fluid removal is not coupled to the patient. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Venous CDI / recirculation reading",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC09 fresh pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Y",
+      "Evidence": "src/neoecmo/cdi_sensor.py; tests/test_cdi_sensor.py; tests/test_clinical_behavior_contract_bridge_recirculation.py",
+      "Notes": "CBC09 protects the bridge-recirculation signature: increasing bridge flow raises the CDI recirculation fraction and mixed saturation while shifting mixed pCO2 toward post-oxygenator blood. This is bridge-specific and is not a VV recirculation model. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Post-oxygenator CDI",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Partial",
+      "Test coverage": "Y",
+      "Fresh verification": "Coverage exists",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "Partial",
+      "Evidence": "neoecmo/post_oxygenator_cdi.py; tests/test_post_oxygenator_cdi.py",
+      "Notes": "Truth/sensor validity separated; only subset surfaced in GUI telemetry."
+    },
+    {
+      "Feature": "Bubble detector / pump interlock",
+      "Implemented": "N",
+      "Integrated": "N",
+      "GUI-exposed": "Label only",
+      "Test coverage": "N",
+      "Fresh verification": "N/A",
+      "Clinical/behavior validation": "N",
+      "Learner-operable": "N",
+      "Evidence": "GUI explicitly says 'Clamps / bubble reset — NOT YET MODELED'",
+      "Notes": "Legacy JS had this behavior; current Python runtime does not."
+    },
+    {
+      "Feature": "Alarm engine / alarm hierarchy",
+      "Implemented": "N",
+      "Integrated": "N",
+      "GUI-exposed": "N",
+      "Test coverage": "N",
+      "Fresh verification": "N/A",
+      "Clinical/behavior validation": "N",
+      "Learner-operable": "N",
+      "Evidence": "No alarm-engine package; limited advisory/status text only",
+      "Notes": "Dynamic advisories are not a general alarm/interlock system."
+    },
+    {
+      "Feature": "Patient Monitor tab",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2a focused pass",
+      "Clinical/behavior validation": "Display projection only; no new physiology",
+      "Learner-operable": "Y — read-only",
+      "Evidence": "src/neogui/patient_monitor.py; src/neogui/ecmo_workspace.py; tests/test_patient_monitor_projection.py",
+      "Notes": "Phase 2a patient monitor implemented as a dumb read-only projection of the authoritative workspace snapshot. MAP/SpO2/PaO2/PaCO2/ECMO flow follow the dynamic learner-display path; BP/CVP/renal/fluid fields expose existing patient state. HR, temperature, and waveforms remain explicitly unavailable rather than synthesized."
+    },
+    {
+      "Feature": "Ventilator tab",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2d fresh pass + Tk smoke",
+      "Clinical/behavior validation": "Partial — backend integrated; device-specific delivery not clinically validated",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/ecmo_workspace.py; src/neoventilator/core.py; tests/test_phase2d_ventilator.py; Phase 2d Tk smoke",
+      "Notes": "Real Phase 2d pressure-control page with learner PIP/PEEP/rate/Ti/FiO2 controls and modeled RR/VT/minute-ventilation plus patient PaO2/PaCO2 readback. Does not contain physiology logic."
+    },
+    {
+      "Feature": "Labs & Diagnostics tab",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2c fresh pass + Tk smoke",
+      "Clinical/behavior validation": "Partial — point-in-time workflow/system contract; panel scope and turnaround policy incomplete",
+      "Learner-operable": "Y",
+      "Evidence": "src/neolabs/core.py; src/neogui/ecmo_workspace.py; tests/test_labs_phase2c.py",
+      "Notes": "Phase 2c learner-orderable frozen diagnostics are live. Initial panels remain deliberately partial and unsupported analytes are not fabricated."
+    },
+    {
+      "Feature": "Interventions tab",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2b fresh pass + Tk smoke",
+      "Clinical/behavior validation": "Partial — only mechanisms already owned by backend are exposed",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/ecmo_workspace.py; tests/test_interventions_phase2b.py; Phase 2b GUI smoke",
+      "Notes": "Learner can apply generic intravascular volume and set CKRT Qb/net UF. Vasoactive/inotrope, sedation/analgesia, calcium/electrolytes, and blood-component-specific transfusion remain visibly unavailable; no direct monitor-value patching."
+    },
+    {
+      "Feature": "Scenario Log tab",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2e fresh pass + Tk smoke",
+      "Clinical/behavior validation": "System/disclosure contract",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/scenario_log.py; src/neogui/ecmo_workspace.py; src/neoscenarios/disclosure.py; tests/test_scenario_log_phase2e.py",
+      "Notes": "Phase 2e read-only learner timeline renders the canonical structured event stream through Tier-A learner disclosure. Hidden/internal scenario events are withheld; instructor/debrief stream remains unchanged."
+    },
+    {
+      "Feature": "Python scenario engine primitives",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Tier-A focused contracts PASS",
+      "Clinical/behavior validation": "Architecture/System contract",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/engine.py; src/neoscenarios/models.py; tests/test_scenario_primitives.py",
+      "Notes": "Deterministic scenario orchestration now includes eligibility/release director semantics, snapshot/restore, generic trigger policies, and mechanism-gated actions. No physiology is owned by scenario definitions."
+    },
+    {
+      "Feature": "Scenario action / mechanism registry",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 1e focused tests PASS",
+      "Clinical/behavior validation": "Architecture/System contract",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/actions.py; src/neoscenarios/mechanisms.py; tests/test_scenario_primitives.py",
+      "Notes": "Scenario actions carry mechanism IDs/parameters only. Registry handlers own mutation. Ready adapters exist for volume bolus, RPM, and sweep; flow remains an outcome."
+    },
+    {
+      "Feature": "Scenario definition capability validation",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 1e focused tests PASS",
+      "Clinical/behavior validation": "N/A",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/validation.py; CAPABILITY_MATRIX.json backing_data; tests/test_scenario_primitives.py",
+      "Notes": "Definitions can be checked before execution for unregistered, partial, or not-implemented mechanisms. This is software capability validation, not clinical validation."
+    },
+    {
+      "Feature": "Fault/complication injection API",
+      "Implemented": "Primitive",
+      "Integrated": "Registry boundary",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 1e focused tests PASS",
+      "Clinical/behavior validation": "Mechanism-gated; clinical contracts pending",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/models.py; src/neoscenarios/mechanisms.py; src/neoscenarios/validation.py; tests/test_scenario_primitives.py",
+      "Notes": "Fault definitions can request registered mechanisms only. Missing/partial mechanisms are reported explicitly; no direct monitor/state patch API exists."
+    },
+    {
+      "Feature": "Structured event-record stream",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2e renderer integration PASS",
+      "Clinical/behavior validation": "System contract",
+      "Learner-operable": "Y",
+      "Evidence": "src/neoevents/core.py; src/neogui/ecmo_workspace.py; tests/test_event_stream.py; tests/test_ecmo_workspace_events.py",
+      "Notes": "Append-only typed event stream remains canonical and is now rendered by the learner Scenario Log through the Tier-A sanitized projection. The GUI does not create a second event store."
+    },
+    {
+      "Feature": "Scenario determinism / seeded RNG",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 1e determinism guardrail PASS",
+      "Clinical/behavior validation": "N/A",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/rng.py; tests/test_scenario_determinism_guardrail.py; tests/test_scenario_primitives.py",
+      "Notes": "ScenarioRng requires an explicit seed; guardrail test rejects uncontrolled random imports elsewhere in src/. RNG draw count retained for replay/debug provenance."
+    },
+    {
+      "Feature": "Debrief / scoring / replay",
+      "Implemented": "N",
+      "Integrated": "N",
+      "GUI-exposed": "N",
+      "Test coverage": "N",
+      "Fresh verification": "Observed",
+      "Clinical/behavior validation": "N/A",
+      "Learner-operable": "N",
+      "Evidence": "Legacy reference only",
+      "Notes": "Not present in current Python rebuild."
+    },
+    {
+      "Feature": "Educator dashboard / scenario builder",
+      "Implemented": "N",
+      "Integrated": "N",
+      "GUI-exposed": "N",
+      "Test coverage": "N",
+      "Fresh verification": "Observed",
+      "Clinical/behavior validation": "N/A",
+      "Learner-operable": "N",
+      "Evidence": "Legacy reference only",
+      "Notes": "Not present in current Python rebuild."
+    },
+    {
+      "Feature": "ECMO learner workspace",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2a–2e verified",
+      "Clinical/behavior validation": "Partial",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/ecmo_workspace.py; Phase 2 tests",
+      "Notes": "All FIX_MAP v4 Phase 2 learner tabs are now implemented: ECMO Console, Patient Monitor, Interventions, Labs & Diagnostics, Ventilator, and read-only Scenario Log."
+    },
+    {
+      "Feature": "Tier-A trigger lifecycle / snapshot restore",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Tier-A contracts PASS",
+      "Clinical/behavior validation": "System contract",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/engine.py; src/neoscenarios/triggers.py; tests/test_tier_a_orchestration.py",
+      "Notes": "Fired/eligible/active/resolved trigger state, action counts, scenario time, release timing, and RNG state survive snapshot/restore; once-only steps cannot re-fire after restore."
+    },
+    {
+      "Feature": "Scenario eligibility / release director",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Tier-A contracts PASS",
+      "Clinical/behavior validation": "System contract",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/engine.py; src/neoscenarios/models.py; tests/test_tier_a_orchestration.py",
+      "Notes": "Eligibility is distinct from release; max concurrent unresolved events, priority, and minimum release spacing are orchestration policy rather than clinical facts."
+    },
+    {
+      "Feature": "Clinical event state-machine primitive",
+      "Implemented": "Y",
+      "Integrated": "Primitive",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Tier-A contracts PASS",
+      "Clinical/behavior validation": "Architecture/System contract",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/state_machine.py; tests/test_tier_a_orchestration.py",
+      "Notes": "Generic hidden event state transitions support time-in-state based on state-entry time and snapshot/restore. No complication-specific physiology is embedded."
+    },
+    {
+      "Feature": "Learner / instructor disclosure separation",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Data views only",
+      "Test coverage": "Y",
+      "Fresh verification": "Tier-A contracts PASS",
+      "Clinical/behavior validation": "System contract",
+      "Learner-operable": "Partial",
+      "Evidence": "src/neoscenarios/disclosure.py; tests/test_tier_a_orchestration.py; tests/test_tier_a_vertical_slice.py",
+      "Notes": "Learner event view removes internal fault/state/rationale/scoring metadata and internal orchestration events; instructor view retains full records."
+    },
+    {
+      "Feature": "Frozen ordered observation primitive",
+      "Implemented": "Y",
+      "Integrated": "Primitive",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Tier-A contracts PASS",
+      "Clinical/behavior validation": "Architecture/System contract",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/observations.py; tests/test_tier_a_orchestration.py",
+      "Notes": "Scenario observation values freeze at sample time with separate availability timing. Phase 2c now adds a learner-orderable Labs & Diagnostics workflow on a separate deterministic lab queue using the same point-in-time principle."
+    },
+    {
+      "Feature": "Hypovolemia Tier-A vertical slice",
+      "Implemented": "Y",
+      "Integrated": "Headless scenario",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Vertical slice PASS",
+      "Clinical/behavior validation": "System/orchestration only; clinical contract pending",
+      "Learner-operable": "N",
+      "Evidence": "tests/test_tier_a_vertical_slice.py; src/neoscenarios/mechanisms.py",
+      "Notes": "Proves hidden at-start volume loss -> authoritative blood-loss mechanism -> learner volume action -> structured events -> resolution -> sanitized learner view. This is a plumbing proof, not a production clinical scenario."
+    },
+    {
+      "Feature": "Supported scenario mechanism registry",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Current block PASS",
+      "Clinical/behavior validation": "Architecture/System contract",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/mechanisms.py; tests/test_ready_scenario_catalog.py",
+      "Notes": "Factory registers only current authoritative mutation mechanisms: volume input, blood loss, RPM, and sweep. Partial legacy interventions are not promoted."
+    },
+    {
+      "Feature": "Ready state observation registry",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Current block PASS",
+      "Clinical/behavior validation": "Read-only state mapping; clinical interpretation separate",
+      "Learner-operable": "Headless only",
+      "Evidence": "src/neoscenarios/observations.py; tests/test_ready_scenario_catalog.py",
+      "Notes": "Six Phase-1b READY_OBSERVATION_FROM_STATE providers read authoritative patient/ECMO state without inferring diagnoses or adding missing fault semantics."
+    },
+    {
+      "Feature": "Scenario learner observation execution",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Indirect via Scenario Log/Labs",
+      "Test coverage": "Y",
+      "Fresh verification": "Current block PASS",
+      "Clinical/behavior validation": "System contract",
+      "Learner-operable": "Partial",
+      "Evidence": "src/neoscenarios/engine.py; tests/test_ready_scenario_catalog.py",
+      "Notes": "ScenarioEngine can request/sample frozen observations and preserve timing/state. Learner-visible observation events can now render through Scenario Log, while observation ordering remains headless scenario orchestration."
+    },
+    {
+      "Feature": "Supported fault catalog",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Current CBC PASS",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/faults.py; tests/test_ready_scenario_catalog.py; tests/test_clinical_behavior_contract_hypovolemia.py",
+      "Notes": "Hypovolemia remains the sole fully supported legacy complication; its core mechanism behavior now has an automated CBC, with expert clinical review still pending. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Low-flow hypovolemia scenario family",
+      "Implemented": "Y",
+      "Integrated": "Headless scenario",
+      "GUI-exposed": "N",
+      "Test coverage": "Y",
+      "Fresh verification": "Current CBC PASS",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "N",
+      "Evidence": "src/neoscenarios/scenarios/preload_low_flow.py; tests/test_ready_scenario_catalog.py; clinical_behavior_contracts/HYPOVOLEMIA_PRELOAD_LOW_FLOW_V1.md; tests/test_clinical_behavior_contract_hypovolemia.py",
+      "Notes": "Family maps lf-01-preload to authoritative blood loss, observations, and replacement. CBC v1 validates directional model behavior; production scenario dose/timing still require clinical author review. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Clinical Behavior Contract — hypovolemia/preload low flow",
+      "Implemented": "Y",
+      "Integrated": "Regression layer",
+      "GUI-exposed": "N/A",
+      "Test coverage": "Y",
+      "Fresh verification": "Current CBC PASS",
+      "Clinical/behavior validation": "Automated/passing; external evidence packet complete; Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "N/A",
+      "Evidence": "clinical_behavior_contracts/hypovolemia_preload_low_flow_v1.json; clinical_behavior_contracts/HYPOVOLEMIA_PRELOAD_LOW_FLOW_V1.md; tests/test_clinical_behavior_contract_hypovolemia.py; validation_packets/CBC01_HYPOVOLEMIA_PRELOAD_EVIDENCE_REVIEW_2026-08-10.md",
+      "Notes": "Direction/range contract for isolated VA-ECMO hypovolemia at a moderate non-chattering baseline; 15% blood-volume loss is a regression stimulus, not a validated neonatal treatment threshold."
+    },
+    {
+      "Feature": "CBC02 complete sweep-gas failure behavior contract",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC02 fresh pass",
+      "Clinical/behavior validation": "Automated/passing; external evidence packet complete; Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Y",
+      "Evidence": "clinical_behavior_contracts/SWEEP_GAS_FAILURE_V1.md; clinical_behavior_contracts/sweep_gas_failure_v1.json; tests/test_clinical_behavior_contract_sweep_gas_failure.py; validation_packets/CBC02_SWEEP_GAS_FAILURE_EVIDENCE_REVIEW_2026-08-10.md",
+      "Notes": "Protects sustained/effective-zero-sweep gas-transfer failure without conflating oxygenator thrombosis, blood-path obstruction, or FdO2-only failure. Evidence review clarifies zero-sweep O2 assertions are post-transient because residual gas washout is not dynamically modeled. Coupled patient O2 consequence remains deferred because native venous saturation can mask it. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "CBC03 oxygenator dysfunction behavior contract",
+      "Implemented": "Y",
+      "Integrated": "Regression layer",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 4b focused pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live; device-specific quantitative validation remains separately gated",
+      "Learner-operable": "Indirect",
+      "Evidence": "clinical_behavior_contracts/OXYGENATOR_DYSFUNCTION_V1.md; clinical_behavior_contracts/oxygenator_dysfunction_v1.json; tests/test_clinical_behavior_contract_oxygenator_dysfunction.py; src/neoecmo/oxygenator.py; src/neoecmo/oxygenator_gas_exchange.py",
+      "Notes": "Phase 4b re-reviewed this contract as the roadmap gate for oxygenator fidelity. Blood-path obstruction and membrane-transfer impairment remain intentionally separate; current behavior passes, so no added oxygenator model complexity is justified. No universal Delta-P threshold or one-to-one coupling is asserted. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "CBC04 ongoing major bleeding / hemorrhage behavior contract",
+      "Implemented": "Y",
+      "Integrated": "Regression layer",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC04 fresh pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Indirect",
+      "Evidence": "clinical_behavior_contracts/ONGOING_MAJOR_BLEEDING_V1.md; clinical_behavior_contracts/ongoing_major_bleeding_v1.json; tests/test_clinical_behavior_contract_ongoing_major_bleeding.py; src/neopatient/core.py",
+      "Notes": "Serial authoritative blood-loss events produce cumulative preload/flow/MAP/CVP deterioration and more-negative drainage pressure; partial replacement improves but does not resolve a deficit when loss outpaces input; stopping further loss and replacing the remaining net deficit restores the isolated baseline. No persistent bleeding-rate/hemostasis state is claimed. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "CBC05A drainage-path resistance behavior contract",
+      "Implemented": "Y",
+      "Integrated": "Regression layer",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 4b focused pass",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Indirect",
+      "Evidence": "clinical_behavior_contracts/DRAINAGE_PATH_RESISTANCE_V1.md; clinical_behavior_contracts/drainage_path_resistance_v1.json; tests/test_clinical_behavior_contract_drainage_path_resistance.py; src/neoecmo/cannula.py; src/neoecmo/main_circuit_full.py",
+      "Notes": "Phase 4b re-reviewed this contract as the roadmap gate for cannula fidelity. Current patient drainage-path resistance behavior passes and does not earn deeper cannula equations. Common pre-pump obstruction and position-sensitive maldrainage remain explicitly blocked; P1 direction is intentionally not asserted in the always-open-shunt topology. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "VA differential hypoxemia / upper-vs-lower body oxygenation",
+      "Implemented": "N",
+      "Integrated": "N",
+      "GUI-exposed": "N",
+      "Test coverage": "N",
+      "Fresh verification": "Phase 11 feasibility/ownership audit",
+      "Clinical/behavior validation": "BLOCKED — topology-aware regional mechanism/state absent; STOP/RESCOPE",
+      "Learner-operable": "N",
+      "Evidence": "PHASE11_DIFFERENTIAL_HYPOXEMIA_FEASIBILITY_OWNERSHIP_AUDIT_2026-08-11.md; src/neoecmocoupling/*",
+      "Notes": "Phase 11 audit found that classic Harlequin/North-South physiology is topology-dependent and cannot be safely grafted onto the current neonatal carotid-return model. No regional gas-number patch was added. Rescope to a topology foundation before CBC12 implementation."
+    },
+    {
+      "Feature": "CBC06 CKRT net ultrafiltration behavior contract",
+      "Implemented": "Y",
+      "Integrated": "Regression layer",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 5d CBC06 evidence pass",
+      "Clinical/behavior validation": "Automated/passing; external evidence packet complete; Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live; device/prescription bounds remain separately gated",
+      "Learner-operable": "Y",
+      "Evidence": "clinical_behavior_contracts/CKRT_NET_ULTRAFILTRATION_V1.md; clinical_behavior_contracts/ckrt_net_ultrafiltration_v1.json; tests/test_clinical_behavior_contract_ckrt_net_ultrafiltration.py; src/neoecmocoupling/time_step.py; validation_packets/CBC06_CKRT_NET_ULTRAFILTRATION_EVIDENCE_REVIEW_2026-08-10.md",
+      "Notes": "Phase 5d evidence review supports CKRT/CRRT fluid-removal use on pediatric ECMO, explicit delivered-UF accounting, and directional circulating-volume/hemodynamic consequences. The exact simulator activation gate (CKRT selected + Qb>0) remains a workflow rule for expert review. Phase 2b Qb/net-UF controls are learner-operable; numeric settings remain regression-only. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "CBC07 positive airway pressure hemodynamic behavior contract",
+      "Implemented": "Y",
+      "Integrated": "Regression layer",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 10a coupled extension pass",
+      "Clinical/behavior validation": "Automated/passing; external evidence packet complete; Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Y",
+      "Evidence": "clinical_behavior_contracts/POSITIVE_AIRWAY_PRESSURE_HEMODYNAMICS_V1.md; clinical_behavior_contracts/positive_airway_pressure_hemodynamics_v1.json; tests/test_clinical_behavior_contract_positive_airway_pressure.py; tests/test_phase10a_peep_ecmo_drainage.py; src/neocoupling/core.py; src/neoecmocoupling/adapters.py; src/neogui/ecmo_workspace.py; validation_packets/CBC07_POSITIVE_AIRWAY_PRESSURE_HEMODYNAMICS_EVIDENCE_REVIEW_2026-08-10.md",
+      "Notes": "Phase 10a extends the canonical teaching path into VA-ECMO drainage using the Phase 9a intrathoracic-relative preload proxy: PEEP may raise measured CVP while effective drainage preload and patient-directed ECMO flow fall at fixed controls. Direction, boundedness, and same-patient reversal are regression-protected; exact magnitude is not clinically validated. Existing external evidence supports the pressure/preload interpretation but predates this coupled implementation; independent external review remains pending."
+    },
+    {
+      "Feature": "PEEP-to-ECMO drainage coupling via transmural preload",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y — CBC07 + Phase 10a coupled regression",
+      "Fresh verification": "Phase 10a coupled extension pass",
+      "Clinical/behavior validation": "Implemented directionally; exact magnitude not quantitatively validated",
+      "Learner-operable": "Y",
+      "Evidence": "clinical_behavior_contracts/POSITIVE_AIRWAY_PRESSURE_HEMODYNAMICS_V1.md; tests/test_phase10a_peep_ecmo_drainage.py; src/neopatient/core.py; src/neoecmocoupling/adapters.py",
+      "Notes": "SUPERSEDED DUPLICATE — Phase 10a supplied the intrathoracic-relative preload boundary and coupled PEEP→ECMO drainage behavior. Retained only for row-history continuity; authoritative status is the CBC07 Phase 10a row immediately above."
+    },
+    {
+      "Feature": "CBC08 ECMO FdO2 oxygen-fraction behavior contract",
+      "Implemented": "Y",
+      "Integrated": "Regression layer",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC08 fresh pass",
+      "Clinical/behavior validation": "Automated/passing; external evidence packet complete; Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live; device-specific quantitative validation remains separately gated",
+      "Learner-operable": "Y",
+      "Evidence": "clinical_behavior_contracts/FDO2_OXYGEN_FRACTION_CONTROL_V1.md; clinical_behavior_contracts/fdo2_oxygen_fraction_control_v1.json; tests/test_clinical_behavior_contract_fdo2.py; src/neoecmo/oxygenator_gas_exchange.py; validation_packets/CBC08_FDO2_OXYGEN_FRACTION_EVIDENCE_REVIEW_2026-08-10.md",
+      "Notes": "Protects graded FdO2 -> lower post-oxy pO2/O2 saturation at fixed sweep/flow, unchanged modeled CO2 clearance/hydraulics, and internal coherence of the paired saturation/pO2 outputs. Phase 5d evidence supports the control-role separation, not the exact transfer curve. Restoration is immutable-control determinism, not persistent blender-fault recovery. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "FdO2-to-coupled-patient oxygenation via true venous inlet state",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y — CBC08 + Phase 10b coupled-patient regression",
+      "Fresh verification": "Phase 10b same-runtime graded/reversal probe",
+      "Clinical/behavior validation": "Directional behavior implemented and internally reviewed; CBC08 external evidence packet complete; independent external review pending; quantitative/device-specific claims not validated",
+      "Learner-operable": "Y",
+      "Evidence": "src/neopatient/core.py; src/neoecmocoupling/adapters.py; src/neoecmocoupling/time_step.py; src/neoblood/mixing.py; src/neoecmo/oxygenator_gas_exchange.py; tests/test_phase10b_fdo2_coupled_patient.py; clinical_behavior_contracts/FDO2_OXYGEN_FRACTION_CONTROL_V1.md; validation_packets/CBC08_FDO2_OXYGEN_FRACTION_EVIDENCE_REVIEW_2026-08-10.md",
+      "Notes": "Phase 9a exposed authoritative native mixed-venous oxygen and the existing coupled VA path already carried post-oxygenator return blood into patient arterial mixing. Phase 10b therefore adds no second oxygen solver: it formalizes and protects the emergent FdO2→return oxygenation→coupled-patient oxygenation path, including same-runtime reversibility and hydraulic/CO2 separation. Differential hypoxemia remains Phase 11."
+    },
+    {
+      "Feature": "CBC09 bridge recirculation / flow-diversion behavior contract",
+      "Implemented": "Y",
+      "Integrated": "Regression layer",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC09 fresh pass",
+      "Clinical/behavior validation": "Automated/passing; external evidence packet complete; Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Y",
+      "Evidence": "clinical_behavior_contracts/BRIDGE_RECIRCULATION_FLOW_DIVERSION_V1.md; clinical_behavior_contracts/bridge_recirculation_flow_diversion_v1.json; tests/test_clinical_behavior_contract_bridge_recirculation.py; src/neoecmo/main_circuit_full.py; validation_packets/CBC09_BRIDGE_RECIRCULATION_FLOW_DIVERSION_EVIDENCE_REVIEW_2026-08-10.md",
+      "Notes": "Protects live-boundary bridge target-flow titration, patient-flow/MAP diversion, branch conservation, and venous-CDI contamination by bridge recirculation. Phase 5d evidence directly supports total-flow-versus-patient-flow separation and supports CDI saturation contamination as a recirculation principle; exact pCO2/magnitude claims remain inferential or unvalidated. Restoration is control determinism, not persistent bridge-fault recovery. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Hemofilter net-fluid removal to coupled patient",
+      "Implemented": "Lower-level helper only",
+      "Integrated": "N",
+      "GUI-exposed": "Activity flag only",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC10 probe",
+      "Clinical/behavior validation": "BLOCKED — clinically bounded prescription/coupling path absent",
+      "Learner-operable": "N",
+      "Evidence": "src/neoecmo/fixed_shunt.py; src/neoecmo/ecmo_console.py; src/neoecmocoupling/time_step.py; clinical_behavior_contracts/FIXED_SHUNT_CONFIGURATION_V1.md",
+      "Notes": "step_filtrate_removal() can accumulate hemofilter removal, but the console does not expose a hemofilter UF prescription and CoupledVaEcmoPatient does not apply the provisional hemofilter rate to patient volume. Do not promote the default 10 mL/min helper value into patient physiology without a bounded/validated prescription."
+    },
+    {
+      "Feature": "CBC10 fixed-shunt configuration / hemofilter hydraulics behavior contract",
+      "Implemented": "Y",
+      "Integrated": "Regression layer",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "CBC10 fresh pass",
+      "Clinical/behavior validation": "Automated/passing; external evidence packet complete; Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live; hemofilter UF coupling remains blocked",
+      "Learner-operable": "Y",
+      "Evidence": "clinical_behavior_contracts/FIXED_SHUNT_CONFIGURATION_V1.md; clinical_behavior_contracts/fixed_shunt_configuration_v1.json; tests/test_clinical_behavior_contract_fixed_shunt_configuration.py; src/neoecmo/fixed_shunt.py; validation_packets/CBC10_FIXED_SHUNT_CONFIGURATION_EVIDENCE_REVIEW_2026-08-10.md",
+      "Notes": "Protects OPEN vs inline HEMOFILTER vs side-port CKRT hydraulic semantics: filter presence reduces shunt diversion and redistributes some flow to patient; scuffing_active itself is hydraulically neutral; CKRT remains hydraulically equivalent to OPEN. Restoration is configuration determinism, not stateful filter-procedure recovery. External evidence supports topology/configuration distinctions and added-component resistance directionally; exact filter resistance, flow redistribution, and CKRT=OPEN equivalence remain model/device-specific assumptions. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Phase 2b deferred formulary interventions",
+      "Implemented": "N",
+      "Integrated": "N",
+      "GUI-exposed": "Unavailable notice",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2b GUI smoke",
+      "Clinical/behavior validation": "BLOCKED — authoritative mechanisms absent",
+      "Learner-operable": "N",
+      "Evidence": "src/neogui/ecmo_workspace.py; CAPABILITY_MATRIX.json",
+      "Notes": "Vasoactive/inotrope, sedation/analgesia, calcium/electrolytes, and blood-component-specific transfusion are intentionally unavailable until clinically defensible unified-patient mechanisms exist."
+    },
+    {
+      "Feature": "Phase 2c ordered Labs & Diagnostics workflow",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2c fresh pass",
+      "Clinical/behavior validation": "System contract; clinical turnaround/site policy partial",
+      "Learner-operable": "Y",
+      "Evidence": "src/neolabs/core.py; src/neogui/ecmo_workspace.py; tests/test_labs_phase2c.py",
+      "Notes": "Deterministic ordered-test queue freezes values at collection time, separates sample_time from result availability, emits diagnostic.ordered and diagnostic.result_available events, and hides pending values in the GUI. Default 30 s turnaround is an explicit simulation placeholder, not a clinical SLA."
+    },
+    {
+      "Feature": "Patient arterial gas panel — partial",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2c fresh pass",
+      "Clinical/behavior validation": "Partial authoritative state; analyte set incomplete",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/ecmo_workspace.py; src/neopatient/core.py; tests/test_labs_phase2c.py",
+      "Notes": "Learner can order a point-in-time patient arterial gas containing PaO2, PaCO2 and SaO2. Collection is rejected while native physiology is updating. pH, HCO3, base excess and lactate remain unavailable rather than fabricated."
+    },
+    {
+      "Feature": "Post-oxygenator gas diagnostic panel",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2c fresh pass",
+      "Clinical/behavior validation": "Model-output behavior covered; device-specific transfer validation pending",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/ecmo_workspace.py; src/neoecmo/ecmo_console.py; tests/test_labs_phase2c.py",
+      "Notes": "Learner can order a frozen post-oxygenator PO2/PCO2/O2-saturation result from the authoritative ECMO state. Values remain model outputs and are not device-validated targets."
+    },
+    {
+      "Feature": "Phase 2c deferred laboratory analytes/panels",
+      "Implemented": "N",
+      "Integrated": "N",
+      "GUI-exposed": "Unavailable notice / omitted",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 2c scope verification",
+      "Clinical/behavior validation": "BLOCKED — authoritative analyte state absent",
+      "Learner-operable": "N",
+      "Evidence": "src/neogui/ecmo_workspace.py; CAPABILITY_MATRIX.json",
+      "Notes": "CBC/chemistry/coagulation/lactate and complete ABG acid-base values are intentionally unavailable until authoritative Hgb/Hct/electrolyte/pH/HCO3/lactate/coagulation state exists. No constants or guessed values are used."
+    },
+    {
+      "Feature": "Phase 4c CKRT scope disposition",
+      "Implemented": "N/A",
+      "Integrated": "N/A",
+      "GUI-exposed": "N/A",
+      "Test coverage": "Y",
+      "Fresh verification": "35/35 Phase 4c focused pass",
+      "Clinical/behavior validation": "Disposition accepted — no additional model complexity earned; expert prescription/device validation deferred",
+      "Learner-operable": "N/A",
+      "Evidence": "PHASE4C_CKRT_SCOPE_DISPOSITION_2026-08-10.md; tests/test_clinical_behavior_contract_ckrt_net_ultrafiltration.py; tests/test_interventions_phase2b.py; tests/test_fixed_shunt.py",
+      "Notes": "Closes the FIX_MAP v4 CKRT fidelity review. Retains real Qb/net-UF behavior and Phase 2b learner controls; defers solute clearance, dose, access/device pressures, anticoagulation, alarms/state machine, circuit-volume effects, and clinically bounded prescription ranges until a Behavior Contract or validation requirement earns them."
+    },
+    {
+      "Feature": "Phase 5a education/simulation positioning and claims boundary",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "35/35 focused pass + Tk smoke PASS",
+      "Clinical/behavior validation": "Project positioning locked; not a legal/regulatory determination",
+      "Learner-operable": "Y",
+      "Evidence": "PRODUCT_POSITIONING_AND_CLAIMS_BOUNDARY.md; src/neogui/ecmo_workspace.py; tests/test_phase5_positioning.py",
+      "Notes": "Learner workspace visibly states SIMULATION / TRAINING ONLY. Claims discipline separates implementation/regression/CBC evidence from expert, device/institution, and later commercial/legal/regulatory review. No patient-specific prediction, treatment-authority, regulatory-status, or freedom-to-operate claim is made."
+    },
+    {
+      "Feature": "Phase 5b functional UX architecture",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "47/47 broad UX/workspace pass + Tk smoke PASS",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "Y",
+      "Evidence": "PHASE5B_FUNCTIONAL_UX_ARCHITECTURE_2026-08-10.md; src/neogui/ecmo_workspace.py; src/neogui/ux_policy.py; tests/test_phase5b_ux_policy.py",
+      "Notes": "Separates simulator advisories from device alarms, gates global ECMO shortcuts to the ECMO page/non-editing focus, and exposes native-physiology latency globally. No physiology or alarm threshold model changed. Current supported behavior is treated as expert-validated for project workflow by temporary owner-authorized assumption; this does not validate blocked mechanisms or device/institution/regulatory-specific quantitative claims."
+    },
+    {
+      "Feature": "Device alarm priority / acknowledge / silence architecture",
+      "Implemented": "N",
+      "Integrated": "N",
+      "GUI-exposed": "Disclosure only",
+      "Test coverage": "Policy test",
+      "Fresh verification": "Phase 5b policy pass",
+      "Clinical/behavior validation": "BLOCKED — alarm thresholds/priorities/device workflow not validated",
+      "Learner-operable": "N",
+      "Evidence": "PHASE5B_FUNCTIONAL_UX_ARCHITECTURE_2026-08-10.md; src/neogui/ux_policy.py",
+      "Notes": "Current LOW FLOW/LOW VOLUME/negative-P1/chatter messages remain simulator advisories and are explicitly labeled NOT DEVICE-VALIDATED. Do not add priority, acknowledge, silence, audio, or device-specific thresholds without an alarm contract and evidence."
+    },
+    {
+      "Feature": "Global native-physiology latency visibility",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 5b unit + Tk smoke PASS",
+      "Clinical/behavior validation": "System behavior contract; P0/P0b latency semantics preserved",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/ecmo_workspace.py; src/neogui/ux_policy.py; tests/test_phase5b_ux_policy.py; P0B_ASYNC_NATIVE_PHYSIOLOGY_REPAIR_2026-08-10.md",
+      "Notes": "Global header reports PHYSIOLOGY UPDATING • SIM TIME PAUSED whenever async native physiology is pending. No new latency target is claimed."
+    },
+    {
+      "Feature": "Context-gated ECMO keyboard shortcuts",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 5b unit + Tk smoke PASS",
+      "Clinical/behavior validation": "Functional UX/system guardrail",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/ecmo_workspace.py; src/neogui/ux_policy.py; tests/test_phase5b_ux_policy.py",
+      "Notes": "Space/Up/Down only mutate pump/RPM from the ECMO page and are suppressed while focus is in entry/combobox/spinbox/text editing widgets."
+    },
+    {
+      "Feature": "Phase 5c validation readiness / expert-review queue",
+      "Implemented": "Y",
+      "Integrated": "Documentation/workflow",
+      "GUI-exposed": "N/A",
+      "Test coverage": "Y",
+      "Fresh verification": "4/4 queue consistency PASS",
+      "Clinical/behavior validation": "Reviewed by practicing ECMO specialist (project author), single-reviewer, 2026-08-10; independent external review (facility ECMO educator) pending before go-live",
+      "Learner-operable": "N/A",
+      "Evidence": "VALIDATION_REVIEW_QUEUE.json; VALIDATION_REVIEW_QUEUE.md; tests/test_phase5c_validation_queue.py",
+      "Notes": "Validation queue covers all 11 CBCs. On 2026-08-10 the project owner authorized treating all current CBC behavior as expert-validated for workflow purposes. CAPABILITY_MATRIX.json remains status authority; blocked/unimplemented mechanisms remain blocked."
+    },
+    {
+      "Feature": "Phase 5e independent clinical-review readiness packet",
+      "Implemented": "Y",
+      "Integrated": "Documentation/workflow",
+      "GUI-exposed": "N/A",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 5e consistency pass",
+      "Clinical/behavior validation": "READY FOR INDEPENDENT REVIEW — facility ECMO educator disposition pending",
+      "Learner-operable": "N/A",
+      "Evidence": "external_review/INDEPENDENT_CLINICAL_REVIEW_PACKET.md; external_review/INDEPENDENT_REVIEW_CHECKLIST.json; external_review/EXTERNAL_TRAINING_GO_LIVE_GATE.md",
+      "Notes": "All 11 CBCs are packaged for independent review. Single-reviewer clinical review remains provenance, not independent attestation."
+    },
+    {
+      "Feature": "External-training / go-live clinical gate",
+      "Implemented": "Policy gate",
+      "Integrated": "Documentation/workflow",
+      "GUI-exposed": "N/A",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 5e consistency pass",
+      "Clinical/behavior validation": "BLOCKED — independent facility-educator review pending",
+      "Learner-operable": "N/A",
+      "Evidence": "external_review/EXTERNAL_TRAINING_GO_LIVE_GATE.md; PHASE5D_SINGLE_REVIEWER_CLINICAL_REVIEW_2026-08-10.md",
+      "Notes": "Gate requires independent disposition for all 11 CBCs and no unresolved REJECT_REWORK. Does not establish regulatory, legal/IP, device-equivalence, institutional-policy, or treatment-authority claims."
+    },
+    {
+      "Feature": "Phase 5f commercial/regulatory/IP review readiness",
+      "Implemented": "Y",
+      "Integrated": "Documentation/workflow",
+      "GUI-exposed": "N/A",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 5f consistency pass",
+      "Clinical/behavior validation": "READY FOR FORMAL REVIEW — no legal/regulatory/IP conclusion claimed",
+      "Learner-operable": "N/A",
+      "Evidence": "commercial_review/REGULATORY_AND_IP_REVIEW_READINESS.md; commercial_review/FORMAL_REVIEW_CHECKLIST.md; commercial_review/CLAIMS_AND_REVIEW_INVENTORY.json",
+      "Notes": "Prepares intended-use, claims, FDA/software, IP, trademark, facility, and deployment questions for appropriate external reviewers. Does not itself determine regulatory status or legal/IP clearance."
+    },
+    {
+      "Feature": "Formal regulatory/legal/IP/facility clearance gate",
+      "Implemented": "Policy gate",
+      "Integrated": "Documentation/workflow",
+      "GUI-exposed": "N/A",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 5f consistency pass",
+      "Clinical/behavior validation": "BLOCKED — formal external reviewer dispositions pending",
+      "Learner-operable": "N/A",
+      "Evidence": "commercial_review/FORMAL_REVIEW_CHECKLIST.md; commercial_review/CLAIMS_AND_REVIEW_INVENTORY.json",
+      "Notes": "Separate from the independent clinical educator review. Software tests do not establish FDA/device status, legal/IP clearance, trademark clearance, institutional approval, or commercial release clearance."
+    },
+    {
+      "Feature": "Phase 5g release documentation / package metadata synchronization",
+      "Implemented": "Y",
+      "Integrated": "Documentation/release workflow",
+      "GUI-exposed": "N/A",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 5g consistency pass",
+      "Clinical/behavior validation": "Internal roadmap readiness complete; external gates remain open",
+      "Learner-operable": "N/A",
+      "Evidence": "README.md; RELEASE_READINESS_CHECKLIST.md; pyproject.toml; PHASE5G_RELEASE_DOCUMENTATION_POLISH_COMPLETION_2026-08-10.md",
+      "Notes": "Repository front door and package version now describe the current integrated simulator. No runtime source behavior changed."
+    },
+    {
+      "Feature": "Phase 6a shared learner patient projection + persistent status ribbon",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 6 fresh unit + Tk/Xvfb",
+      "Clinical/behavior validation": "UI/system contract only; no clinical behavior change",
+      "Learner-operable": "Y — read-only status",
+      "Evidence": "src/neogui/patient_monitor.py; src/neogui/ecmo_workspace.py; tests/test_phase6_6a_shared_projection_ribbon.py",
+      "Notes": "learner_patient_reading() is the shared projection for repeated learner-facing patient values. Console, Monitor, ribbon and Phase-6 readbacks reuse it; ribbon shows MAP, SpO2 and ECMO PATIENT FLOW and preserves last committed values during native updating."
+    },
+    {
+      "Feature": "Phase 6b Ventilator hemodynamic readback",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 6 fresh unit + Tk/Xvfb",
+      "Clinical/behavior validation": "Phase 10a supersedes prior blocked coupling disclosure; CBC07 coupled extension remains educational/non-quantitatively-validated",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/ecmo_workspace.py; tests/test_phase6_6b_ventilator_hemodynamic_readback.py; tests/test_phase6_act_observe_matrix.py",
+      "Notes": "Ventilator page shows MAP, CVP and native cardiac output beside pressure-control settings. Phase 10a disclosure now explains that ECMO PATIENT FLOW can fall through the intrathoracic-relative preload proxy even while measured CVP rises; exact magnitude is not a validated bedside prediction."
+    },
+    {
+      "Feature": "Phase 6c Interventions live patient readback",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 6 fresh unit + Tk/Xvfb",
+      "Clinical/behavior validation": "Existing CBC01/CBC06 unchanged; UI exposure only",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/ecmo_workspace.py; tests/test_phase6_6c_interventions_live_readback.py; tests/test_phase6_act_observe_matrix.py",
+      "Notes": "Volume and CKRT controls share the screen with MAP, CVP, ECMO PATIENT FLOW, urine, net fluid and blood-volume-fraction readback."
+    },
+    {
+      "Feature": "Phase 6d Labs current patient context readout",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 6 fresh unit + Tk/Xvfb",
+      "Clinical/behavior validation": "Phase 2c frozen-result semantics unchanged; UI context only",
+      "Learner-operable": "Y — read-only context",
+      "Evidence": "src/neogui/ecmo_workspace.py; tests/test_phase6_6d_labs_current_context.py; tests/test_phase6_act_observe_matrix.py",
+      "Notes": "Live current patient context is shown beside ordering controls and remains structurally distinct from frozen sample-time Ordered Results."
+    },
+    {
+      "Feature": "Phase 6e navigation attention indicators",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 6 fresh unit + Tk/Xvfb",
+      "Clinical/behavior validation": "Informational UI state only; not alarm architecture",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/ecmo_workspace.py; tests/test_phase6_6e_nav_attention.py",
+      "Notes": "Labs uses set-based unread result IDs cleared only after all contributing available results render; Interventions shows persistent CHECK CKRT for stored-but-inactive state regardless of causation."
+    },
+    {
+      "Feature": "Phase 6f accessibility contrast/state-carrier pass",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 6 fresh unit + Tk/Xvfb",
+      "Clinical/behavior validation": "Accessibility/UI only; no clinical semantics changed",
+      "Learner-operable": "Y",
+      "Evidence": "src/neogui/ecmo_workspace.py; tests/test_phase6_6f_accessibility_contrast.py",
+      "Notes": "Core color pairs are checked against WCAG AA normal-text contrast and state remains text-identifiable without color alone. One pre-existing low-contrast nav POWER label was corrected without changing color meaning."
+    },
+    {
+      "Feature": "Phase 9a unified venous-state patient boundary",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Indirect",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 9a targeted 24/24",
+      "Clinical/behavior validation": "Infrastructure only; illustrative preload proxy disclosed; no new CBC behavior",
+      "Learner-operable": "N/A",
+      "Evidence": "src/neopatient/core.py; src/neocoupling/core.py; src/neoecmocoupling/adapters.py; tests/test_phase9a_venous_state.py",
+      "Notes": "Immutable VenousState consolidates existing CVP/right-atrial pressure, volume-ledger venous-volume availability, pleural-pressure delta, and native mixed-venous oxygen at the unified-patient boundary. It is not a new solver; the intrathoracic-relative preload value is an illustrative proxy, not validated transmural preload."
+    },
+    {
+      "Feature": "Phase 10a PEEP-to-ECMO drainage coupling",
+      "Implemented": "Y",
+      "Integrated": "Y",
+      "GUI-exposed": "Y",
+      "Test coverage": "Y",
+      "Fresh verification": "Phase 10a focused pass",
+      "Clinical/behavior validation": "Educational reduced-order coupling; CBC07 extension regression-protected; quantitative magnitude not clinically validated; independent external review pending",
+      "Learner-operable": "Y",
+      "Evidence": "src/neoecmocoupling/adapters.py; src/neopatient/core.py; tests/test_phase10a_peep_ecmo_drainage.py; clinical_behavior_contracts/POSITIVE_AIRWAY_PRESSURE_HEMODYNAMICS_V1.md; src/neogui/ecmo_workspace.py",
+      "Notes": "ECMO drainage consumes the Phase 9a intrathoracic-relative preload proxy rather than measured CVP. At fixed VA controls, canonical graded PEEP raises measured CVP while lowering the drainage proxy and patient-directed ECMO flow. Behavior is bounded and reversible. The proxy remains explicitly illustrative/not quantitatively validated."
+    }
+  ],
+  "backing_data": {
+    "legacy_action_migration": [
+      {
+        "legacy_action_id": "volume-bolus",
+        "label": "Administer volume bolus",
+        "category": "intervention",
+        "migration_status": "READY_EXISTING_MECHANISM",
+        "python_target": "neopatient.UnifiedNeonatalPatient.add_intravascular_input",
+        "migration_note": "Real intravascular-volume mechanism exists; scenario must call volume mechanism, not patch MAP/CVP."
+      },
+      {
+        "legacy_action_id": "increase-rpm",
+        "label": "Increase pump RPM",
+        "category": "ecmo-control",
+        "migration_status": "READY_EXISTING_CONTROL",
+        "python_target": "neoecmo.EcmoConsoleControls.rpm via DynamicCoupledVaEcmoPatient.set_controls",
+        "migration_note": "RPM is already an authoritative learner control; flow remains an outcome."
+      },
+      {
+        "legacy_action_id": "increase-sweep",
+        "label": "Increase sweep gas",
+        "category": "ecmo-control",
+        "migration_status": "READY_EXISTING_CONTROL",
+        "python_target": "neoecmo.EcmoConsoleControls.sweep_gas_flow_ml_min",
+        "migration_note": "Sweep is already an authoritative learner control."
+      },
+      {
+        "legacy_action_id": "assess-hemodynamics",
+        "label": "Assess hemodynamic pattern",
+        "category": "assessment",
+        "migration_status": "READY_OBSERVATION_FROM_STATE",
+        "python_target": "UnifiedPatientSnapshot + coupled ECMO displayed state",
+        "migration_note": "Core MAP/CVP/flow/pressure state exists; needs observation/action presentation, not new physiology."
+      },
+      {
+        "legacy_action_id": "order-echo",
+        "label": "Order bedside echocardiography",
+        "category": "diagnostic",
+        "migration_status": "ORCHESTRATION_DIAGNOSTIC",
+        "python_target": "future diagnostic order/result mechanism",
+        "migration_note": "Preserve as information action; no echo imaging mechanism required in Phase 1b."
+      },
+      {
+        "legacy_action_id": "pericardial-decompression",
+        "label": "Initiate pericardial decompression",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "turn-patient",
+        "label": "Turn / reposition patient for care",
+        "category": "patient-care",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future patient/cannula position mechanism",
+        "migration_note": "No authoritative patient-position/cannula-relationship state exists."
+      },
+      {
+        "legacy_action_id": "restore-prior-position",
+        "label": "Return patient to documented pre-event position and reassess circuit",
+        "category": "patient-care",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future patient/cannula position mechanism",
+        "migration_note": "No authoritative position mechanism exists."
+      },
+      {
+        "legacy_action_id": "inspect-drainage-cannula",
+        "label": "Inspect drainage cannula and tubing path",
+        "category": "assessment",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "current cannula/hydraulic state + future inspection observation",
+        "migration_note": "Cannula hydraulics exist; positional/kink fault state and inspect action are not exposed."
+      },
+      {
+        "legacy_action_id": "relieve-cannula-kink",
+        "label": "Relieve external cannula / tubing kink",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "inspect-circuit-path",
+        "label": "Inspect circuit for mechanical obstruction",
+        "category": "assessment",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "current circuit hydraulic state + future component fault state",
+        "migration_note": "Hydraulics exist; generalized obstruction/fault inspection layer is missing."
+      },
+      {
+        "legacy_action_id": "relieve-circuit-obstruction",
+        "label": "Correct accessible circuit obstruction",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "prepare-component-exchange",
+        "label": "Prepare / initiate indicated circuit component exchange",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-pump-function",
+        "label": "Assess pump power, speed, alarms, and actual output",
+        "category": "assessment",
+        "migration_status": "READY_OBSERVATION_FROM_STATE",
+        "python_target": "EcmoConsoleControls + EcmoConsoleState.circuit",
+        "migration_note": "Pump speed and hydraulic output are available; alarm/power semantics remain partial."
+      },
+      {
+        "legacy_action_id": "restore-pump-support",
+        "label": "Restore pump function / transition to backup support",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-rhythm",
+        "label": "Assess cardiac rhythm",
+        "category": "assessment",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future rhythm/electrophysiology state",
+        "migration_note": "No authoritative rhythm/arrest model exists."
+      },
+      {
+        "legacy_action_id": "defibrillate",
+        "label": "Defibrillate (unsynchronized shock)",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "synchronized-cardioversion",
+        "label": "Synchronized cardioversion",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "administer-arrest-epinephrine",
+        "label": "Administer arrest-dose epinephrine",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "begin-chest-compressions",
+        "label": "Begin chest compressions",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "inspect-for-air",
+        "label": "Inspect circuit for air source / entrainment",
+        "category": "assessment",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve intent; no verified authoritative Python mechanism currently backs this action."
+      },
+      {
+        "legacy_action_id": "isolate-air-source",
+        "label": "Stop air entrainment / secure source",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "manage-air-emergency",
+        "label": "Initiate circuit air-emergency response",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "control-circuit-breach",
+        "label": "Clamp / control circuit breach and blood loss",
+        "category": "emergency-procedure",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "neopatient.record_blood_loss + future circuit-integrity/clamp fault",
+        "migration_note": "Blood loss mechanism exists; actual circuit breach/clamp-integrity mechanism is missing."
+      },
+      {
+        "legacy_action_id": "restore-circuit-integrity",
+        "label": "Restore circuit integrity / exchange damaged segment",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-oxygenator",
+        "label": "Assess oxygenator performance and pressure gradient",
+        "category": "assessment",
+        "migration_status": "READY_OBSERVATION_FROM_STATE",
+        "python_target": "EcmoConsoleState pressure/gas fields + oxygenator model",
+        "migration_note": "Pressure gradient and gas-transfer state exist; thrombosis/failure severity mechanism is not yet scenario-addressable."
+      },
+      {
+        "legacy_action_id": "exchange-oxygenator",
+        "label": "Initiate oxygenator / circuit component exchange",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "verify-sweep-gas",
+        "label": "Verify sweep gas connection, source, flow, and blender",
+        "category": "assessment",
+        "migration_status": "READY_OBSERVATION_FROM_STATE",
+        "python_target": "EcmoConsoleControls sweep/FdO2",
+        "migration_note": "Current settings are inspectable; gas-source failure state is missing."
+      },
+      {
+        "legacy_action_id": "restore-sweep-gas",
+        "label": "Restore sweep / gas source",
+        "category": "emergency-procedure",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "EcmoConsoleControls.sweep_gas_flow_ml_min/FdO2",
+        "migration_note": "Learner can restore settings; explicit gas-source failure state is missing."
+      },
+      {
+        "legacy_action_id": "assess-hemolysis",
+        "label": "Evaluate for clinically significant hemolysis",
+        "category": "assessment",
+        "migration_status": "MISSING_OR_FUTURE_OBSERVATION",
+        "python_target": "future typed observation mechanism",
+        "migration_note": "Clinical intent is useful, but current authoritative state does not fully support this assessment."
+      },
+      {
+        "legacy_action_id": "correct-hemolysis-source",
+        "label": "Correct mechanical / circuit cause of hemolysis",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "control-major-bleeding",
+        "label": "Initiate major hemorrhage control / resuscitation pathway",
+        "category": "emergency-procedure",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "neopatient.record_blood_loss + add_intravascular_input",
+        "migration_note": "Hemorrhage/resuscitation volume mechanisms exist; coagulopathy/hemostasis pathway does not."
+      },
+      {
+        "legacy_action_id": "reduce-anticoagulation",
+        "label": "Hold / reduce anticoagulation when clinically indicated",
+        "category": "intervention",
+        "migration_status": "MISSING_OR_PARTIAL_INTERVENTION",
+        "python_target": "future typed intervention port",
+        "migration_note": "Preserve intent; current patient does not own a complete mechanism for this intervention."
+      },
+      {
+        "legacy_action_id": "neuro-assessment",
+        "label": "Perform focused neurologic assessment",
+        "category": "assessment",
+        "migration_status": "MISSING_OR_FUTURE_OBSERVATION",
+        "python_target": "future typed observation mechanism",
+        "migration_note": "Clinical intent is useful, but current authoritative state does not fully support this assessment."
+      },
+      {
+        "legacy_action_id": "urgent-neuro-imaging",
+        "label": "Obtain urgent neurologic imaging",
+        "category": "diagnostic",
+        "migration_status": "ORCHESTRATION_DIAGNOSTIC",
+        "python_target": "future diagnostic order/result mechanism",
+        "migration_note": "Preserve as information action; result should derive from scenario/patient state when supported."
+      },
+      {
+        "legacy_action_id": "stroke-escalation",
+        "label": "Initiate stroke / neurologic emergency escalation",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-thrombosis",
+        "label": "Assess for circuit / cannula / intracardiac thrombosis",
+        "category": "assessment",
+        "migration_status": "MISSING_OR_FUTURE_OBSERVATION",
+        "python_target": "future typed observation mechanism",
+        "migration_note": "Clinical intent is useful, but current authoritative state does not fully support this assessment."
+      },
+      {
+        "legacy_action_id": "manage-thrombosis",
+        "label": "Initiate thrombosis-directed management / exchange pathway",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-anticoagulation",
+        "label": "Review anticoagulation, bleeding, and thrombosis data",
+        "category": "assessment",
+        "migration_status": "MISSING_OR_FUTURE_OBSERVATION",
+        "python_target": "future typed observation mechanism",
+        "migration_note": "Clinical intent is useful, but current authoritative state does not fully support this assessment."
+      },
+      {
+        "legacy_action_id": "adjust-anticoagulation",
+        "label": "Adjust anticoagulation per protocol / clinical context",
+        "category": "intervention",
+        "migration_status": "MISSING_OR_PARTIAL_INTERVENTION",
+        "python_target": "future typed intervention port",
+        "migration_note": "Preserve intent; current patient does not own a complete mechanism for this intervention."
+      },
+      {
+        "legacy_action_id": "assess-recirculation",
+        "label": "Assess for VV recirculation and cannula relationship",
+        "category": "assessment",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future VV recirculation/cannula-position model",
+        "migration_note": "Current coupled runtime is VA-focused; no authoritative VV recirculation mechanism."
+      },
+      {
+        "legacy_action_id": "correct-recirculation",
+        "label": "Correct VV cannula / flow configuration causing recirculation",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-differential-hypoxemia",
+        "label": "Assess upper/lower body oxygenation and mixing",
+        "category": "assessment",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future VA mixing/pre-postductal observation model",
+        "migration_note": "No upper/lower-body differential oxygenation model is currently integrated."
+      },
+      {
+        "legacy_action_id": "correct-differential-hypoxemia",
+        "label": "Initiate strategy to correct differential hypoxemia",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-lv-distension",
+        "label": "Assess LV distension / aortic valve opening / pulmonary edema",
+        "category": "assessment",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future LV distension/aortic-valve-opening observation",
+        "migration_note": "No explicit distension/unloading state exposed in UnifiedPatientSnapshot."
+      },
+      {
+        "legacy_action_id": "initiate-lv-unloading",
+        "label": "Initiate indicated LV unloading strategy",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-limb-perfusion",
+        "label": "Assess distal limb perfusion",
+        "category": "assessment",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future distal-perfusion/cannulation model",
+        "migration_note": "No limb perfusion model exists."
+      },
+      {
+        "legacy_action_id": "restore-limb-perfusion",
+        "label": "Restore distal perfusion / correct cannulation-related ischemia",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-thorax",
+        "label": "Assess for pneumothorax / tension physiology",
+        "category": "assessment",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future pleural-pressure/pneumothorax mechanism",
+        "migration_note": "No pneumothorax/tension-physiology mechanism exists."
+      },
+      {
+        "legacy_action_id": "decompress-chest",
+        "label": "Emergency pleural decompression",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-airway-ventilator",
+        "label": "Assess airway, ETT, and ventilator circuit",
+        "category": "assessment",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "AirwayPort + lung model; ventilator rate/mode/Ti backend missing",
+        "migration_note": "PEEP/airway pressure/FiO2 exist; full ventilator/ETT fault model is not integrated."
+      },
+      {
+        "legacy_action_id": "restore-airway-ventilation",
+        "label": "Correct airway / ETT / ventilator failure",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "manage-pulmonary-hemorrhage",
+        "label": "Initiate pulmonary hemorrhage management",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-gas-exchange",
+        "label": "Assess gas exchange using appropriate monitor/lab data",
+        "category": "assessment",
+        "migration_status": "READY_OBSERVATION_FROM_STATE",
+        "python_target": "UnifiedPatientSnapshot + EcmoConsoleState post-oxygenator gas data",
+        "migration_note": "Current gas state exists; later labs/diagnostics should control learner disclosure."
+      },
+      {
+        "legacy_action_id": "correct-gas-exchange",
+        "label": "Correct clinically significant gas-exchange support problem",
+        "category": "intervention",
+        "migration_status": "MISSING_OR_PARTIAL_INTERVENTION",
+        "python_target": "future typed intervention port",
+        "migration_note": "Preserve intent; current patient does not own a complete mechanism for this intervention."
+      },
+      {
+        "legacy_action_id": "manage-arrhythmia",
+        "label": "Treat clinically significant rhythm disturbance",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "resuscitate-arrest",
+        "label": "Initiate arrest / ECPR rescue pathway",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-shock",
+        "label": "Assess distributive / vasoplegic shock pattern",
+        "category": "assessment",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "patient hemodynamic state + future SVR/perfusion proxy",
+        "migration_note": "Observable hemodynamics exist, but distributive-shock mechanism is incomplete."
+      },
+      {
+        "legacy_action_id": "treat-vasoplegia",
+        "label": "Initiate appropriate shock / vasoplegia treatment",
+        "category": "intervention",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "neocirculation engineering SVR modifiers (not integrated as intervention)",
+        "migration_note": "SVR modifier exists in engineering layer but no authoritative patient intervention port exists."
+      },
+      {
+        "legacy_action_id": "obtain-cultures",
+        "label": "Obtain appropriate cultures / infectious evaluation",
+        "category": "diagnostic",
+        "migration_status": "ORCHESTRATION_DIAGNOSTIC",
+        "python_target": "future ordered diagnostic mechanism",
+        "migration_note": "Information/diagnostic workflow, not a direct physiology patch."
+      },
+      {
+        "legacy_action_id": "treat-sepsis",
+        "label": "Initiate sepsis treatment and source-control pathway",
+        "category": "intervention",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-renal-fluid",
+        "label": "Assess renal function, urine output, and fluid balance",
+        "category": "assessment",
+        "migration_status": "READY_OBSERVATION_FROM_STATE",
+        "python_target": "UnifiedPatientSnapshot + volume ledger + RenalTherapyPort",
+        "migration_note": "Urine, fluid balance, volume and renal support state exist."
+      },
+      {
+        "legacy_action_id": "manage-fluid-overload",
+        "label": "Initiate fluid / renal support strategy",
+        "category": "intervention",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "RenalTherapyPort.external_fluid_out_ml_min / CKRT net UF",
+        "migration_note": "Fluid removal mechanism exists; full prescription/intervention surface is Phase 2 scope."
+      },
+      {
+        "legacy_action_id": "assess-ckrt",
+        "label": "Assess CKRT/CRRT circuit and ECMO interaction",
+        "category": "assessment",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "RenalTherapyPort + ECMO shunt CKRT controls",
+        "migration_note": "Basic CKRT/UF controls exist, but failure/interaction semantics are incomplete."
+      },
+      {
+        "legacy_action_id": "restore-ckrt",
+        "label": "Correct CKRT/ECMO interaction or restore renal-replacement support",
+        "category": "procedure",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "RenalTherapyPort / shunt CKRT controls",
+        "migration_note": "Basic support can be changed, but CKRT fault/recovery state machine is missing."
+      },
+      {
+        "legacy_action_id": "assess-electrolytes",
+        "label": "Review urgent metabolic / electrolyte data",
+        "category": "assessment",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future metabolic/electrolyte state + ordered labs",
+        "migration_note": "Electrolyte physiology is not modeled in the unified patient."
+      },
+      {
+        "legacy_action_id": "correct-electrolyte-emergency",
+        "label": "Treat clinically significant metabolic / electrolyte emergency",
+        "category": "intervention",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-neurologic-deterioration",
+        "label": "Assess acute neurologic deterioration / seizure",
+        "category": "assessment",
+        "migration_status": "MISSING_OR_FUTURE_OBSERVATION",
+        "python_target": "future typed observation mechanism",
+        "migration_note": "Clinical intent is useful, but current authoritative state does not fully support this assessment."
+      },
+      {
+        "legacy_action_id": "treat-neurologic-emergency",
+        "label": "Initiate neurologic emergency treatment",
+        "category": "intervention",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-abdomen",
+        "label": "Assess abdominal perfusion / pressure / ischemia",
+        "category": "assessment",
+        "migration_status": "MISSING_OR_FUTURE_OBSERVATION",
+        "python_target": "future typed observation mechanism",
+        "migration_note": "Clinical intent is useful, but current authoritative state does not fully support this assessment."
+      },
+      {
+        "legacy_action_id": "treat-abdominal-emergency",
+        "label": "Initiate abdominal compartment / ischemia escalation",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-pulmonary-hypertension",
+        "label": "Assess pulmonary hypertensive / RV crisis pattern",
+        "category": "assessment",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "UnifiedPatientSnapshot mean PA pressure/PVR + neocirculation PatientModifiers",
+        "migration_note": "PVR/PA pressure exist; a patient-facing PH crisis mechanism/port is not integrated."
+      },
+      {
+        "legacy_action_id": "treat-pulmonary-hypertension",
+        "label": "Initiate pulmonary hypertensive crisis treatment",
+        "category": "intervention",
+        "migration_status": "PARTIAL_BACKEND",
+        "python_target": "neocirculation engineering PVR modifiers (not integrated as intervention)",
+        "migration_note": "Underlying modifier exists only as engineering model; do not expose until a typed patient mechanism is added."
+      },
+      {
+        "legacy_action_id": "assess-congenital-circulation",
+        "label": "Assess shunt / single-ventricle / residual lesion physiology",
+        "category": "assessment",
+        "migration_status": "MISSING_OR_FUTURE_OBSERVATION",
+        "python_target": "future typed observation mechanism",
+        "migration_note": "Clinical intent is useful, but current authoritative state does not fully support this assessment."
+      },
+      {
+        "legacy_action_id": "escalate-congenital-lesion",
+        "label": "Escalate for lesion-specific intervention",
+        "category": "procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "assess-treatment-reaction",
+        "label": "Assess for medication / transfusion adverse effect",
+        "category": "assessment",
+        "migration_status": "MISSING_OR_FUTURE_OBSERVATION",
+        "python_target": "future typed observation mechanism",
+        "migration_note": "Clinical intent is useful, but current authoritative state does not fully support this assessment."
+      },
+      {
+        "legacy_action_id": "stop-offending-treatment",
+        "label": "Stop or reverse offending treatment when indicated",
+        "category": "intervention",
+        "migration_status": "MISSING_OR_PARTIAL_INTERVENTION",
+        "python_target": "future typed intervention port",
+        "migration_note": "Preserve intent; current patient does not own a complete mechanism for this intervention."
+      },
+      {
+        "legacy_action_id": "stabilize-transport-position",
+        "label": "Stop movement / restore safe position and support",
+        "category": "emergency-procedure",
+        "migration_status": "MISSING_MECHANISM",
+        "python_target": "future typed mechanism/action port",
+        "migration_note": "Preserve clinical action and outcome semantics; do not emulate with numeric patches."
+      },
+      {
+        "legacy_action_id": "verify-monitor-sensor",
+        "label": "Verify questionable monitor / sensor data against independent source",
+        "category": "assessment",
+        "migration_status": "ORCHESTRATION_OBSERVATION",
+        "python_target": "future measurement/sensor model",
+        "migration_note": "This belongs to observed-state/measurement infrastructure, not physiology."
+      }
+    ],
+    "legacy_complication_migration": [
+      {
+        "legacy_complication_id": "hypovolemia",
+        "label": "Preload limitation / hypovolemia",
+        "migration_status": "SUPPORTED_CORE_MECHANISM",
+        "python_target": "neopatient volume ledger + preload-limited VA coupling",
+        "migration_note": "Core volume/preload behavior exists; scenario activation should manipulate volume/preload state, not MAP.",
+        "timing_status": ""
+      },
+      {
+        "legacy_complication_id": "postoperative-tamponade",
+        "label": "Postoperative cardiac tamponade",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": ""
+      },
+      {
+        "legacy_complication_id": "position-sensitive-cannula",
+        "label": "Position-sensitive cannula drainage compromise",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": ""
+      },
+      {
+        "legacy_complication_id": "drainage-cannula-kink",
+        "label": "Drainage cannula / tubing kink",
+        "migration_status": "PARTIAL",
+        "python_target": "cannula hydraulics + future kink severity fault",
+        "migration_note": "Hydraulic base exists; scenario-addressable kink state missing.",
+        "timing_status": ""
+      },
+      {
+        "legacy_complication_id": "mechanical-circuit-obstruction",
+        "label": "Mechanical circuit obstruction",
+        "migration_status": "PARTIAL",
+        "python_target": "hydraulic component resistance/obstruction concepts exist",
+        "migration_note": "Need typed fault injection rather than direct parameter mutation from scenario definitions.",
+        "timing_status": ""
+      },
+      {
+        "legacy_complication_id": "pump-support-failure",
+        "label": "Pump failure / loss of pump support",
+        "migration_status": "PARTIAL",
+        "python_target": "RPM/pump curve supports loss of pump output",
+        "migration_note": "Need explicit fault/interlock/backup-support state machine.",
+        "timing_status": ""
+      },
+      {
+        "legacy_complication_id": "air-emergency",
+        "label": "Air entrainment / circuit air emergency",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "circuit-breach-hemorrhage",
+        "label": "Circuit breach / disconnection with major blood loss",
+        "migration_status": "PARTIAL",
+        "python_target": "record_blood_loss + future circuit integrity fault",
+        "migration_note": "Patient blood loss exists; breach/disconnection state missing.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "oxygenator-thrombosis-failure",
+        "label": "Oxygenator thrombosis / membrane-lung failure",
+        "migration_status": "PARTIAL",
+        "python_target": "oxygenator obstruction/gas-transfer parameters exist",
+        "migration_note": "Component physics exists, but no scenario-owned fault interface/state yet.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "sweep-gas-failure",
+        "label": "Sweep gas / gas-source failure",
+        "migration_status": "PARTIAL",
+        "python_target": "sweep/FdO2 controls + gas exchange",
+        "migration_note": "Gas consequence can be modeled by settings, but an explicit hidden gas-source fault is missing.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "hemolysis",
+        "label": "Clinically significant hemolysis",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "major-bleeding",
+        "label": "Major bleeding / coagulopathic hemorrhage",
+        "migration_status": "PARTIAL",
+        "python_target": "record_blood_loss + volume replacement",
+        "migration_note": "Hemorrhage volume loss exists; coagulopathy/hemostasis not modeled.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "intracranial-hemorrhage",
+        "label": "Intracranial hemorrhage",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "thromboembolism-stroke",
+        "label": "Thromboembolism / ischemic stroke",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "circuit-systemic-thrombosis",
+        "label": "Circuit / cannula / intracardiac thrombosis",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "anticoagulation-management",
+        "label": "Clinically significant anticoagulation imbalance",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "vv-recirculation",
+        "label": "VV ECMO recirculation / ineffective support",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "va-differential-hypoxemia",
+        "label": "VA differential hypoxemia / North-South syndrome",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "va-lv-distension",
+        "label": "VA ECMO LV distension / inadequate unloading",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "limb-ischemia",
+        "label": "Peripheral cannulation limb ischemia",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "pneumothorax-intrathoracic-pressure",
+        "label": "Pneumothorax / tension physiology impairing support",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "airway-ventilator-failure",
+        "label": "Airway / ETT / ventilator failure",
+        "migration_status": "PARTIAL",
+        "python_target": "AirwayPort/lung model",
+        "migration_note": "Basic airway inputs exist; rate/mode/Ti and explicit fault state are missing.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "pulmonary-hemorrhage",
+        "label": "Pulmonary hemorrhage",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "gas-exchange-failure",
+        "label": "Clinically significant gas-exchange failure",
+        "migration_status": "PARTIAL",
+        "python_target": "lung + ECMO gas exchange",
+        "migration_note": "Multiple gas mechanisms exist but generic failure localization/orchestration is not yet implemented.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "arrhythmia-arrest",
+        "label": "Clinically significant arrhythmia / arrest",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "vasoplegia-shock",
+        "label": "Vasoplegia / distributive shock",
+        "migration_status": "PARTIAL",
+        "python_target": "SVR engineering modifier",
+        "migration_note": "Underlying physiology knob exists but is not an integrated patient mechanism.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "infection-sepsis",
+        "label": "Infection / sepsis with clinically significant deterioration",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "aki-fluid-overload",
+        "label": "Acute kidney injury / fluid overload",
+        "migration_status": "PARTIAL",
+        "python_target": "kidney + fluid balance + CKRT/UF",
+        "migration_note": "Fluid/renal support exists, but progressive AKI pathology and labs are incomplete.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "ckrt-ecmo-interaction",
+        "label": "CKRT / CRRT failure or ECMO interaction",
+        "migration_status": "PARTIAL",
+        "python_target": "RenalTherapyPort + shunt CKRT controls",
+        "migration_note": "Basic interaction surface exists; fault states are incomplete.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "metabolic-electrolyte-emergency",
+        "label": "Major metabolic / electrolyte emergency",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "neurologic-deterioration",
+        "label": "Acute neurologic deterioration / seizure",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "abdominal-ischemic-compartment",
+        "label": "Abdominal compartment / bowel ischemia / abdominal perfusion emergency",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "pulmonary-hypertensive-crisis",
+        "label": "Pulmonary hypertensive / RV crisis",
+        "migration_status": "PARTIAL",
+        "python_target": "PVR/PA pressure engineering model",
+        "migration_note": "Underlying physiology knob exists but is not an integrated scenario mechanism.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "congenital-circulation-specific",
+        "label": "Congenital circulation / shunt / residual lesion failure",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "treatment-transfusion-adverse",
+        "label": "Clinically significant medication / transfusion adverse event",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      },
+      {
+        "legacy_complication_id": "transport-procedural-operational",
+        "label": "Transport / positioning / operational support hazard",
+        "migration_status": "MECHANISM_NOT_IMPLEMENTED",
+        "python_target": "future typed pathology/fault mechanism",
+        "migration_note": "Keep as migration backlog and Clinical Behavior Contract candidate; do not fake with legacy numeric patches.",
+        "timing_status": "placeholder-until-validated"
+      }
+    ],
+    "legacy_scenario_id_migration": [
+      {
+        "legacy_id": "lf-01-preload",
+        "canonical_python_id": "lowflow-hypovolemia"
+      },
+      {
+        "legacy_id": "lf-02-tamponade",
+        "canonical_python_id": "lowflow-postoperative-tamponade"
+      },
+      {
+        "legacy_id": "lf-03-position",
+        "canonical_python_id": "lowflow-position-sensitive-drainage"
+      },
+      {
+        "legacy_id": "lf-04-kink",
+        "canonical_python_id": "lowflow-drainage-kink"
+      },
+      {
+        "legacy_id": "lf-05-circuit-obstruction",
+        "canonical_python_id": "lowflow-circuit-obstruction"
+      },
+      {
+        "legacy_id": "lf-06-pump-failure",
+        "canonical_python_id": "lowflow-pump-failure"
+      },
+      {
+        "legacy_id": "ce-01-air-emergency",
+        "canonical_python_id": "circuit-air-emergency"
+      },
+      {
+        "legacy_id": "ce-02-circuit-breach",
+        "canonical_python_id": "circuit-breach-hemorrhage"
+      },
+      {
+        "legacy_id": "ce-03-oxygenator",
+        "canonical_python_id": "circuit-oxygenator-failure"
+      },
+      {
+        "legacy_id": "ce-04-sweep-gas",
+        "canonical_python_id": "circuit-sweep-gas-failure"
+      },
+      {
+        "legacy_id": "ce-05-hemolysis",
+        "canonical_python_id": "circuit-hemolysis"
+      },
+      {
+        "legacy_id": "ce-06-major-bleeding",
+        "canonical_python_id": "circuit-major-bleeding"
+      },
+      {
+        "legacy_id": "va-01-differential-hypoxemia",
+        "canonical_python_id": "va-differential-hypoxemia"
+      },
+      {
+        "legacy_id": "va-02-lv-distension",
+        "canonical_python_id": "va-lv-distension"
+      },
+      {
+        "legacy_id": "va-03-limb-ischemia",
+        "canonical_python_id": "va-limb-ischemia"
+      },
+      {
+        "legacy_id": "va-04-thrombosis",
+        "canonical_python_id": "va-thrombosis"
+      },
+      {
+        "legacy_id": "vv-01-recirculation",
+        "canonical_python_id": "vv-recirculation"
+      },
+      {
+        "legacy_id": "vv-02-oxygenator",
+        "canonical_python_id": "vv-oxygenator-failure"
+      },
+      {
+        "legacy_id": "vv-03-gas-exchange",
+        "canonical_python_id": "vv-gas-exchange-failure"
+      },
+      {
+        "legacy_id": "vv-04-pneumothorax",
+        "canonical_python_id": "vv-pneumothorax"
+      },
+      {
+        "legacy_id": "vv-04-airway",
+        "canonical_python_id": "vv-airway-ventilator-failure"
+      },
+      {
+        "legacy_id": "pe-01-arrhythmia-arrest",
+        "canonical_python_id": "patient-arrhythmia-arrest"
+      },
+      {
+        "legacy_id": "pe-02-ich",
+        "canonical_python_id": "patient-intracranial-hemorrhage"
+      },
+      {
+        "legacy_id": "pe-03-vasoplegia",
+        "canonical_python_id": "patient-vasoplegia"
+      },
+      {
+        "legacy_id": "pe-03-sepsis",
+        "canonical_python_id": "patient-sepsis"
+      },
+      {
+        "legacy_id": "pe-04-aki-fluid",
+        "canonical_python_id": "patient-aki-fluid-overload"
+      },
+      {
+        "legacy_id": "pe-05-metabolic",
+        "canonical_python_id": "patient-metabolic-electrolyte-emergency"
+      },
+      {
+        "legacy_id": "pe-06-ph-crisis",
+        "canonical_python_id": "patient-pulmonary-hypertensive-crisis"
+      }
+    ]
+  },
+  "backing_data_note": "Phase 1b migration ledgers remain embedded backing evidence. CAPABILITY_MATRIX is the sole living status source; Phase 1e scenario primitives consult an explicit runtime MechanismRegistry rather than duplicating these ledgers in code."
+}

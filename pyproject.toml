@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neonatal-circulation-engine"
+version = "0.21.0"
+description = "Reduced-order neonatal ECMO simulation and training platform"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0", "scipy>=1.13"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

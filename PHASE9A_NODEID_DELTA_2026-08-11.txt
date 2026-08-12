@@ -1,0 +1,15 @@
+Audited Fix Map v5 / pre-9a baseline nodes: 527
+Post-Phase-9a nodes: 533
+New nodes: 6
+Missing baseline nodes: 0
+
+NEW NODES
+tests/test_phase9a_venous_state.py::test_phase9a_existing_ecmo_boundary_consumes_only_canonical_venous_api
+tests/test_phase9a_venous_state.py::test_phase9a_preload_proxy_is_explicitly_derived_from_current_native_step
+tests/test_phase9a_venous_state.py::test_phase9a_structural_guard_demonstrably_rejects_projection_dependency
+tests/test_phase9a_venous_state.py::test_phase9a_structural_guard_no_projection_feedback_into_venous_state
+tests/test_phase9a_venous_state.py::test_phase9a_venous_state_is_immutable_and_preserves_existing_authorities
+tests/test_phase9a_venous_state.py::test_phase9a_venous_state_uses_current_volume_ledger_after_update
+
+MISSING BASELINE NODES
+(none)

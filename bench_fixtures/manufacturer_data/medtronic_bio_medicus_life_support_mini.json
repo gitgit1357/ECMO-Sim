@@ -1,0 +1,18 @@
+{
+  "manufacturer": "Medtronic",
+  "family": "Bio-Medicus Life Support Mini",
+  "intended_use_note": "External bench-test fixture only; not part of the simulated patient.",
+  "source_url": "https://www.medtronic.com/en-us/healthcare-professionals/products/cardiovascular/extracorporeal-membrane-oxygenation/bio-medicus-life-support-catheter.html",
+  "source_description": "Manufacturer performance table: flow rate (L/min water) at room temperature for +100 mmHg pressure loss and -40 mmHg drainage pressure loss.",
+  "clinical_caveat": "Manufacturer states clinical results vary with patient condition and blood composition. Curves here are interpolation models for bench testing, not clinical device specifications.",
+  "manufacturer_limits": {
+    "vacuum_augmented_drainage_min_mmhg": -100,
+    "maximum_pressure_mmhg": 300
+  },
+  "records": [
+    {"size_fr": 9, "diameter_mm": 3.0, "tip_length_cm": 10.0, "connector_in": 0.25, "return_model": "LS96010-009", "drainage_model": "LS96110-009", "flow_l_min_at_plus_100_mmhg": 0.6, "flow_l_min_at_minus_40_mmhg": 0.4},
+    {"size_fr": 11, "diameter_mm": 3.7, "tip_length_cm": 10.5, "connector_in": 0.25, "return_model": "LS96010-011", "drainage_model": "LS96110-011", "flow_l_min_at_plus_100_mmhg": 1.2, "flow_l_min_at_minus_40_mmhg": 0.8},
+    {"size_fr": 13, "diameter_mm": 4.3, "tip_length_cm": 11.0, "connector_in": 0.25, "return_model": "LS96010-013", "drainage_model": "LS96110-013", "flow_l_min_at_plus_100_mmhg": 2.0, "flow_l_min_at_minus_40_mmhg": 1.3},
+    {"size_fr": 15, "diameter_mm": 5.0, "tip_length_cm": 11.5, "connector_in": 0.25, "return_model": "LS96010-015", "drainage_model": "LS96110-015", "flow_l_min_at_plus_100_mmhg": 2.8, "flow_l_min_at_minus_40_mmhg": 1.8}
+  ]
+}

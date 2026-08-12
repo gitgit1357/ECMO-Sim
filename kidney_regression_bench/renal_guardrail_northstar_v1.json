@@ -1,0 +1,18 @@
+{
+  "schema": "Renal Volume Guardrail NorthStar v1",
+  "rules": [
+    "Urine output must fall progressively as circulating volume and renal perfusion decline",
+    "Diuretics cannot override critical hypoperfusion or severe volume depletion",
+    "Near-anuria is allowed at critical depletion",
+    "Urine production can recover when circulating volume/perfusion recover"
+  ],
+  "volume_fraction_checkpoints": [
+    1.0,
+    0.9,
+    0.8,
+    0.7,
+    0.6,
+    0.5,
+    0.4
+  ]
+}

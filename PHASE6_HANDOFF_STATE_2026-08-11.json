@@ -1,0 +1,32 @@
+{
+  "roadmap": "FIX_MAP_v5_AUTHORIZED_2026-08-10.md",
+  "phase": "6",
+  "status": "implementation-complete-closure-verification-incomplete",
+  "baseline_version": "v0.21.0",
+  "baseline_node_count": 497,
+  "post_node_count": 514,
+  "new_phase6_nodes": 17,
+  "missing_baseline_nodes": 0,
+  "phase6_tests": {"passed": 17, "total": 17, "live_tk_xvfb": true},
+  "act_observe_rows": {"passed": 7, "total": 7},
+  "reference_window": "1360x820",
+  "capability_matrix_rows": 99,
+  "changed_source_files_vs_v0_21_0": [
+    "src/neogui/__init__.py",
+    "src/neogui/patient_monitor.py",
+    "src/neogui/ecmo_workspace.py"
+  ],
+  "new_test_files": [
+    "tests/test_phase6_6a_shared_projection_ribbon.py",
+    "tests/test_phase6_6b_ventilator_hemodynamic_readback.py",
+    "tests/test_phase6_6c_interventions_live_readback.py",
+    "tests/test_phase6_6d_labs_current_context.py",
+    "tests/test_phase6_6e_nav_attention.py",
+    "tests/test_phase6_6f_accessibility_contrast.py",
+    "tests/test_phase6_act_observe_matrix.py"
+  ],
+  "known_failure": null,
+  "known_blocker": "Full auditable zero-exit accounting of all 497 baseline pytest node IDs remains incomplete because several legacy native/multiprocessing tests exceed wrapper/harness timeouts.",
+  "timeout_semantics": "incomplete-never-pass-never-fail",
+  "next_action": "Finish exact baseline-node verification, then completion artifact + hashes + package latest release, then STOP and cue user before Phase 7 or Phase 8."
+}

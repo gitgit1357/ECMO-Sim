@@ -1,0 +1,87 @@
+{
+  "schema": "ecmo-main-circuit-with-shunt-and-bridge-northstar-v1",
+  "cases": {
+    "rpm_sweep_bridge_closed": {
+      "0": {
+        "solved_total_flow_ml_min": 0.0,
+        "solved_shunt_flow_ml_min": 0.0,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 0.0
+      },
+      "1500": {
+        "solved_total_flow_ml_min": 192.91768106558015,
+        "solved_shunt_flow_ml_min": 77.16966105875684,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 115.74802000682331
+      },
+      "2000": {
+        "solved_total_flow_ml_min": 320.7734617602888,
+        "solved_shunt_flow_ml_min": 128.31368894731196,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 192.45977281297684
+      },
+      "2500": {
+        "solved_total_flow_ml_min": 469.02021294087376,
+        "solved_shunt_flow_ml_min": 187.61437864292702,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 281.40583429794674
+      },
+      "3000": {
+        "solved_total_flow_ml_min": 632.9519883342641,
+        "solved_shunt_flow_ml_min": 253.18928849044784,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 379.76269984381634
+      },
+      "3500": {
+        "solved_total_flow_ml_min": 809.0259327786387,
+        "solved_shunt_flow_ml_min": 323.62122888595684,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 485.40470389268177
+      },
+      "4000": {
+        "solved_total_flow_ml_min": 994.5906268382116,
+        "solved_shunt_flow_ml_min": 397.8495964775269,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 596.7410303606847
+      }
+    },
+    "clamp_sweep_at_3000rpm": {
+      "0.00": {
+        "solved_total_flow_ml_min": 632.9519883342641,
+        "shunt_fraction": 0.4000134183269801,
+        "bridge_fraction": 0.0,
+        "patient_fraction": 0.59998658167302
+      },
+      "0.05": {
+        "solved_total_flow_ml_min": 907.9506820805167,
+        "shunt_fraction": 0.17424901108455446,
+        "bridge_fraction": 0.5643920851122065,
+        "patient_fraction": 0.26135890380323895
+      },
+      "0.10": {
+        "solved_total_flow_ml_min": 1122.5482533731135,
+        "shunt_fraction": 0.06470018838881197,
+        "bridge_fraction": 0.8382549548977265,
+        "patient_fraction": 0.09704485671346147
+      },
+      "0.30": {
+        "solved_total_flow_ml_min": 1264.2423400879802,
+        "shunt_fraction": 0.008396036280405313,
+        "bridge_fraction": 0.9790106134051179,
+        "patient_fraction": 0.012593350314476866
+      },
+      "0.60": {
+        "solved_total_flow_ml_min": 1281.564024843296,
+        "shunt_fraction": 0.002132580233322689,
+        "bridge_fraction": 0.9946687282585619,
+        "patient_fraction": 0.0031986915081154174
+      },
+      "1.00": {
+        "solved_total_flow_ml_min": 1285.375083007456,
+        "shunt_fraction": 0.0007703573540071938,
+        "bridge_fraction": 0.9980741712184829,
+        "patient_fraction": 0.0011554714275100457
+      }
+    }
+  }
+}

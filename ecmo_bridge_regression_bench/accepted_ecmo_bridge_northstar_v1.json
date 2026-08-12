@@ -1,0 +1,39 @@
+{
+  "schema": "ecmo-bridge-northstar-v1",
+  "cases": {
+    "clamp_sweep": {
+      "0.00": {
+        "solved_flow_ml_min": 0.0
+      },
+      "0.10": {
+        "solved_flow_ml_min": 1766.78445229682
+      },
+      "0.25": {
+        "solved_flow_ml_min": 11042.402826855125
+      },
+      "0.50": {
+        "solved_flow_ml_min": 44169.6113074205
+      },
+      "0.75": {
+        "solved_flow_ml_min": 99381.62544169612
+      },
+      "1.00": {
+        "solved_flow_ml_min": 176678.445229682
+      }
+    },
+    "closed_clamp_gradients": {
+      "forward": {
+        "solved_flow_ml_min": 0.0
+      },
+      "large_forward": {
+        "solved_flow_ml_min": 0.0
+      },
+      "equal": {
+        "solved_flow_ml_min": 0.0
+      },
+      "reversed": {
+        "solved_flow_ml_min": 0.0
+      }
+    }
+  }
+}

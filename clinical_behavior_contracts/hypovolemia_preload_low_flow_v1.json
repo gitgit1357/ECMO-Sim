@@ -1,0 +1,57 @@
+{
+  "contract_id": "cbc.lowflow.hypovolemia.v1",
+  "scenario_family": "lowflow-hypovolemia",
+  "legacy_scenario_id": "lf-01-preload",
+  "status": "automated-behavior-contract",
+  "clinical_review_status": "expert-review-pending",
+  "preconditions": {
+    "weight_kg": 3.0,
+    "va_ecmo": true,
+    "rpm": 2200,
+    "sweep_gas_flow_ml_min": 600,
+    "baseline_chatter": false,
+    "bridge_clamp_position": 0.0
+  },
+  "stimulus": {
+    "blood_loss_fraction_of_baseline_blood_volume": 0.15,
+    "replacement_fraction_of_removed_volume": 1.0
+  },
+  "expected_after_volume_loss": [
+    "preload_fraction decreases",
+    "patient-directed ECMO flow decreases",
+    "drainage pressure becomes more negative",
+    "MAP decreases",
+    "CVP decreases"
+  ],
+  "expected_after_equal_intravascular_replacement": [
+    "preload returns approximately to baseline",
+    "patient-directed ECMO flow returns approximately to baseline",
+    "drainage pressure returns approximately to baseline",
+    "MAP returns approximately to baseline",
+    "CVP returns approximately to baseline"
+  ],
+  "rpm_escalation_branch": {
+    "rpm": 3000,
+    "expected": [
+      "drainage pressure becomes substantially more negative",
+      "chatter can activate",
+      "patient-directed flow does not meaningfully improve while drainage-limited",
+      "MAP does not recover to the euvolemic baseline solely from RPM escalation"
+    ]
+  },
+  "tolerances": {
+    "recovery_relative": 0.01,
+    "rpm_escalation_flow_gain_fraction_max": 0.02
+  },
+  "allowed_exceptions": [
+    "different RPM/preload combinations may not chatter",
+    "extreme vasoplegia or other unsupported concurrent pathology may alter MAP response",
+    "bridge/shunt configuration changes may alter gross circuit flow without increasing patient drainage capacity",
+    "displayed values may lag true state according to the dynamic display model"
+  ],
+  "notes": [
+    "The 15% blood-volume-loss stimulus is a stable regression stimulus, not a validated neonatal treatment threshold.",
+    "This contract asserts direction and bedside coherence rather than exact patient prediction.",
+    "RPM is an input; flow remains an outcome."
+  ]
+}

@@ -1,0 +1,3163 @@
+$ node --test test/*.test.mjs
+TAP version 13
+# Subtest: air emergency retains source-control pathway and source review records massive-air safety
+ok 1 - air emergency retains source-control pathway and source review records massive-air safety
+  ---
+  duration_ms: 27.1969
+  type: 'test'
+  ...
+# Subtest: hemolysis evidence keeps cause-directed correction and no invented universal numeric threshold
+ok 2 - hemolysis evidence keeps cause-directed correction and no invented universal numeric threshold
+  ---
+  duration_ms: 6.30833
+  type: 'test'
+  ...
+# Subtest: circuit-breach progression is promoted only after traceable source review and still awaits expert signoff
+ok 3 - circuit-breach progression is promoted only after traceable source review and still awaits expert signoff
+  ---
+  duration_ms: 0.225306
+  type: 'test'
+  ...
+# Subtest: air and hemolysis deterioration timings remain placeholders
+ok 4 - air and hemolysis deterioration timings remain placeholders
+  ---
+  duration_ms: 0.156714
+  type: 'test'
+  ...
+# Subtest: circuit breach avoids invented universal clamp sequence
+ok 5 - circuit breach avoids invented universal clamp sequence
+  ---
+  duration_ms: 0.96799
+  type: 'test'
+  ...
+# Subtest: circuit breach timing remains unpromoted placeholder
+ok 6 - circuit breach timing remains unpromoted placeholder
+  ---
+  duration_ms: 0.139728
+  type: 'test'
+  ...
+# Subtest: all five B1 dossiers now have source review records
+ok 7 - all five B1 dossiers now have source review records
+  ---
+  duration_ms: 6.197985
+  type: 'test'
+  ...
+# Subtest: all B1 evidence-applied rules still await expert clinical signoff
+ok 8 - all B1 evidence-applied rules still await expert clinical signoff
+  ---
+  duration_ms: 0.166407
+  type: 'test'
+  ...
+# Subtest: B1 has five circuit/gas-path evidence records with official ELSO source identity verified
+ok 9 - B1 has five circuit/gas-path evidence records with official ELSO source identity verified
+  ---
+  duration_ms: 7.969352
+  type: 'test'
+  ...
+# Subtest: B1 does not falsely convert source assignment into numeric clinical validation
+ok 10 - B1 does not falsely convert source assignment into numeric clinical validation
+  ---
+  duration_ms: 0.124675
+  type: 'test'
+  ...
+# Subtest: source verification remains distinct from exact rule validation
+ok 11 - source verification remains distinct from exact rule validation
+  ---
+  duration_ms: 0.242391
+  type: 'test'
+  ...
+# Subtest: oxygenator assessment explicitly uses trend/device/flow context rather than universal delta-P cutoff
+ok 12 - oxygenator assessment explicitly uses trend/device/flow context rather than universal delta-P cutoff
+  ---
+  duration_ms: 4.789539
+  type: 'test'
+  ...
+# Subtest: oxygenator evidence record preserves ELSO >300 post-oxygenator reference without treating it as sole exchange trigger
+ok 13 - oxygenator evidence record preserves ELSO >300 post-oxygenator reference without treating it as sole exchange trigger
+  ---
+  duration_ms: 0.172837
+  type: 'test'
+  ...
+# Subtest: oxygenator deterioration timing remains explicitly unvalidated placeholder
+ok 14 - oxygenator deterioration timing remains explicitly unvalidated placeholder
+  ---
+  duration_ms: 0.117404
+  type: 'test'
+  ...
+# Subtest: sweep-gas evidence retains gas-path verification and restoration as preferred pathway
+ok 15 - sweep-gas evidence retains gas-path verification and restoration as preferred pathway
+  ---
+  duration_ms: 6.445023
+  type: 'test'
+  ...
+# Subtest: sweep-gas source review records manufacturer-limit safety without inventing numeric limit
+ok 16 - sweep-gas source review records manufacturer-limit safety without inventing numeric limit
+  ---
+  duration_ms: 0.230944
+  type: 'test'
+  ...
+# Subtest: B2 exact comparison covers the three actual reusable registry primitives
+ok 17 - B2 exact comparison covers the three actual reusable registry primitives
+  ---
+  duration_ms: 0.89349
+  type: 'test'
+  ...
+# Subtest: all B2 primitives have traceable source review and await expert signoff
+ok 18 - all B2 primitives have traceable source review and await expert signoff
+  ---
+  duration_ms: 0.200699
+  type: 'test'
+  ...
+# Subtest: B2 does not invent exact numeric standards
+ok 19 - B2 does not invent exact numeric standards
+  ---
+  duration_ms: 0.808774
+  type: 'test'
+  ...
+# Subtest: pump failure 60-second progression remains placeholder
+ok 20 - pump failure 60-second progression remains placeholder
+  ---
+  duration_ms: 0.205165
+  type: 'test'
+  ...
+# Subtest: B2 drainage mechanics explicitly reject blind RPM escalation for fixed restriction
+ok 21 - B2 drainage mechanics explicitly reject blind RPM escalation for fixed restriction
+  ---
+  duration_ms: 0.131986
+  type: 'test'
+  ...
+# Subtest: B2 contains three registry-level low-flow/mechanical validation records
+ok 22 - B2 contains three registry-level low-flow/mechanical validation records
+  ---
+  duration_ms: 0.599452
+  type: 'test'
+  ...
+# Subtest: B2 uses ELSO general/circuit defaults while institutional sources are absent
+ok 23 - B2 uses ELSO general/circuit defaults while institutional sources are absent
+  ---
+  duration_ms: 1.268548
+  type: 'test'
+  ...
+# Subtest: B2 evidence ledger passes anti-overclaim validation
+ok 24 - B2 evidence ledger passes anti-overclaim validation
+  ---
+  duration_ms: 0.182522
+  type: 'test'
+  ...
+# Subtest: B2 authorizes no unsupported numeric claims or simulation changes
+ok 25 - B2 authorizes no unsupported numeric claims or simulation changes
+  ---
+  duration_ms: 0.15453
+  type: 'test'
+  ...
+# Subtest: B3 covers five VV/shared primitives
+ok 26 - B3 covers five VV/shared primitives
+  ---
+  duration_ms: 0.557891
+  type: 'test'
+  ...
+# Subtest: recirculation source review records paradoxical worsening with increased VV flow
+ok 27 - recirculation source review records paradoxical worsening with increased VV flow
+  ---
+  duration_ms: 0.20205
+  type: 'test'
+  ...
+# Subtest: recirculation fractions remain simulation exemplars not universal ELSO thresholds
+ok 28 - recirculation fractions remain simulation exemplars not universal ELSO thresholds
+  ---
+  duration_ms: 0.136092
+  type: 'test'
+  ...
+# Subtest: gas-exchange review emphasizes oxygen delivery rather than saturation alone
+ok 29 - gas-exchange review emphasizes oxygen delivery rather than saturation alone
+  ---
+  duration_ms: 0.145847
+  type: 'test'
+  ...
+# Subtest: pneumothorax rule is not falsely promoted as ELSO-derived
+ok 30 - pneumothorax rule is not falsely promoted as ELSO-derived
+  ---
+  duration_ms: 0.137575
+  type: 'test'
+  ...
+# Subtest: VV recirculation case still resolves through cause-directed correction
+ok 31 - VV recirculation case still resolves through cause-directed correction
+  ---
+  duration_ms: 4.996597
+  type: 'test'
+  ...
+# Subtest: B3 VV ledger has all discovered VV/shared respiratory primitives
+ok 32 - B3 VV ledger has all discovered VV/shared respiratory primitives
+  ---
+  duration_ms: 0.59089
+  type: 'test'
+  ...
+# Subtest: shared oxygenator rule remains circuit-primary with VV secondary applicability
+ok 33 - shared oxygenator rule remains circuit-primary with VV secondary applicability
+  ---
+  duration_ms: 0.836875
+  type: 'test'
+  ...
+# Subtest: B3 evidence ledger passes anti-overclaim validation
+ok 34 - B3 evidence ledger passes anti-overclaim validation
+  ---
+  duration_ms: 0.158857
+  type: 'test'
+  ...
+# Subtest: B3 authorizes no unsupported numeric changes
+ok 35 - B3 authorizes no unsupported numeric changes
+  ---
+  duration_ms: 0.14776
+  type: 'test'
+  ...
+# Subtest: B4 exact comparison covers all three VA primitives
+ok 36 - B4 exact comparison covers all three VA primitives
+  ---
+  duration_ms: 0.67816
+  type: 'test'
+  ...
+# Subtest: differential hypoxemia source review requires right-radial/proximal monitoring
+ok 37 - differential hypoxemia source review requires right-radial/proximal monitoring
+  ---
+  duration_ms: 1.270702
+  type: 'test'
+  ...
+# Subtest: LV distension evidence retains exact pulse-pressure references as evidence not universal simulator cutoffs
+ok 38 - LV distension evidence retains exact pulse-pressure references as evidence not universal simulator cutoffs
+  ---
+  duration_ms: 0.229582
+  type: 'test'
+  ...
+# Subtest: limb ischemia evidence records source numeric monitoring references
+ok 39 - limb ischemia evidence records source numeric monitoring references
+  ---
+  duration_ms: 0.130804
+  type: 'test'
+  ...
+# Subtest: all B4 rules remain pending expert clinical signoff
+ok 40 - all B4 rules remain pending expert clinical signoff
+  ---
+  duration_ms: 0.106689
+  type: 'test'
+  ...
+# Subtest: B4 contains VA/cardiac registry primitives
+ok 41 - B4 contains VA/cardiac registry primitives
+  ---
+  duration_ms: 0.625862
+  type: 'test'
+  ...
+# Subtest: B4 defaults to ELSO adult VA/cardiac governance
+ok 42 - B4 defaults to ELSO adult VA/cardiac governance
+  ---
+  duration_ms: 0.844717
+  type: 'test'
+  ...
+# Subtest: B4 ledger passes anti-overclaim validation
+ok 43 - B4 ledger passes anti-overclaim validation
+  ---
+  duration_ms: 0.162121
+  type: 'test'
+  ...
+# Subtest: B4 authorizes no unsupported numeric changes
+ok 44 - B4 authorizes no unsupported numeric changes
+  ---
+  duration_ms: 0.150504
+  type: 'test'
+  ...
+# Subtest: B5 discovers actual bleeding/neurologic registry primitives
+ok 45 - B5 discovers actual bleeding/neurologic registry primitives
+  ---
+  duration_ms: 0.686572
+  type: 'test'
+  ...
+# Subtest: B5 requires cross-guideline review
+ok 46 - B5 requires cross-guideline review
+  ---
+  duration_ms: 1.033328
+  type: 'test'
+  ...
+# Subtest: B5 includes anticoagulation governance for hemorrhagic/neuro rules
+ok 47 - B5 includes anticoagulation governance for hemorrhagic/neuro rules
+  ---
+  duration_ms: 0.118737
+  type: 'test'
+  ...
+# Subtest: B5 passes anti-overclaim validation
+ok 48 - B5 passes anti-overclaim validation
+  ---
+  duration_ms: 0.212926
+  type: 'test'
+  ...
+# Subtest: B5 covers five bleeding/neuro/anticoagulation primitives
+ok 49 - B5 covers five bleeding/neuro/anticoagulation primitives
+  ---
+  duration_ms: 0.904636
+  type: 'test'
+  ...
+# Subtest: major bleeding evidence records temporary UFH-hold example without making it universal
+ok 50 - major bleeding evidence records temporary UFH-hold example without making it universal
+  ---
+  duration_ms: 1.012887
+  type: 'test'
+  ...
+# Subtest: ICH evidence keeps >2 day cessation specific to VV rather than generalizing to VA
+ok 51 - ICH evidence keeps >2 day cessation specific to VV rather than generalizing to VA
+  ---
+  duration_ms: 0.151195
+  type: 'test'
+  ...
+# Subtest: ICH review does not invent universal anticoagulation reversal
+ok 52 - ICH review does not invent universal anticoagulation reversal
+  ---
+  duration_ms: 0.175511
+  type: 'test'
+  ...
+# Subtest: anticoagulation management explicitly avoids a single-test universal target
+ok 53 - anticoagulation management explicitly avoids a single-test universal target
+  ---
+  duration_ms: 0.126979
+  type: 'test'
+  ...
+# Subtest: pulmonary hemorrhage remains partial pending specialty-source corroboration
+ok 54 - pulmonary hemorrhage remains partial pending specialty-source corroboration
+  ---
+  duration_ms: 0.158867
+  type: 'test'
+  ...
+# Subtest: B6 covers six patient-emergency primitives
+ok 55 - B6 covers six patient-emergency primitives
+  ---
+  duration_ms: 0.551721
+  type: 'test'
+  ...
+# Subtest: sepsis uses current 2026 specialty standard without fixed fluid volume
+ok 56 - sepsis uses current 2026 specialty standard without fixed fluid volume
+  ---
+  duration_ms: 0.278124
+  type: 'test'
+  ...
+# Subtest: AKI values remain exemplars
+ok 57 - AKI values remain exemplars
+  ---
+  duration_ms: 0.978016
+  type: 'test'
+  ...
+# Subtest: electrolyte emergency avoids universal drug sequence
+ok 58 - electrolyte emergency avoids universal drug sequence
+  ---
+  duration_ms: 0.146328
+  type: 'test'
+  ...
+# Subtest: PH crisis remains partial
+ok 59 - PH crisis remains partial
+  ---
+  duration_ms: 0.117796
+  type: 'test'
+  ...
+# Subtest: B6 contains patient-emergency registry primitives
+ok 60 - B6 contains patient-emergency registry primitives
+  ---
+  duration_ms: 0.614665
+  type: 'test'
+  ...
+# Subtest: B6 uses explicit ELSO domain routing rather than one generic source
+ok 61 - B6 uses explicit ELSO domain routing rather than one generic source
+  ---
+  duration_ms: 1.099206
+  type: 'test'
+  ...
+# Subtest: B6 passes anti-overclaim validation
+ok 62 - B6 passes anti-overclaim validation
+  ---
+  duration_ms: 0.272976
+  type: 'test'
+  ...
+# Subtest: B6 authorizes no unsupported numeric changes
+ok 63 - B6 authorizes no unsupported numeric changes
+  ---
+  duration_ms: 0.151706
+  type: 'test'
+  ...
+# Subtest: B7 covers all previously remaining cross-cutting rules
+ok 64 - B7 covers all previously remaining cross-cutting rules
+  ---
+  duration_ms: 0.548947
+  type: 'test'
+  ...
+# Subtest: B7 passes anti-overclaim validation
+ok 65 - B7 passes anti-overclaim validation
+  ---
+  duration_ms: 1.08179
+  type: 'test'
+  ...
+# Subtest: all current registry rules now appear in at least one validation evidence ledger
+ok 66 - all current registry rules now appear in at least one validation evidence ledger
+  ---
+  duration_ms: 0.100689
+  type: 'test'
+  ...
+# Subtest: specialty supplementation is explicit rather than silently invented
+ok 67 - specialty supplementation is explicit rather than silently invented
+  ---
+  duration_ms: 0.287248
+  type: 'test'
+  ...
+# Subtest: B7 covers eight cross-cutting primitives
+ok 68 - B7 covers eight cross-cutting primitives
+  ---
+  duration_ms: 0.800111
+  type: 'test'
+  ...
+# Subtest: transport rule remains program-specific rather than hard-coded as one universal checklist
+ok 69 - transport rule remains program-specific rather than hard-coded as one universal checklist
+  ---
+  duration_ms: 1.191564
+  type: 'test'
+  ...
+# Subtest: stroke rule does not encode universal thrombolysis
+ok 70 - stroke rule does not encode universal thrombolysis
+  ---
+  duration_ms: 0.216282
+  type: 'test'
+  ...
+# Subtest: CKRT rule avoids universal connection configuration
+ok 71 - CKRT rule avoids universal connection configuration
+  ---
+  duration_ms: 0.20101
+  type: 'test'
+  ...
+# Subtest: abdominal and treatment/transfusion rules remain partial
+ok 72 - abdominal and treatment/transfusion rules remain partial
+  ---
+  duration_ms: 0.168521
+  type: 'test'
+  ...
+# Subtest: canonical status remains hardened preclinical
+ok 73 - canonical status remains hardened preclinical
+  ---
+  duration_ms: 0.656187
+  type: 'test'
+  ...
+# Subtest: canonical authority hierarchy preserves institution first and ELSO default gaps
+ok 74 - canonical authority hierarchy preserves institution first and ELSO default gaps
+  ---
+  duration_ms: 1.411181
+  type: 'test'
+  ...
+# Subtest: auditor accepts explicit negative competency claim
+ok 75 - auditor accepts explicit negative competency claim
+  ---
+  duration_ms: 0.68551
+  type: 'test'
+  ...
+# Subtest: auditor flags unsupported positive certification claim
+ok 76 - auditor flags unsupported positive certification claim
+  ---
+  duration_ms: 0.326015
+  type: 'test'
+  ...
+# Subtest: epinephrine bump is reflected on the monitor immediately (within one short tick)
+ok 77 - epinephrine bump is reflected on the monitor immediately (within one short tick)
+  ---
+  duration_ms: 4.796759
+  type: 'test'
+  ...
+# Subtest: sweep gas increase is invisible on every monitor with no tcCO2 equipped, until an ABG results
+ok 78 - sweep gas increase is invisible on every monitor with no tcCO2 equipped, until an ABG results
+  ---
+  duration_ms: 2.5531
+  type: 'test'
+  ...
+# Subtest: flow is derived from RPM (not directly settable), and is weight-indexed for the readout
+ok 79 - flow is derived from RPM (not directly settable), and is weight-indexed for the readout
+  ---
+  duration_ms: 0.455578
+  type: 'test'
+  ...
+# Subtest: flow shows diminishing returns as RPM rises, bounded by the cannula ceiling
+ok 80 - flow shows diminishing returns as RPM rises, bounded by the cannula ceiling
+  ---
+  duration_ms: 1.031856
+  type: 'test'
+  ...
+# Subtest: a bigger cannula raises the achievable flow ceiling at the same RPM
+ok 81 - a bigger cannula raises the achievable flow ceiling at the same RPM
+  ---
+  duration_ms: 0.361478
+  type: 'test'
+  ...
+# Subtest: the bubble detector alarm stops the pump — flow and all three pressures collapse to zero — and clearing it resumes
+ok 82 - the bubble detector alarm stops the pump — flow and all three pressures collapse to zero — and clearing it resumes
+  ---
+  duration_ms: 0.337462
+  type: 'test'
+  ...
+# Subtest: rhythm has no player-facing set action — only sustained hypoxia or loss of flow can change it
+ok 83 - rhythm has no player-facing set action — only sustained hypoxia or loss of flow can change it
+  ---
+  duration_ms: 0.461917
+  type: 'test'
+  ...
+# Subtest: sustained critical hypoxia escalates rhythm sinus -> junctional -> vtach, with an announcement
+ok 84 - sustained critical hypoxia escalates rhythm sinus -> junctional -> vtach, with an announcement
+  ---
+  duration_ms: 0.450231
+  type: 'test'
+  ...
+# Subtest: loss of circuit flow (bubble alarm) escalates rhythm toward vtach then vfib, and never auto-reverts
+ok 85 - loss of circuit flow (bubble alarm) escalates rhythm toward vtach then vfib, and never auto-reverts
+  ---
+  duration_ms: 1.04164
+  type: 'test'
+  ...
+# Subtest: bivalirudin dose is reflected in DTT only after ordering the lab and waiting turnaround, matching a real calibration point
+ok 86 - bivalirudin dose is reflected in DTT only after ordering the lab and waiting turnaround, matching a real calibration point
+  ---
+  duration_ms: 2.397749
+  type: 'test'
+  ...
+# Subtest: HepPTT, TEG, and ATIII are orderable labs that follow the same order-then-wait rule
+ok 87 - HepPTT, TEG, and ATIII are orderable labs that follow the same order-then-wait rule
+  ---
+  duration_ms: 0.714264
+  type: 'test'
+  ...
+# Subtest: an auto-triggered checkpoint appears when a dTT results, and answering it clears it
+ok 88 - an auto-triggered checkpoint appears when a dTT results, and answering it clears it
+  ---
+  duration_ms: 0.580234
+  type: 'test'
+  ...
+# Subtest: answering a checkpoint does not spawn another one from the same lab result
+ok 89 - answering a checkpoint does not spawn another one from the same lab result
+  ---
+  duration_ms: 0.417492
+  type: 'test'
+  ...
+# Subtest: a checkpoint round-trips through snapshot/restore mid-answer
+ok 90 - a checkpoint round-trips through snapshot/restore mid-answer
+  ---
+  duration_ms: 0.775274
+  type: 'test'
+  ...
+# Subtest: a scenario with transcutaneous CO2 equipped exposes PaCO2 as a real-time surrogate
+ok 91 - a scenario with transcutaneous CO2 equipped exposes PaCO2 as a real-time surrogate
+  ---
+  duration_ms: 0.320768
+  type: 'test'
+  ...
+# Subtest: instructorPresentation exposes a debrief summary built from real session activity, hidden from the learner presentation
+ok 92 - instructorPresentation exposes a debrief summary built from real session activity, hidden from the learner presentation
+  ---
+  duration_ms: 0.71837
+  type: 'test'
+  ...
+# Subtest: a full debrief snapshot/restore round trip preserves the summary exactly
+ok 93 - a full debrief snapshot/restore round trip preserves the summary exactly
+  ---
+  duration_ms: 0.401928
+  type: 'test'
+  ...
+# Subtest: learner presentation exposes availableActions derived from the registry, not a hardcoded list, and it changes with the scenario
+ok 94 - learner presentation exposes availableActions derived from the registry, not a hardcoded list, and it changes with the scenario
+  ---
+  duration_ms: 0.19507
+  type: 'test'
+  ...
+# Subtest: rhythm rescue is reachable end-to-end: escalate to vfib via loss of flow, then defibrillate back to sinus
+ok 95 - rhythm rescue is reachable end-to-end: escalate to vfib via loss of flow, then defibrillate back to sinus
+  ---
+  duration_ms: 0.444381
+  type: 'test'
+  ...
+# Subtest: rescue actions are always offered as buttons, not only after something has already gone wrong
+ok 96 - rescue actions are always offered as buttons, not only after something has already gone wrong
+  ---
+  duration_ms: 0.313237
+  type: 'test'
+  ...
+# Subtest: an inappropriate rescue action (defibrillating a normal sinus rhythm) is scored harmful and leaves the rhythm unchanged
+ok 97 - an inappropriate rescue action (defibrillating a normal sinus rhythm) is scored harmful and leaves the rhythm unchanged
+  ---
+  duration_ms: 0.312885
+  type: 'test'
+  ...
+# Subtest: a rescue conversion recurs on the next tick if the underlying driver was never corrected — not a bug, a real consequence
+ok 98 - a rescue conversion recurs on the next tick if the underlying driver was never corrected — not a bug, a real consequence
+  ---
+  duration_ms: 0.467446
+  type: 'test'
+  ...
+# Subtest: the monitor reflects overall patient condition, not just hypoxia/no-flow: a case that reaches a death trajectory endpoint shows asystole, not sinus
+ok 99 - the monitor reflects overall patient condition, not just hypoxia/no-flow: a case that reaches a death trajectory endpoint shows asystole, not sinus
+  ---
+  duration_ms: 0.319035
+  type: 'test'
+  ...
+# Subtest: a normal flow index with a low MAP is classified as impaired, not adequate — the bug this fix targets
+ok 100 - a normal flow index with a low MAP is classified as impaired, not adequate — the bug this fix targets
+  ---
+  duration_ms: 1.117874
+  type: 'test'
+  ...
+# Subtest: the deficit MAGNITUDE (not just the classification) reflects the worse ratio — a normal flow with low MAP must still produce a nonzero modifier over time
+ok 101 - the deficit MAGNITUDE (not just the classification) reflects the worse ratio — a normal flow with low MAP must still produce a nonzero modifier over time
+  ---
+  duration_ms: 1.196832
+  type: 'test'
+  ...
+# Subtest: a normal MAP with reduced flow still classifies as impaired via the flow pathway (existing behavior preserved)
+ok 102 - a normal MAP with reduced flow still classifies as impaired via the flow pathway (existing behavior preserved)
+  ---
+  duration_ms: 0.179547
+  type: 'test'
+  ...
+# Subtest: both adequate flow and adequate MAP together classify as fully adequate
+ok 103 - both adequate flow and adequate MAP together classify as fully adequate
+  ---
+  duration_ms: 0.138996
+  type: 'test'
+  ...
+# Subtest: omitting map entirely falls back to flow-only classification (backward compatible with any caller that does not pass it)
+ok 104 - omitting map entirely falls back to flow-only classification (backward compatible with any caller that does not pass it)
+  ---
+  duration_ms: 0.130544
+  type: 'test'
+  ...
+# Subtest: DEFAULT_SUPPORT_PROFILE.adequateMapTarget is high enough that this codebase's own "unstable" baseline MAP (35) actually registers a deficit
+ok 105 - DEFAULT_SUPPORT_PROFILE.adequateMapTarget is high enough that this codebase's own "unstable" baseline MAP (35) actually registers a deficit
+  ---
+  duration_ms: 0.109113
+  type: 'test'
+  ...
+# Subtest: clinical event maps an action to a contextual therapeutic outcome
+ok 106 - clinical event maps an action to a contextual therapeutic outcome
+  ---
+  duration_ms: 1.174328
+  type: 'test'
+  ...
+# Subtest: same complication can classify a wrong intervention as harmful
+ok 107 - same complication can classify a wrong intervention as harmful
+  ---
+  duration_ms: 0.746281
+  type: 'test'
+  ...
+# Subtest: sandbox wires existing volume action through clinical event system
+ok 108 - sandbox wires existing volume action through clinical event system
+  ---
+  duration_ms: 3.358278
+  type: 'test'
+  ...
+# Subtest: sandbox classifies increasing RPM contextually and persists event state through snapshot restore
+ok 109 - sandbox classifies increasing RPM contextually and persists event state through snapshot restore
+  ---
+  duration_ms: 1.423348
+  type: 'test'
+  ...
+# Subtest: generic clinical actions default to neutral when no active rule handles them
+ok 110 - generic clinical actions default to neutral when no active rule handles them
+  ---
+  duration_ms: 0.966498
+  type: 'test'
+  ...
+# Subtest: same volume action diverges by hidden cause: therapeutic in hypovolemia, only temporizing in tamponade
+ok 111 - same volume action diverges by hidden cause: therapeutic in hypovolemia, only temporizing in tamponade
+  ---
+  duration_ms: 1.089902
+  type: 'test'
+  ...
+# Subtest: tamponade diagnostic path can progress from assessment to echo confirmation to definitive resolution
+ok 112 - tamponade diagnostic path can progress from assessment to echo confirmation to definitive resolution
+  ---
+  duration_ms: 1.305693
+  type: 'test'
+  ...
+# Subtest: tamponade temporizing benefit expires based on time in state, not time since complication activation
+ok 113 - tamponade temporizing benefit expires based on time in state, not time since complication activation
+  ---
+  duration_ms: 2.612068
+  type: 'test'
+  ...
+# Subtest: tamponade state-entry timer survives snapshot restore
+ok 114 - tamponade state-entry timer survives snapshot restore
+  ---
+  duration_ms: 1.780149
+  type: 'test'
+  ...
+# Subtest: untreated worsened tamponade can progress through critical deterioration to arrest
+ok 115 - untreated worsened tamponade can progress through critical deterioration to arrest
+  ---
+  duration_ms: 1.57239
+  type: 'test'
+  ...
+# Subtest: hidden complication identity is not exposed through trainee presentation, submit outcome, or log
+ok 116 - hidden complication identity is not exposed through trainee presentation, submit outcome, or log
+  ---
+  duration_ms: 1.156081
+  type: 'test'
+  ...
+# Subtest: critical tamponade remains rescuable with emergency definitive treatment
+ok 117 - critical tamponade remains rescuable with emergency definitive treatment
+  ---
+  duration_ms: 0.935823
+  type: 'test'
+  ...
+# Subtest: objective resolves educator concepts into reusable knowledge IDs
+ok 118 - objective resolves educator concepts into reusable knowledge IDs
+  ---
+  duration_ms: 1.254968
+  type: 'test'
+  ...
+# Subtest: educator-generated scenario references knowledge IDs instead of embedding complication behavior
+ok 119 - educator-generated scenario references knowledge IDs instead of embedding complication behavior
+  ---
+  duration_ms: 0.380937
+  type: 'test'
+  ...
+# Subtest: engine resolves registry-backed complication behavior at runtime
+ok 120 - engine resolves registry-backed complication behavior at runtime
+  ---
+  duration_ms: 4.168915
+  type: 'test'
+  ...
+# Subtest: same reusable complication definition can be used by multiple generated scenarios without copying rules
+ok 121 - same reusable complication definition can be used by multiple generated scenarios without copying rules
+  ---
+  duration_ms: 0.236041
+  type: 'test'
+  ...
+# Subtest: low-flow objective now resolves all major differential families to reusable knowledge
+ok 122 - low-flow objective now resolves all major differential families to reusable knowledge
+  ---
+  duration_ms: 0.226317
+  type: 'test'
+  ...
+# Subtest: cannula-malposition concept resolves to reusable positional and mechanical drainage knowledge
+ok 123 - cannula-malposition concept resolves to reusable positional and mechanical drainage knowledge
+  ---
+  duration_ms: 0.138856
+  type: 'test'
+  ...
+# Subtest: resolveLearnerActionButtons returns learner-safe descriptors and excludes ecmo-control category
+ok 124 - resolveLearnerActionButtons returns learner-safe descriptors and excludes ecmo-control category
+  ---
+  duration_ms: 0.249651
+  type: 'test'
+  ...
+# Subtest: resolveLearnerActionButtons skips unknown ids and de-duplicates repeats rather than throwing
+ok 125 - resolveLearnerActionButtons skips unknown ids and de-duplicates repeats rather than throwing
+  ---
+  duration_ms: 0.127129
+  type: 'test'
+  ...
+# Subtest: resolveLearnerActionButtons hides any action whose id names a hidden complication, even with no differential to dilute it
+ok 126 - resolveLearnerActionButtons hides any action whose id names a hidden complication, even with no differential to dilute it
+  ---
+  duration_ms: 0.339776
+  type: 'test'
+  ...
+# Subtest: every one of the 72 actionIds referenced by any complication is registered with a label and category (no dead references)
+ok 127 - every one of the 72 actionIds referenced by any complication is registered with a label and category (no dead references)
+  ---
+  duration_ms: 1.634703
+  type: 'test'
+  ...
+# Subtest: all 36 reusable complication definitions can be instantiated as neutral engine-backed scenarios
+ok 128 - all 36 reusable complication definitions can be instantiated as neutral engine-backed scenarios
+  ---
+  duration_ms: 27.326898
+  type: 'test'
+  ...
+# Subtest: learner module catalog contains neutral labels only
+ok 129 - learner module catalog contains neutral labels only
+  ---
+  duration_ms: 1.203451
+  type: 'test'
+  ...
+# Subtest: minor HR movement is classified as background noise
+ok 130 - minor HR movement is classified as background noise
+  ---
+  duration_ms: 0.602667
+  type: 'test'
+  ...
+# Subtest: large indexed-flow collapse is classified as critical
+ok 131 - large indexed-flow collapse is classified as critical
+  ---
+  duration_ms: 0.13466
+  type: 'test'
+  ...
+# Subtest: aggregate significance promotes the highest clinically meaningful change
+ok 132 - aggregate significance promotes the highest clinically meaningful change
+  ---
+  duration_ms: 0.269341
+  type: 'test'
+  ...
+# Subtest: generic turn requires an explicit position rather than acting as a magic intervention
+ok 133 - generic turn requires an explicit position rather than acting as a magic intervention
+  ---
+  duration_ms: 3.624184
+  type: 'test'
+  ...
+# Subtest: changing position without a configured position-response relationship does not invent physiology
+ok 134 - changing position without a configured position-response relationship does not invent physiology
+  ---
+  duration_ms: 2.155158
+  type: 'test'
+  ...
+# Subtest: institutional protocol always governs when available
+ok 135 - institutional protocol always governs when available
+  ---
+  duration_ms: 0.576277
+  type: 'test'
+  ...
+# Subtest: ELSO is used only as documented fallback when institution source absent
+ok 136 - ELSO is used only as documented fallback when institution source absent
+  ---
+  duration_ms: 0.151565
+  type: 'test'
+  ...
+# Subtest: unsupported rules remain explicitly unvalidated
+ok 137 - unsupported rules remain explicitly unvalidated
+  ---
+  duration_ms: 0.25492
+  type: 'test'
+  ...
+# Subtest: reviewer validated status cannot override absence of an authoritative source
+ok 138 - reviewer validated status cannot override absence of an authoritative source
+  ---
+  duration_ms: 0.954891
+  type: 'test'
+  ...
+# Subtest: position-dependent low-flow case begins with learner-known recent turn context
+ok 139 - position-dependent low-flow case begins with learner-known recent turn context
+  ---
+  duration_ms: 3.142787
+  type: 'test'
+  ...
+# Subtest: severe sustained low flow produces progressive coherent monitor deterioration
+ok 140 - severe sustained low flow produces progressive coherent monitor deterioration
+  ---
+  duration_ms: 4.209195
+  type: 'test'
+  ...
+# Subtest: assessment actions return useful positive or negative findings instead of anonymous no-change
+ok 141 - assessment actions return useful positive or negative findings instead of anonymous no-change
+  ---
+  duration_ms: 2.470216
+  type: 'test'
+  ...
+# Subtest: restoring prior position recovers flow and patient monitor trends toward recovery
+ok 142 - restoring prior position recovers flow and patient monitor trends toward recovery
+  ---
+  duration_ms: 2.434774
+  type: 'test'
+  ...
+# Subtest: cumulative critical deterioration can reach death independent of score
+ok 143 - cumulative critical deterioration can reach death independent of score
+  ---
+  duration_ms: 0.936925
+  type: 'test'
+  ...
+# Subtest: arrest remains rescuable before the configured rescue window expires
+ok 144 - arrest remains rescuable before the configured rescue window expires
+  ---
+  duration_ms: 0.236592
+  type: 'test'
+  ...
+# Subtest: unresolved arrest beyond rescue window reaches death
+ok 145 - unresolved arrest beyond rescue window reaches death
+  ---
+  duration_ms: 0.177144
+  type: 'test'
+  ...
+# Subtest: catastrophic terminal signal can end immediately while ordinary critical state does not
+ok 146 - catastrophic terminal signal can end immediately while ordinary critical state does not
+  ---
+  duration_ms: 0.243953
+  type: 'test'
+  ...
+# Subtest: engine requires sustained stability after resolving a complication before completing
+ok 147 - engine requires sustained stability after resolving a complication before completing
+  ---
+  duration_ms: 6.622817
+  type: 'test'
+  ...
+# Subtest: instructor can terminate without classifying the patient as dead or stabilized
+ok 148 - instructor can terminate without classifying the patient as dead or stabilized
+  ---
+  duration_ms: 0.679752
+  type: 'test'
+  ...
+# Subtest: manifest covers every current rule and starts preclinical
+ok 149 - manifest covers every current rule and starts preclinical
+  ---
+  duration_ms: 2.1504
+  type: 'test'
+  ...
+# Subtest: progress reports source assignment separately from clinical validation
+ok 150 - progress reports source assignment separately from clinical validation
+  ---
+  duration_ms: 0.312725
+  type: 'test'
+  ...
+# Subtest: promotion requires every validation gate
+ok 151 - promotion requires every validation gate
+  ---
+  duration_ms: 0.208631
+  type: 'test'
+  ...
+# Subtest: every complication NOT on the known-inert allowlist shows real, ongoing monitor change if left untreated (currently 1 of 36 are still on that list)
+ok 152 - every complication NOT on the known-inert allowlist shows real, ongoing monitor change if left untreated (currently 1 of 36 are still on that list)
+  ---
+  duration_ms: 42.881365
+  type: 'test'
+  ...
+# Subtest: the known-inert allowlist only shrinks or stays the same across commits, never grows silently
+ok 153 - the known-inert allowlist only shrinks or stays the same across commits, never grows silently
+  ---
+  duration_ms: 0.157815
+  type: 'test'
+  ...
+# Subtest: every complication with an arrest:true trajectory state actually forces rhythm to vfib the moment arrest becomes true
+ok 154 - every complication with an arrest:true trajectory state actually forces rhythm to vfib the moment arrest becomes true
+  ---
+  duration_ms: 15.585107
+  type: 'test'
+  ...
+# Subtest: bubble detector is present and continuously exposed in every cockpit
+ok 155 - bubble detector is present and continuously exposed in every cockpit
+  ---
+  duration_ms: 6.947141
+  type: 'test'
+  ...
+# Subtest: bubble alarm activates circuit safety interlock and collapses measured flow
+ok 156 - bubble alarm activates circuit safety interlock and collapses measured flow
+  ---
+  duration_ms: 2.29148
+  type: 'test'
+  ...
+# Subtest: standalone visibly renders bubble detector status and location
+ok 157 - standalone visibly renders bubble detector status and location
+  ---
+  duration_ms: 1.542747
+  type: 'test'
+  ...
+# Subtest: bubble detector lives on return limb downstream of final pigtail
+ok 158 - bubble detector lives on return limb downstream of final pigtail
+  ---
+  duration_ms: 7.152526
+  type: 'test'
+  ...
+# Subtest: air only trips detector/interlock when it reaches detector state
+ok 159 - air only trips detector/interlock when it reaches detector state
+  ---
+  duration_ms: 2.832716
+  type: 'test'
+  ...
+# Subtest: clearing detector state restores detector clear status
+ok 160 - clearing detector state restores detector clear status
+  ---
+  duration_ms: 1.296189
+  type: 'test'
+  ...
+# Subtest: bubble alarm can be reset but residual air remains hazardous
+ok 161 - bubble alarm can be reset but residual air remains hazardous
+  ---
+  duration_ms: 6.96769
+  type: 'test'
+  ...
+# Subtest: restoring RPM after reset retrips detector if air was not explicitly cleared
+ok 162 - restoring RPM after reset retrips detector if air was not explicitly cleared
+  ---
+  duration_ms: 2.225483
+  type: 'test'
+  ...
+# Subtest: explicit de-airing prevents retrip when flow is restored
+ok 163 - explicit de-airing prevents retrip when flow is restored
+  ---
+  duration_ms: 1.022452
+  type: 'test'
+  ...
+# Subtest: lf-01-preload inherits universal ECMO cockpit contract
+ok 164 - lf-01-preload inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 5.130847
+  type: 'test'
+  ...
+# Subtest: lf-02-tamponade inherits universal ECMO cockpit contract
+ok 165 - lf-02-tamponade inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.793561
+  type: 'test'
+  ...
+# Subtest: lf-03-position inherits universal ECMO cockpit contract
+ok 166 - lf-03-position inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.839299
+  type: 'test'
+  ...
+# Subtest: lf-04-kink inherits universal ECMO cockpit contract
+ok 167 - lf-04-kink inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.807422
+  type: 'test'
+  ...
+# Subtest: lf-05-circuit-obstruction inherits universal ECMO cockpit contract
+ok 168 - lf-05-circuit-obstruction inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.857877
+  type: 'test'
+  ...
+# Subtest: lf-06-pump-failure inherits universal ECMO cockpit contract
+ok 169 - lf-06-pump-failure inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 1.345884
+  type: 'test'
+  ...
+# Subtest: ce-01-air-emergency inherits universal ECMO cockpit contract
+ok 170 - ce-01-air-emergency inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.820692
+  type: 'test'
+  ...
+# Subtest: ce-02-circuit-breach inherits universal ECMO cockpit contract
+ok 171 - ce-02-circuit-breach inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 1.099617
+  type: 'test'
+  ...
+# Subtest: ce-03-oxygenator inherits universal ECMO cockpit contract
+ok 172 - ce-03-oxygenator inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 1.019587
+  type: 'test'
+  ...
+# Subtest: ce-04-sweep-gas inherits universal ECMO cockpit contract
+ok 173 - ce-04-sweep-gas inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.809825
+  type: 'test'
+  ...
+# Subtest: ce-05-hemolysis inherits universal ECMO cockpit contract
+ok 174 - ce-05-hemolysis inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.54418
+  type: 'test'
+  ...
+# Subtest: ce-06-major-bleeding inherits universal ECMO cockpit contract
+ok 175 - ce-06-major-bleeding inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.596978
+  type: 'test'
+  ...
+# Subtest: va-01-differential-hypoxemia inherits universal ECMO cockpit contract
+ok 176 - va-01-differential-hypoxemia inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.620824
+  type: 'test'
+  ...
+# Subtest: va-02-lv-distension inherits universal ECMO cockpit contract
+ok 177 - va-02-lv-distension inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.394557
+  type: 'test'
+  ...
+# Subtest: va-03-limb-ischemia inherits universal ECMO cockpit contract
+ok 178 - va-03-limb-ischemia inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.421447
+  type: 'test'
+  ...
+# Subtest: va-04-thrombosis inherits universal ECMO cockpit contract
+ok 179 - va-04-thrombosis inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.451191
+  type: 'test'
+  ...
+# Subtest: vv-01-recirculation inherits universal ECMO cockpit contract
+ok 180 - vv-01-recirculation inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.614855
+  type: 'test'
+  ...
+# Subtest: vv-02-oxygenator inherits universal ECMO cockpit contract
+ok 181 - vv-02-oxygenator inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.891547
+  type: 'test'
+  ...
+# Subtest: vv-03-gas-exchange inherits universal ECMO cockpit contract
+ok 182 - vv-03-gas-exchange inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.363351
+  type: 'test'
+  ...
+# Subtest: vv-04-pneumothorax inherits universal ECMO cockpit contract
+ok 183 - vv-04-pneumothorax inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.487606
+  type: 'test'
+  ...
+# Subtest: vv-04-airway inherits universal ECMO cockpit contract
+ok 184 - vv-04-airway inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.345735
+  type: 'test'
+  ...
+# Subtest: pe-01-arrhythmia-arrest inherits universal ECMO cockpit contract
+ok 185 - pe-01-arrhythmia-arrest inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.528266
+  type: 'test'
+  ...
+# Subtest: pe-02-ich inherits universal ECMO cockpit contract
+ok 186 - pe-02-ich inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.398032
+  type: 'test'
+  ...
+# Subtest: pe-03-vasoplegia inherits universal ECMO cockpit contract
+ok 187 - pe-03-vasoplegia inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.494226
+  type: 'test'
+  ...
+# Subtest: pe-03-sepsis inherits universal ECMO cockpit contract
+ok 188 - pe-03-sepsis inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.394206
+  type: 'test'
+  ...
+# Subtest: pe-04-aki-fluid inherits universal ECMO cockpit contract
+ok 189 - pe-04-aki-fluid inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.354368
+  type: 'test'
+  ...
+# Subtest: pe-05-metabolic inherits universal ECMO cockpit contract
+ok 190 - pe-05-metabolic inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.345054
+  type: 'test'
+  ...
+# Subtest: pe-06-ph-crisis inherits universal ECMO cockpit contract
+ok 191 - pe-06-ph-crisis inherits universal ECMO cockpit contract
+  ---
+  duration_ms: 0.393786
+  type: 'test'
+  ...
+# Subtest: every scenario exposes always-on ECMO cockpit monitoring and controls independent of diagnosis
+ok 192 - every scenario exposes always-on ECMO cockpit monitoring and controls independent of diagnosis
+  ---
+  duration_ms: 5.27406
+  type: 'test'
+  ...
+# Subtest: neonatal cockpit exposes pre/post ductal SpO2 and shunt flow when configured
+ok 193 - neonatal cockpit exposes pre/post ductal SpO2 and shunt flow when configured
+  ---
+  duration_ms: 0.884236
+  type: 'test'
+  ...
+# Subtest: flow target can be changed immediately even when not the correct clinical action
+ok 194 - flow target can be changed immediately even when not the correct clinical action
+  ---
+  duration_ms: 2.087197
+  type: 'test'
+  ...
+# Subtest: sweep and FdO2 remain immediately adjustable in every scenario
+ok 195 - sweep and FdO2 remain immediately adjustable in every scenario
+  ---
+  duration_ms: 1.090163
+  type: 'test'
+  ...
+# Subtest: circuit clamp is always available and interrupts measured circuit flow immediately
+ok 196 - circuit clamp is always available and interrupts measured circuit flow immediately
+  ---
+  duration_ms: 1.438181
+  type: 'test'
+  ...
+# Subtest: continuous cockpit values refresh every simulation tick
+ok 197 - continuous cockpit values refresh every simulation tick
+  ---
+  duration_ms: 9.697023
+  type: 'test'
+  ...
+# Subtest: RPM, sweep and FdO2 changes are immediate and not scenario-gated
+ok 198 - RPM, sweep and FdO2 changes are immediate and not scenario-gated
+  ---
+  duration_ms: 4.146051
+  type: 'test'
+  ...
+# Subtest: clamp always acts immediately and independently of hidden diagnosis
+ok 199 - clamp always acts immediately and independently of hidden diagnosis
+  ---
+  duration_ms: 2.330038
+  type: 'test'
+  ...
+# Subtest: flow target control remains available even when clinically harmful or ineffective
+ok 200 - flow target control remains available even when clinically harmful or ineffective
+  ---
+  duration_ms: 1.912376
+  type: 'test'
+  ...
+# Subtest: standalone exposes continuous core ECMO monitors
+ok 201 - standalone exposes continuous core ECMO monitors
+  ---
+  duration_ms: 0.754924
+  type: 'test'
+  ...
+# Subtest: standalone exposes always-available ECMO controls
+ok 202 - standalone exposes always-available ECMO controls
+  ---
+  duration_ms: 0.689566
+  type: 'test'
+  ...
+# Subtest: standalone labels pre/post oxygenation explicitly as ductal
+ok 203 - standalone labels pre/post oxygenation explicitly as ductal
+  ---
+  duration_ms: 0.101721
+  type: 'test'
+  ...
+# Subtest: record() assigns a canonical id/sequence/category without dropping the caller's original fields
+ok 204 - record() assigns a canonical id/sequence/category without dropping the caller's original fields
+  ---
+  duration_ms: 1.568785
+  type: 'test'
+  ...
+# Subtest: unmapped kinds fall back to category "other" rather than throwing
+ok 205 - unmapped kinds fall back to category "other" rather than throwing
+  ---
+  duration_ms: 0.164835
+  type: 'test'
+  ...
+# Subtest: outcomeClass is inferred from either an "outcome" or "outcomeClass" field, and left null otherwise
+ok 206 - outcomeClass is inferred from either an "outcome" or "outcomeClass" field, and left null otherwise
+  ---
+  duration_ms: 0.158936
+  type: 'test'
+  ...
+# Subtest: instructorTimeline returns everything; learnerTimeline hides diagnostic kinds and strips forbidden fields
+ok 207 - instructorTimeline returns everything; learnerTimeline hides diagnostic kinds and strips forbidden fields
+  ---
+  duration_ms: 0.38995
+  type: 'test'
+  ...
+# Subtest: learnerTimeline(limit) applies the limit before sanitizing, matching prior circuit-sandbox behavior
+ok 208 - learnerTimeline(limit) applies the limit before sanitizing, matching prior circuit-sandbox behavior
+  ---
+  duration_ms: 0.256542
+  type: 'test'
+  ...
+# Subtest: summary() totals score, counts outcome classes, and tracks one row per complication encountered
+ok 209 - summary() totals score, counts outcome classes, and tracks one row per complication encountered
+  ---
+  duration_ms: 0.788153
+  type: 'test'
+  ...
+# Subtest: snapshot/restore round-trips the full entry history and continues numbering sequence correctly
+ok 210 - snapshot/restore round-trips the full entry history and continues numbering sequence correctly
+  ---
+  duration_ms: 0.148431
+  type: 'test'
+  ...
+# Subtest: institutional gaps default to ELSO governance in registry
+ok 211 - institutional gaps default to ELSO governance in registry
+  ---
+  duration_ms: 0.716747
+  type: 'test'
+  ...
+# Subtest: ELSO governance assignment does not falsely mark numeric rules clinically validated
+ok 212 - ELSO governance assignment does not falsely mark numeric rules clinically validated
+  ---
+  duration_ms: 0.14112
+  type: 'test'
+  ...
+# Subtest: generic emergent eligibility can require sustained learner-created conditions
+ok 213 - generic emergent eligibility can require sustained learner-created conditions
+  ---
+  duration_ms: 0.950154
+  type: 'test'
+  ...
+# Subtest: breaking a sustained condition resets its eligibility timer
+ok 214 - breaking a sustained condition resets its eligibility timer
+  ---
+  duration_ms: 0.539032
+  type: 'test'
+  ...
+# Subtest: learner action history can make an initially unplanned complication eligible and director-controlled
+ok 215 - learner action history can make an initially unplanned complication eligible and director-controlled
+  ---
+  duration_ms: 7.341217
+  type: 'test'
+  ...
+# Subtest: baseline snapshots all 33 clinical rules before evidence-driven tuning
+ok 216 - baseline snapshots all 33 clinical rules before evidence-driven tuning
+  ---
+  duration_ms: 0.574576
+  type: 'test'
+  ...
+# Subtest: source ingestion rejects untraceable or incomplete evidence
+ok 217 - source ingestion rejects untraceable or incomplete evidence
+  ---
+  duration_ms: 0.212717
+  type: 'test'
+  ...
+# Subtest: institution evidence outranks ELSO when both apply
+ok 218 - institution evidence outranks ELSO when both apply
+  ---
+  duration_ms: 0.12799
+  type: 'test'
+  ...
+# Subtest: numeric comparison never compares absent source values
+ok 219 - numeric comparison never compares absent source values
+  ---
+  duration_ms: 0.180158
+  type: 'test'
+  ...
+# Subtest: numeric comparison identifies exact alignment and revision
+ok 220 - numeric comparison identifies exact alignment and revision
+  ---
+  duration_ms: 0.118516
+  type: 'test'
+  ...
+# Subtest: classification comparison is evidence gated
+ok 221 - classification comparison is evidence gated
+  ---
+  duration_ms: 0.113439
+  type: 'test'
+  ...
+# Subtest: exact comparison queue covers all 33 clinical rules
+ok 222 - exact comparison queue covers all 33 clinical rules
+  ---
+  duration_ms: 1.573071
+  type: 'test'
+  ...
+# Subtest: no rule enters exact-comparison phase pre-authorized for clinical changes
+ok 223 - no rule enters exact-comparison phase pre-authorized for clinical changes
+  ---
+  duration_ms: 0.145256
+  type: 'test'
+  ...
+# Subtest: B1 dossiers never contain unsupported source statements or unauthorized changes
+ok 224 - B1 dossiers never contain unsupported source statements or unauthorized changes
+  ---
+  duration_ms: 0.137915
+  type: 'test'
+  ...
+# Subtest: clinical change authorization requires reviewed traceable evidence plus approval
+ok 225 - clinical change authorization requires reviewed traceable evidence plus approval
+  ---
+  duration_ms: 0.18125
+  type: 'test'
+  ...
+# Subtest: evidence hash is stable
+ok 226 - evidence hash is stable
+  ---
+  duration_ms: 0.180058
+  type: 'test'
+  ...
+# Subtest: all 36 normalized taxonomy modules map to one or more registry complication implementations
+ok 227 - all 36 normalized taxonomy modules map to one or more registry complication implementations
+  ---
+  duration_ms: 1.572731
+  type: 'test'
+  ...
+# Subtest: VA-only modules reject VV compilation and VV recirculation rejects VA compilation
+ok 228 - VA-only modules reject VV compilation and VV recirculation rejects VA compilation
+  ---
+  duration_ms: 0.566453
+  type: 'test'
+  ...
+# Subtest: new complication definitions are reusable knowledge, hidden from learner by default, and carry placeholder timing status
+ok 229 - new complication definitions are reusable knowledge, hidden from learner by default, and carry placeholder timing status
+  ---
+  duration_ms: 0.327427
+  type: 'test'
+  ...
+# Subtest: G1.1 reference neonatal VA cockpit has complete bedside baseline
+ok 230 - G1.1 reference neonatal VA cockpit has complete bedside baseline
+  ---
+  duration_ms: 4.869929
+  type: 'test'
+  ...
+# Subtest: G1.2 RPM is freely adjustable and measured flow responds
+ok 231 - G1.2 RPM is freely adjustable and measured flow responds
+  ---
+  duration_ms: 2.121718
+  type: 'test'
+  ...
+# Subtest: G1.3 aggressive RPM increase in low preload is allowed rather than blocked
+ok 232 - G1.3 aggressive RPM increase in low preload is allowed rather than blocked
+  ---
+  duration_ms: 1.103773
+  type: 'test'
+  ...
+# Subtest: G1.4 sweep and FdO2 are independently and immediately adjustable
+ok 233 - G1.4 sweep and FdO2 are independently and immediately adjustable
+  ---
+  duration_ms: 0.9408
+  type: 'test'
+  ...
+# Subtest: G1.5 clamp is always available and immediately removes extracorporeal flow
+ok 234 - G1.5 clamp is always available and immediately removes extracorporeal flow
+  ---
+  duration_ms: 1.266075
+  type: 'test'
+  ...
+# Subtest: G1.6 flow target is available as a pump-mediated control
+ok 235 - G1.6 flow target is available as a pump-mediated control
+  ---
+  duration_ms: 1.755393
+  type: 'test'
+  ...
+# Subtest: G1.7 bubble detector reset does not equal de-airing and residual air retrips
+ok 236 - G1.7 bubble detector reset does not equal de-airing and residual air retrips
+  ---
+  duration_ms: 0.988752
+  type: 'test'
+  ...
+# Subtest: G1.8 explicit de-airing permits successful restart without retrip
+ok 237 - G1.8 explicit de-airing permits successful restart without retrip
+  ---
+  duration_ms: 0.855813
+  type: 'test'
+  ...
+# Subtest: G1.9 cockpit remains live after repeated arbitrary control manipulation
+ok 238 - G1.9 cockpit remains live after repeated arbitrary control manipulation
+  ---
+  duration_ms: 2.498739
+  type: 'test'
+  ...
+# Subtest: lf-01-preload integrated bench: prebrief -> live -> actionable
+ok 239 - lf-01-preload integrated bench: prebrief -> live -> actionable
+  ---
+  duration_ms: 6.512788
+  type: 'test'
+  ...
+# Subtest: ce-01-air-emergency integrated bench: prebrief -> live -> actionable
+ok 240 - ce-01-air-emergency integrated bench: prebrief -> live -> actionable
+  ---
+  duration_ms: 2.4726
+  type: 'test'
+  ...
+# Subtest: ce-03-oxygenator integrated bench: prebrief -> live -> actionable
+ok 241 - ce-03-oxygenator integrated bench: prebrief -> live -> actionable
+  ---
+  duration_ms: 1.479061
+  type: 'test'
+  ...
+# Subtest: va-01-differential-hypoxemia integrated bench: prebrief -> live -> actionable
+ok 242 - va-01-differential-hypoxemia integrated bench: prebrief -> live -> actionable
+  ---
+  duration_ms: 1.258363
+  type: 'test'
+  ...
+# Subtest: va-02-lv-distension integrated bench: prebrief -> live -> actionable
+ok 243 - va-02-lv-distension integrated bench: prebrief -> live -> actionable
+  ---
+  duration_ms: 1.735333
+  type: 'test'
+  ...
+# Subtest: vv-01-recirculation integrated bench: prebrief -> live -> actionable
+ok 244 - vv-01-recirculation integrated bench: prebrief -> live -> actionable
+  ---
+  duration_ms: 0.938888
+  type: 'test'
+  ...
+# Subtest: vv-04-airway integrated bench: prebrief -> live -> actionable
+ok 245 - vv-04-airway integrated bench: prebrief -> live -> actionable
+  ---
+  duration_ms: 1.157142
+  type: 'test'
+  ...
+# Subtest: pe-01-arrhythmia-arrest integrated bench: prebrief -> live -> actionable
+ok 246 - pe-01-arrhythmia-arrest integrated bench: prebrief -> live -> actionable
+  ---
+  duration_ms: 0.955622
+  type: 'test'
+  ...
+# Subtest: pe-03-sepsis integrated bench: prebrief -> live -> actionable
+ok 247 - pe-03-sepsis integrated bench: prebrief -> live -> actionable
+  ---
+  duration_ms: 1.239956
+  type: 'test'
+  ...
+# Subtest: pe-04-aki-fluid integrated bench: prebrief -> live -> actionable
+ok 248 - pe-04-aki-fluid integrated bench: prebrief -> live -> actionable
+  ---
+  duration_ms: 1.02155
+  type: 'test'
+  ...
+# Subtest: oxygenator rescue remains cause-directed and resolves event
+ok 249 - oxygenator rescue remains cause-directed and resolves event
+  ---
+  duration_ms: 2.838104
+  type: 'test'
+  ...
+# Subtest: VV recirculation does not resolve with blind RPM increase but does with cause correction
+ok 250 - VV recirculation does not resolve with blind RPM increase but does with cause correction
+  ---
+  duration_ms: 1.173887
+  type: 'test'
+  ...
+# Subtest: VA LV distension penalizes indiscriminate volume and resolves with unloading
+ok 251 - VA LV distension penalizes indiscriminate volume and resolves with unloading
+  ---
+  duration_ms: 0.862664
+  type: 'test'
+  ...
+# Subtest: patient sepsis requires treatment rather than cultures alone
+ok 252 - patient sepsis requires treatment rather than cultures alone
+  ---
+  duration_ms: 2.248287
+  type: 'test'
+  ...
+# Subtest: learner presentation does not expose educator objective, hidden complication, score, or event state
+ok 253 - learner presentation does not expose educator objective, hidden complication, score, or event state
+  ---
+  duration_ms: 5.084588
+  type: 'test'
+  ...
+# Subtest: live learner action response contains observable consequence but not grading classification or rationale
+ok 254 - live learner action response contains observable consequence but not grading classification or rationale
+  ---
+  duration_ms: 2.268316
+  type: 'test'
+  ...
+# Subtest: internal trigger and grading metadata remains available to instructor/debrief view
+ok 255 - internal trigger and grading metadata remains available to instructor/debrief view
+  ---
+  duration_ms: 1.076142
+  type: 'test'
+  ...
+# Subtest: every one of the six cases produces a real, non-flat consequence if left completely untreated for 10 minutes
+ok 256 - every one of the six cases produces a real, non-flat consequence if left completely untreated for 10 minutes
+  ---
+  duration_ms: 13.899048
+  type: 'test'
+  ...
+# Subtest: no case is diagnosis-flat: an untreated case does not just sit at its starting severity forever without at least trending toward instability
+ok 257 - no case is diagnosis-flat: an untreated case does not just sit at its starting severity forever without at least trending toward instability
+  ---
+  duration_ms: 4.229856
+  type: 'test'
+  ...
+# Subtest: assessment/inspection actions return specific, non-anonymous findings, never the bare "no meaningful clinical change" message
+ok 258 - assessment/inspection actions return specific, non-anonymous findings, never the bare "no meaningful clinical change" message
+  ---
+  duration_ms: 3.572317
+  type: 'test'
+  ...
+# Subtest: the correct definitive treatment for every case produces a real, measurable hemodynamic improvement
+ok 259 - the correct definitive treatment for every case produces a real, measurable hemodynamic improvement
+  ---
+  duration_ms: 6.41633
+  type: 'test'
+  ...
+# Subtest: no case ever leaks its own hidden complication id into the learner-facing presentation, at any point in a full run
+ok 260 - no case ever leaks its own hidden complication id into the learner-facing presentation, at any point in a full run
+  ---
+  duration_ms: 8.265377
+  type: 'test'
+  ...
+# Subtest: untreated hypovolemia and tamponade now reach a death endpoint (previously they never did, at any duration)
+ok 261 - untreated hypovolemia and tamponade now reach a death endpoint (previously they never did, at any duration)
+  ---
+  duration_ms: 1.537238
+  type: 'test'
+  ...
+# Subtest: correct, timely treatment still fully prevents death for hypovolemia and tamponade (no regression from the deterioration-pathway fix)
+ok 262 - correct, timely treatment still fully prevents death for hypovolemia and tamponade (no regression from the deterioration-pathway fix)
+  ---
+  duration_ms: 2.090461
+  type: 'test'
+  ...
+# Subtest: recognizing tamponade without treating it (assess + echo, but never decompress) still deteriorates — recognition alone does not cure anything
+ok 263 - recognizing tamponade without treating it (assess + echo, but never decompress) still deteriorates — recognition alone does not cure anything
+  ---
+  duration_ms: 1.804886
+  type: 'test'
+  ...
+# Subtest: SUMMARY — bench acceptance findings as of this run (see file comments for detail)
+ok 264 - SUMMARY — bench acceptance findings as of this run (see file comments for detail)
+  ---
+  duration_ms: 0.267167
+  type: 'test'
+  ...
+# Subtest: drainage cannula kink enters as major low-flow state and direct correction restores support
+ok 265 - drainage cannula kink enters as major low-flow state and direct correction restores support
+  ---
+  duration_ms: 6.500416
+  type: 'test'
+  ...
+# Subtest: mechanical circuit obstruction remains low despite RPM escalation and improves when corrected
+ok 266 - mechanical circuit obstruction remains low despite RPM escalation and improves when corrected
+  ---
+  duration_ms: 2.647901
+  type: 'test'
+  ...
+# Subtest: pump support failure produces loss of flow and requires pump-restoration pathway
+ok 267 - pump support failure produces loss of flow and requires pump-restoration pathway
+  ---
+  duration_ms: 1.833289
+  type: 'test'
+  ...
+# Subtest: low-flow modules remain registry knowledge rather than embedded scenario behavior
+ok 268 - low-flow modules remain registry knowledge rather than embedded scenario behavior
+  ---
+  duration_ms: 0.679641
+  type: 'test'
+  ...
+# Subtest: validation catalog covers every supported educator template
+ok 269 - validation catalog covers every supported educator template
+  ---
+  duration_ms: 1.077544
+  type: 'test'
+  ...
+# Subtest: preclinical templates are never falsely labeled competency ready
+ok 270 - preclinical templates are never falsely labeled competency ready
+  ---
+  duration_ms: 0.16781
+  type: 'test'
+  ...
+# Subtest: competency readiness requires all four validation gates
+ok 271 - competency readiness requires all four validation gates
+  ---
+  duration_ms: 0.179086
+  type: 'test'
+  ...
+# Subtest: clinical review checklist explicitly covers physiology, actions, endpoints, versioning
+ok 272 - clinical review checklist explicitly covers physiology, actions, endpoints, versioning
+  ---
+  duration_ms: 0.265615
+  type: 'test'
+  ...
+# Subtest: M11 shell connects educator, learner, and admin/content-governance surfaces
+ok 273 - M11 shell connects educator, learner, and admin/content-governance surfaces
+  ---
+  duration_ms: 0.873259
+  type: 'test'
+  ...
+# Subtest: admin shell clearly prevents false competency-ready claims
+ok 274 - admin shell clearly prevents false competency-ready claims
+  ---
+  duration_ms: 0.569859
+  type: 'test'
+  ...
+# Subtest: M12 required milestone freeze artifacts exist
+ok 275 - M12 required milestone freeze artifacts exist
+  ---
+  duration_ms: 0.760042
+  type: 'test'
+  ...
+# Subtest: current standalone V1 shell exists
+ok 276 - current standalone V1 shell exists
+  ---
+  duration_ms: 0.203943
+  type: 'test'
+  ...
+# Subtest: feature freeze does not misrepresent clinical validation
+ok 277 - feature freeze does not misrepresent clinical validation
+  ---
+  duration_ms: 2.047588
+  type: 'test'
+  ...
+# Subtest: M2: all six low-flow cases expose diagnosis-neutral handoff and learner objectives before start
+ok 278 - M2: all six low-flow cases expose diagnosis-neutral handoff and learner objectives before start
+  ---
+  duration_ms: 7.681694
+  type: 'test'
+  ...
+# Subtest: M2: lifecycle transitions prebrief -> active -> explicit failure and unlocks debrief only after completion
+ok 279 - M2: lifecycle transitions prebrief -> active -> explicit failure and unlocks debrief only after completion
+  ---
+  duration_ms: 6.3025
+  type: 'test'
+  ...
+# Subtest: M2: successful treatment reaches an explicit stabilized endpoint and produces a learner debrief
+ok 280 - M2: successful treatment reaches an explicit stabilized endpoint and produces a learner debrief
+  ---
+  duration_ms: 4.829237
+  type: 'test'
+  ...
+# Subtest: M2 acceptance: every low-flow case has a reachable clinically coherent success endpoint on the intended pathway
+ok 281 - M2 acceptance: every low-flow case has a reachable clinically coherent success endpoint on the intended pathway
+  ---
+  duration_ms: 11.682768
+  type: 'test'
+  ...
+# Subtest: M2 acceptance: restoring pump support after VF does not falsely declare stabilization until the malignant rhythm is treated
+ok 282 - M2 acceptance: restoring pump support after VF does not falsely declare stabilization until the malignant rhythm is treated
+  ---
+  duration_ms: 2.511689
+  type: 'test'
+  ...
+# Subtest: M3 circuit emergency pack defines the six locked V1 case families
+ok 283 - M3 circuit emergency pack defines the six locked V1 case families
+  ---
+  duration_ms: 1.029852
+  type: 'test'
+  ...
+# Subtest: all six M3 presets instantiate diagnosis-neutral engine-backed scenarios
+ok 284 - all six M3 presets instantiate diagnosis-neutral engine-backed scenarios
+  ---
+  duration_ms: 7.597929
+  type: 'test'
+  ...
+# Subtest: oxygenator failure proving case exposes assessment then definitive exchange path without diagnosis leakage
+ok 285 - oxygenator failure proving case exposes assessment then definitive exchange path without diagnosis leakage
+  ---
+  duration_ms: 2.536495
+  type: 'test'
+  ...
+# Subtest: standalone v2.3 exposes circuit emergency scenario library and CE-03 actions
+ok 286 - standalone v2.3 exposes circuit emergency scenario library and CE-03 actions
+  ---
+  duration_ms: 1.244723
+  type: 'test'
+  ...
+# Subtest: oxygenator vertical slice shows discriminating pressure/gas evidence and progressive worsening
+ok 287 - oxygenator vertical slice shows discriminating pressure/gas evidence and progressive worsening
+  ---
+  duration_ms: 7.671558
+  type: 'test'
+  ...
+# Subtest: increasing sweep is temporizing only; exchange normalizes resistance and resolves event
+ok 288 - increasing sweep is temporizing only; exchange normalizes resistance and resolves event
+  ---
+  duration_ms: 2.215147
+  type: 'test'
+  ...
+# Subtest: ce-01-air-emergency has a learner-neutral evidence-to-definitive-management resolution path
+ok 289 - ce-01-air-emergency has a learner-neutral evidence-to-definitive-management resolution path
+  ---
+  duration_ms: 5.751891
+  type: 'test'
+  ...
+# Subtest: ce-02-circuit-breach has a learner-neutral evidence-to-definitive-management resolution path
+ok 290 - ce-02-circuit-breach has a learner-neutral evidence-to-definitive-management resolution path
+  ---
+  duration_ms: 1.40421
+  type: 'test'
+  ...
+# Subtest: ce-04-sweep-gas has a learner-neutral evidence-to-definitive-management resolution path
+ok 291 - ce-04-sweep-gas has a learner-neutral evidence-to-definitive-management resolution path
+  ---
+  duration_ms: 1.002312
+  type: 'test'
+  ...
+# Subtest: ce-05-hemolysis has a learner-neutral evidence-to-definitive-management resolution path
+ok 292 - ce-05-hemolysis has a learner-neutral evidence-to-definitive-management resolution path
+  ---
+  duration_ms: 1.289259
+  type: 'test'
+  ...
+# Subtest: ce-06-major-bleeding has a learner-neutral evidence-to-definitive-management resolution path
+ok 293 - ce-06-major-bleeding has a learner-neutral evidence-to-definitive-management resolution path
+  ---
+  duration_ms: 2.398916
+  type: 'test'
+  ...
+# Subtest: air emergency worsens rapidly if untreated
+ok 294 - air emergency worsens rapidly if untreated
+  ---
+  duration_ms: 2.719808
+  type: 'test'
+  ...
+# Subtest: sweep gas failure worsens hypercarbia if untreated
+ok 295 - sweep gas failure worsens hypercarbia if untreated
+  ---
+  duration_ms: 1.188108
+  type: 'test'
+  ...
+# Subtest: major bleeding permits anticoagulation reassessment after initial hemorrhage control
+ok 296 - major bleeding permits anticoagulation reassessment after initial hemorrhage control
+  ---
+  duration_ms: 1.257151
+  type: 'test'
+  ...
+# Subtest: va-01-differential-hypoxemia passes M4 completion gate
+ok 297 - va-01-differential-hypoxemia passes M4 completion gate
+  ---
+  duration_ms: 12.297974
+  type: 'test'
+  ...
+# Subtest: va-02-lv-distension passes M4 completion gate
+ok 298 - va-02-lv-distension passes M4 completion gate
+  ---
+  duration_ms: 2.27131
+  type: 'test'
+  ...
+# Subtest: va-03-limb-ischemia passes M4 completion gate
+ok 299 - va-03-limb-ischemia passes M4 completion gate
+  ---
+  duration_ms: 1.975601
+  type: 'test'
+  ...
+# Subtest: va-04-thrombosis passes M4 completion gate
+ok 300 - va-04-thrombosis passes M4 completion gate
+  ---
+  duration_ms: 3.459725
+  type: 'test'
+  ...
+# Subtest: standalone v2.6 contains all four M4 VA actions and current evidence engine
+ok 301 - standalone v2.6 contains all four M4 VA actions and current evidence engine
+  ---
+  duration_ms: 1.507273
+  type: 'test'
+  ...
+# Subtest: M4 locks four VA case families
+ok 302 - M4 locks four VA case families
+  ---
+  duration_ms: 0.572121
+  type: 'test'
+  ...
+# Subtest: va-01-differential-hypoxemia builds learner-neutral VA scenario
+ok 303 - va-01-differential-hypoxemia builds learner-neutral VA scenario
+  ---
+  duration_ms: 5.468409
+  type: 'test'
+  ...
+# Subtest: va-02-lv-distension builds learner-neutral VA scenario
+ok 304 - va-02-lv-distension builds learner-neutral VA scenario
+  ---
+  duration_ms: 0.910755
+  type: 'test'
+  ...
+# Subtest: va-03-limb-ischemia builds learner-neutral VA scenario
+ok 305 - va-03-limb-ischemia builds learner-neutral VA scenario
+  ---
+  duration_ms: 0.79284
+  type: 'test'
+  ...
+# Subtest: va-04-thrombosis builds learner-neutral VA scenario
+ok 306 - va-04-thrombosis builds learner-neutral VA scenario
+  ---
+  duration_ms: 0.785709
+  type: 'test'
+  ...
+# Subtest: VA-01 differential hypoxemia proving path recognizes and resolves cause-directed management
+ok 307 - VA-01 differential hypoxemia proving path recognizes and resolves cause-directed management
+  ---
+  duration_ms: 2.428294
+  type: 'test'
+  ...
+# Subtest: VA-01 worsens when upper-body hypoxemia remains untreated
+ok 308 - VA-01 worsens when upper-body hypoxemia remains untreated
+  ---
+  duration_ms: 1.737065
+  type: 'test'
+  ...
+# Subtest: va-02-lv-distension exposes discriminating evidence and resolves with cause-directed management
+ok 309 - va-02-lv-distension exposes discriminating evidence and resolves with cause-directed management
+  ---
+  duration_ms: 7.626512
+  type: 'test'
+  ...
+# Subtest: va-03-limb-ischemia exposes discriminating evidence and resolves with cause-directed management
+ok 310 - va-03-limb-ischemia exposes discriminating evidence and resolves with cause-directed management
+  ---
+  duration_ms: 1.957984
+  type: 'test'
+  ...
+# Subtest: va-04-thrombosis exposes discriminating evidence and resolves with cause-directed management
+ok 311 - va-04-thrombosis exposes discriminating evidence and resolves with cause-directed management
+  ---
+  duration_ms: 1.820941
+  type: 'test'
+  ...
+# Subtest: VA-02 untreated LV distension worsens before correction
+ok 312 - VA-02 untreated LV distension worsens before correction
+  ---
+  duration_ms: 1.117023
+  type: 'test'
+  ...
+# Subtest: VA-03 untreated limb ischemia develops worsening distal findings
+ok 313 - VA-03 untreated limb ischemia develops worsening distal findings
+  ---
+  duration_ms: 2.032956
+  type: 'test'
+  ...
+# Subtest: VA-04 RPM escalation does not resolve thrombosis
+ok 314 - VA-04 RPM escalation does not resolve thrombosis
+  ---
+  duration_ms: 0.916364
+  type: 'test'
+  ...
+# Subtest: VA-01 accepted prompt pathway reaches stabilized endpoint after sustained stability
+ok 315 - VA-01 accepted prompt pathway reaches stabilized endpoint after sustained stability
+  ---
+  duration_ms: 15.586879
+  type: 'test'
+  ...
+# Subtest: VA-01 accepted delayed pathway demonstrates worsening upper-body differential before rescue
+ok 316 - VA-01 accepted delayed pathway demonstrates worsening upper-body differential before rescue
+  ---
+  duration_ms: 2.143921
+  type: 'test'
+  ...
+# Subtest: standalone v2.5 contains current VA-01 bundle and cockpit actions
+ok 317 - standalone v2.5 contains current VA-01 bundle and cockpit actions
+  ---
+  duration_ms: 5.392977
+  type: 'test'
+  ...
+# Subtest: standalone v2.5 exposes VA scenario library and VA-01 actions
+ok 318 - standalone v2.5 exposes VA scenario library and VA-01 actions
+  ---
+  duration_ms: 5.551062
+  type: 'test'
+  ...
+# Subtest: VA-01 exposes discriminating right-radial versus lower-body oxygenation evidence
+ok 319 - VA-01 exposes discriminating right-radial versus lower-body oxygenation evidence
+  ---
+  duration_ms: 9.136749
+  type: 'test'
+  ...
+# Subtest: VA-01 site-specific upper-body oxygenation worsens with delay and normalizes after correction
+ok 320 - VA-01 site-specific upper-body oxygenation worsens with delay and normalizes after correction
+  ---
+  duration_ms: 6.629557
+  type: 'test'
+  ...
+# Subtest: vv-01-recirculation passes VV resolution/completion path
+ok 321 - vv-01-recirculation passes VV resolution/completion path
+  ---
+  duration_ms: 11.149264
+  type: 'test'
+  ...
+# Subtest: vv-02-oxygenator passes VV resolution/completion path
+ok 322 - vv-02-oxygenator passes VV resolution/completion path
+  ---
+  duration_ms: 2.960346
+  type: 'test'
+  ...
+# Subtest: vv-03-gas-exchange passes VV resolution/completion path
+ok 323 - vv-03-gas-exchange passes VV resolution/completion path
+  ---
+  duration_ms: 2.199935
+  type: 'test'
+  ...
+# Subtest: vv-04-pneumothorax passes VV resolution/completion path
+ok 324 - vv-04-pneumothorax passes VV resolution/completion path
+  ---
+  duration_ms: 3.17779
+  type: 'test'
+  ...
+# Subtest: vv-04-airway passes VV resolution/completion path
+ok 325 - vv-04-airway passes VV resolution/completion path
+  ---
+  duration_ms: 2.486301
+  type: 'test'
+  ...
+# Subtest: VV-03 gas exchange assessment returns physiologic evidence
+ok 326 - VV-03 gas exchange assessment returns physiologic evidence
+  ---
+  duration_ms: 2.20369
+  type: 'test'
+  ...
+# Subtest: VV-04 pneumothorax distinguishes patient-side tension mechanics
+ok 327 - VV-04 pneumothorax distinguishes patient-side tension mechanics
+  ---
+  duration_ms: 2.131593
+  type: 'test'
+  ...
+# Subtest: VV-04 airway distinguishes mechanical ventilation failure from circuit-only problem
+ok 328 - VV-04 airway distinguishes mechanical ventilation failure from circuit-only problem
+  ---
+  duration_ms: 1.056282
+  type: 'test'
+  ...
+# Subtest: standalone v2.7 contains VV scenario library and all M5 actions
+ok 329 - standalone v2.7 contains VV scenario library and all M5 actions
+  ---
+  duration_ms: 1.717967
+  type: 'test'
+  ...
+# Subtest: M5 locks four VV families represented by five presets
+ok 330 - M5 locks four VV families represented by five presets
+  ---
+  duration_ms: 0.938677
+  type: 'test'
+  ...
+# Subtest: vv-01-recirculation builds a single-complication learner-neutral VV scenario
+ok 331 - vv-01-recirculation builds a single-complication learner-neutral VV scenario
+  ---
+  duration_ms: 5.446546
+  type: 'test'
+  ...
+# Subtest: vv-02-oxygenator builds a single-complication learner-neutral VV scenario
+ok 332 - vv-02-oxygenator builds a single-complication learner-neutral VV scenario
+  ---
+  duration_ms: 0.889013
+  type: 'test'
+  ...
+# Subtest: vv-03-gas-exchange builds a single-complication learner-neutral VV scenario
+ok 333 - vv-03-gas-exchange builds a single-complication learner-neutral VV scenario
+  ---
+  duration_ms: 0.808443
+  type: 'test'
+  ...
+# Subtest: vv-04-pneumothorax builds a single-complication learner-neutral VV scenario
+ok 334 - vv-04-pneumothorax builds a single-complication learner-neutral VV scenario
+  ---
+  duration_ms: 0.818798
+  type: 'test'
+  ...
+# Subtest: vv-04-airway builds a single-complication learner-neutral VV scenario
+ok 335 - vv-04-airway builds a single-complication learner-neutral VV scenario
+  ---
+  duration_ms: 0.975421
+  type: 'test'
+  ...
+# Subtest: VV-01 recirculation exposes discriminating saturation/recirculation evidence and resolves
+ok 336 - VV-01 recirculation exposes discriminating saturation/recirculation evidence and resolves
+  ---
+  duration_ms: 3.564916
+  type: 'test'
+  ...
+# Subtest: VV-01 indiscriminate RPM escalation does not solve recirculation
+ok 337 - VV-01 indiscriminate RPM escalation does not solve recirculation
+  ---
+  duration_ms: 1.722213
+  type: 'test'
+  ...
+# Subtest: pe-01-arrhythmia-arrest passes M6 resolution/completion gate
+ok 338 - pe-01-arrhythmia-arrest passes M6 resolution/completion gate
+  ---
+  duration_ms: 7.534424
+  type: 'test'
+  ...
+# Subtest: pe-02-ich passes M6 resolution/completion gate
+ok 339 - pe-02-ich passes M6 resolution/completion gate
+  ---
+  duration_ms: 2.471669
+  type: 'test'
+  ...
+# Subtest: pe-03-vasoplegia passes M6 resolution/completion gate
+ok 340 - pe-03-vasoplegia passes M6 resolution/completion gate
+  ---
+  duration_ms: 7.837486
+  type: 'test'
+  ...
+# Subtest: pe-03-sepsis passes M6 resolution/completion gate
+ok 341 - pe-03-sepsis passes M6 resolution/completion gate
+  ---
+  duration_ms: 2.198562
+  type: 'test'
+  ...
+# Subtest: pe-04-aki-fluid passes M6 resolution/completion gate
+ok 342 - pe-04-aki-fluid passes M6 resolution/completion gate
+  ---
+  duration_ms: 1.959917
+  type: 'test'
+  ...
+# Subtest: pe-05-metabolic passes M6 resolution/completion gate
+ok 343 - pe-05-metabolic passes M6 resolution/completion gate
+  ---
+  duration_ms: 1.577398
+  type: 'test'
+  ...
+# Subtest: pe-06-ph-crisis passes M6 resolution/completion gate
+ok 344 - pe-06-ph-crisis passes M6 resolution/completion gate
+  ---
+  duration_ms: 1.507053
+  type: 'test'
+  ...
+# Subtest: PE-04 exposes quantitative renal/fluid evidence
+ok 345 - PE-04 exposes quantitative renal/fluid evidence
+  ---
+  duration_ms: 0.787622
+  type: 'test'
+  ...
+# Subtest: PE-05 exposes actionable electrolyte evidence
+ok 346 - PE-05 exposes actionable electrolyte evidence
+  ---
+  duration_ms: 2.233594
+  type: 'test'
+  ...
+# Subtest: PE-06 distinguishes RV/pulmonary vascular crisis from circuit malfunction
+ok 347 - PE-06 distinguishes RV/pulmonary vascular crisis from circuit malfunction
+  ---
+  duration_ms: 1.754281
+  type: 'test'
+  ...
+# Subtest: standalone v2.8 contains patient emergency library, broad differential, and M6 actions
+ok 348 - standalone v2.8 contains patient emergency library, broad differential, and M6 actions
+  ---
+  duration_ms: 1.554103
+  type: 'test'
+  ...
+# Subtest: M6 locks six families represented by seven presets
+ok 349 - M6 locks six families represented by seven presets
+  ---
+  duration_ms: 0.983805
+  type: 'test'
+  ...
+# Subtest: pe-01-arrhythmia-arrest builds a single-complication learner-neutral patient emergency
+ok 350 - pe-01-arrhythmia-arrest builds a single-complication learner-neutral patient emergency
+  ---
+  duration_ms: 5.988233
+  type: 'test'
+  ...
+# Subtest: pe-02-ich builds a single-complication learner-neutral patient emergency
+ok 351 - pe-02-ich builds a single-complication learner-neutral patient emergency
+  ---
+  duration_ms: 1.212535
+  type: 'test'
+  ...
+# Subtest: pe-03-vasoplegia builds a single-complication learner-neutral patient emergency
+ok 352 - pe-03-vasoplegia builds a single-complication learner-neutral patient emergency
+  ---
+  duration_ms: 1.22995
+  type: 'test'
+  ...
+# Subtest: pe-03-sepsis builds a single-complication learner-neutral patient emergency
+ok 353 - pe-03-sepsis builds a single-complication learner-neutral patient emergency
+  ---
+  duration_ms: 1.233667
+  type: 'test'
+  ...
+# Subtest: pe-04-aki-fluid builds a single-complication learner-neutral patient emergency
+ok 354 - pe-04-aki-fluid builds a single-complication learner-neutral patient emergency
+  ---
+  duration_ms: 1.394065
+  type: 'test'
+  ...
+# Subtest: pe-05-metabolic builds a single-complication learner-neutral patient emergency
+ok 355 - pe-05-metabolic builds a single-complication learner-neutral patient emergency
+  ---
+  duration_ms: 1.079737
+  type: 'test'
+  ...
+# Subtest: pe-06-ph-crisis builds a single-complication learner-neutral patient emergency
+ok 356 - pe-06-ph-crisis builds a single-complication learner-neutral patient emergency
+  ---
+  duration_ms: 0.910315
+  type: 'test'
+  ...
+# Subtest: PE-01 begins in VF and cannot falsely stabilize while malignant rhythm persists
+ok 357 - PE-01 begins in VF and cannot falsely stabilize while malignant rhythm persists
+  ---
+  duration_ms: 5.231357
+  type: 'test'
+  ...
+# Subtest: PE-01 rhythm rescue plus arrest resolution reaches genuine stabilization
+ok 358 - PE-01 rhythm rescue plus arrest resolution reaches genuine stabilization
+  ---
+  duration_ms: 2.68076
+  type: 'test'
+  ...
+# Subtest: PE-02 ICH has a complete acute-threat-control pathway
+ok 359 - PE-02 ICH has a complete acute-threat-control pathway
+  ---
+  duration_ms: 2.701471
+  type: 'test'
+  ...
+# Subtest: M2 follows universal prebrief -> active -> stabilized lifecycle
+ok 360 - M2 follows universal prebrief -> active -> stabilized lifecycle
+  ---
+  duration_ms: 7.114769
+  type: 'test'
+  ...
+# Subtest: M3 follows universal prebrief -> active -> stabilized lifecycle
+ok 361 - M3 follows universal prebrief -> active -> stabilized lifecycle
+  ---
+  duration_ms: 2.203099
+  type: 'test'
+  ...
+# Subtest: M4 follows universal prebrief -> active -> stabilized lifecycle
+ok 362 - M4 follows universal prebrief -> active -> stabilized lifecycle
+  ---
+  duration_ms: 1.717457
+  type: 'test'
+  ...
+# Subtest: M5 follows universal prebrief -> active -> stabilized lifecycle
+ok 363 - M5 follows universal prebrief -> active -> stabilized lifecycle
+  ---
+  duration_ms: 1.458011
+  type: 'test'
+  ...
+# Subtest: M6 follows universal prebrief -> active -> stabilized lifecycle
+ok 364 - M6 follows universal prebrief -> active -> stabilized lifecycle
+  ---
+  duration_ms: 1.568986
+  type: 'test'
+  ...
+# Subtest: terminal deterioration produces a universal completed failure endpoint
+ok 365 - terminal deterioration produces a universal completed failure endpoint
+  ---
+  duration_ms: 0.856314
+  type: 'test'
+  ...
+# Subtest: completed scenarios reject further meaningful manipulation through UI lifecycle lock contract
+ok 366 - completed scenarios reject further meaningful manipulation through UI lifecycle lock contract
+  ---
+  duration_ms: 0.938777
+  type: 'test'
+  ...
+# Subtest: M8 debrief compares expected vs actual pathway after endpoint only
+ok 367 - M8 debrief compares expected vs actual pathway after endpoint only
+  ---
+  duration_ms: 7.29586
+  type: 'test'
+  ...
+# Subtest: M8 debrief identifies missed preferred actions and harmful actions
+ok 368 - M8 debrief identifies missed preferred actions and harmful actions
+  ---
+  duration_ms: 2.423787
+  type: 'test'
+  ...
+# Subtest: M8 debrief keeps hidden diagnosis unavailable before completion
+ok 369 - M8 debrief keeps hidden diagnosis unavailable before completion
+  ---
+  duration_ms: 2.527912
+  type: 'test'
+  ...
+# Subtest: standalone v2.9 renders structured decision analysis after endpoint
+ok 370 - standalone v2.9 renders structured decision analysis after endpoint
+  ---
+  duration_ms: 1.29041
+  type: 'test'
+  ...
+# Subtest: standalone v3.0 provides supported educator scenario creator controls
+ok 371 - standalone v3.0 provides supported educator scenario creator controls
+  ---
+  duration_ms: 1.166275
+  type: 'test'
+  ...
+# Subtest: creator UI does not expose unsupported free-form complication injection
+ok 372 - creator UI does not expose unsupported free-form complication injection
+  ---
+  duration_ms: 0.901452
+  type: 'test'
+  ...
+# Subtest: educator creator exposes all supported packs/templates
+ok 373 - educator creator exposes all supported packs/templates
+  ---
+  duration_ms: 1.310971
+  type: 'test'
+  ...
+# Subtest: educator creator builds supported lf-01-preload without source editing
+ok 374 - educator creator builds supported lf-01-preload without source editing
+  ---
+  duration_ms: 3.979774
+  type: 'test'
+  ...
+# Subtest: educator creator builds supported ce-03-oxygenator without source editing
+ok 375 - educator creator builds supported ce-03-oxygenator without source editing
+  ---
+  duration_ms: 1.110553
+  type: 'test'
+  ...
+# Subtest: educator creator builds supported va-01-differential-hypoxemia without source editing
+ok 376 - educator creator builds supported va-01-differential-hypoxemia without source editing
+  ---
+  duration_ms: 0.964846
+  type: 'test'
+  ...
+# Subtest: educator creator builds supported vv-01-recirculation without source editing
+ok 377 - educator creator builds supported vv-01-recirculation without source editing
+  ---
+  duration_ms: 1.284421
+  type: 'test'
+  ...
+# Subtest: educator creator builds supported pe-01-arrhythmia-arrest without source editing
+ok 378 - educator creator builds supported pe-01-arrhythmia-arrest without source editing
+  ---
+  duration_ms: 1.1353
+  type: 'test'
+  ...
+# Subtest: educator creator rejects unsupported free-form templates and invalid modes
+ok 379 - educator creator rejects unsupported free-form templates and invalid modes
+  ---
+  duration_ms: 0.529158
+  type: 'test'
+  ...
+# Subtest: position state is explicit in the learner presentation
+ok 380 - position state is explicit in the learner presentation
+  ---
+  duration_ms: 4.587478
+  type: 'test'
+  ...
+# Subtest: partial position change partially improves flow without magically resolving the problem
+ok 381 - partial position change partially improves flow without magically resolving the problem
+  ---
+  duration_ms: 6.064316
+  type: 'test'
+  ...
+# Subtest: directly selecting the favorable prior position and restore-previous use the same underlying state mechanism
+ok 382 - directly selecting the favorable prior position and restore-previous use the same underlying state mechanism
+  ---
+  duration_ms: 3.82668
+  type: 'test'
+  ...
+# Subtest: returning to the adverse position reproduces adverse support only while the hidden condition remains unresolved
+ok 383 - returning to the adverse position reproduces adverse support only while the hidden condition remains unresolved
+  ---
+  duration_ms: 2.233699
+  type: 'test'
+  ...
+# Subtest: refinement v3.3 removes stale low-flow-only shell labeling
+ok 384 - refinement v3.3 removes stale low-flow-only shell labeling
+  ---
+  duration_ms: 0.729606
+  type: 'test'
+  ...
+# Subtest: irrelevant positioning panel is hidden outside low-flow family
+ok 385 - irrelevant positioning panel is hidden outside low-flow family
+  ---
+  duration_ms: 0.237443
+  type: 'test'
+  ...
+# Subtest: dynamic feedback/debrief regions use polite live announcements
+ok 386 - dynamic feedback/debrief regions use polite live announcements
+  ---
+  duration_ms: 0.112537
+  type: 'test'
+  ...
+# Subtest: circuit cases expose broad circuit-emergency differential actions rather than case-specific set
+ok 387 - circuit cases expose broad circuit-emergency differential actions rather than case-specific set
+  ---
+  duration_ms: 2.863202
+  type: 'test'
+  ...
+# Subtest: VV cases expose broad VV differential actions rather than revealing recirculation diagnosis
+ok 388 - VV cases expose broad VV differential actions rather than revealing recirculation diagnosis
+  ---
+  duration_ms: 0.754163
+  type: 'test'
+  ...
+# Subtest: refinement v3.2 groups educator templates by clinical pack
+ok 389 - refinement v3.2 groups educator templates by clinical pack
+  ---
+  duration_ms: 1.286665
+  type: 'test'
+  ...
+# Subtest: learner action wall is filtered by scenario-safe availableActions
+ok 390 - learner action wall is filtered by scenario-safe availableActions
+  ---
+  duration_ms: 0.568666
+  type: 'test'
+  ...
+# Subtest: standalone v3.3 bundled require targets are embedded
+ok 391 - standalone v3.3 bundled require targets are embedded
+  ---
+  duration_ms: 2.19687
+  type: 'test'
+  ...
+# Subtest: standalone v3.3 contains no active-feature stale title
+ok 392 - standalone v3.3 contains no active-feature stale title
+  ---
+  duration_ms: 0.451792
+  type: 'test'
+  ...
+# Subtest: current release manifest remains validation-in-progress
+ok 393 - current release manifest remains validation-in-progress
+  ---
+  duration_ms: 0.769566
+  type: 'test'
+  ...
+# Subtest: readiness cannot claim clinical validation before all rules pass
+ok 394 - readiness cannot claim clinical validation before all rules pass
+  ---
+  duration_ms: 1.190582
+  type: 'test'
+  ...
+# Subtest: competency-ready requires every rule clinically validated and competency ready
+ok 395 - competency-ready requires every rule clinically validated and competency ready
+  ---
+  duration_ms: 0.144225
+  type: 'test'
+  ...
+# Subtest: all current registry rules remain represented in validation coverage
+ok 396 - all current registry rules remain represented in validation coverage
+  ---
+  duration_ms: 0.134831
+  type: 'test'
+  ...
+# Subtest: M2 representative scenario still creates a valid prebrief session
+ok 397 - M2 representative scenario still creates a valid prebrief session
+  ---
+  duration_ms: 3.940184
+  type: 'test'
+  ...
+# Subtest: M3 representative scenario still creates a valid prebrief session
+ok 398 - M3 representative scenario still creates a valid prebrief session
+  ---
+  duration_ms: 0.569067
+  type: 'test'
+  ...
+# Subtest: M4 representative scenario still creates a valid prebrief session
+ok 399 - M4 representative scenario still creates a valid prebrief session
+  ---
+  duration_ms: 0.476139
+  type: 'test'
+  ...
+# Subtest: M5 representative scenario still creates a valid prebrief session
+ok 400 - M5 representative scenario still creates a valid prebrief session
+  ---
+  duration_ms: 0.561726
+  type: 'test'
+  ...
+# Subtest: M6 representative scenario still creates a valid prebrief session
+ok 401 - M6 representative scenario still creates a valid prebrief session
+  ---
+  duration_ms: 0.981961
+  type: 'test'
+  ...
+# Subtest: release integrity manifest is internally valid
+ok 402 - release integrity manifest is internally valid
+  ---
+  duration_ms: 0.48412
+  type: 'test'
+  ...
+# Subtest: standalone current build is present and labeled preclinical-safe
+ok 403 - standalone current build is present and labeled preclinical-safe
+  ---
+  duration_ms: 1.297942
+  type: 'test'
+  ...
+# Subtest: no escalation below any threshold
+ok 404 - no escalation below any threshold
+  ---
+  duration_ms: 1.041239
+  type: 'test'
+  ...
+# Subtest: hypoxia crossing 60s escalates sinus to junctional
+ok 405 - hypoxia crossing 60s escalates sinus to junctional
+  ---
+  duration_ms: 0.285645
+  type: 'test'
+  ...
+# Subtest: a single long tick can jump straight to the deserved stage rather than requiring incremental steps
+ok 406 - a single long tick can jump straight to the deserved stage rather than requiring incremental steps
+  ---
+  duration_ms: 0.145767
+  type: 'test'
+  ...
+# Subtest: no-flow escalates faster than hypoxia (loss of circuit support is more acute)
+ok 407 - no-flow escalates faster than hypoxia (loss of circuit support is more acute)
+  ---
+  duration_ms: 0.124205
+  type: 'test'
+  ...
+# Subtest: never de-escalates: a rhythm past the deserved stage returns null even if conditions look mild now
+ok 408 - never de-escalates: a rhythm past the deserved stage returns null even if conditions look mild now
+  ---
+  duration_ms: 0.111816
+  type: 'test'
+  ...
+# Subtest: sustained critical trajectory (not just hypoxia or lost flow) also escalates rhythm — the monitor must reflect overall patient condition
+ok 409 - sustained critical trajectory (not just hypoxia or lost flow) also escalates rhythm — the monitor must reflect overall patient condition
+  ---
+  duration_ms: 0.140829
+  type: 'test'
+  ...
+# Subtest: an active cardiac arrest (from clinical-trajectory) forces at least vfib immediately, with no timer required
+ok 410 - an active cardiac arrest (from clinical-trajectory) forces at least vfib immediately, with no timer required
+  ---
+  duration_ms: 0.115822
+  type: 'test'
+  ...
+# Subtest: a death endpoint forces asystole even from vfib — a dying patient must show a terminal rhythm, not a shockable one
+ok 411 - a death endpoint forces asystole even from vfib — a dying patient must show a terminal rhythm, not a shockable one
+  ---
+  duration_ms: 0.198735
+  type: 'test'
+  ...
+# Subtest: a death endpoint on an already-asystole patient returns null (nothing further to escalate to)
+ok 412 - a death endpoint on an already-asystole patient returns null (nothing further to escalate to)
+  ---
+  duration_ms: 0.706933
+  type: 'test'
+  ...
+# Subtest: epinephrine is the primary (preferred) treatment for asystole and can restore organized activity, unlike its adjunct-only role in vtach/vfib
+ok 413 - epinephrine is the primary (preferred) treatment for asystole and can restore organized activity, unlike its adjunct-only role in vtach/vfib
+  ---
+  duration_ms: 0.43635
+  type: 'test'
+  ...
+# Subtest: defibrillation and synchronized cardioversion are not indicated for asystole (a non-shockable rhythm)
+ok 414 - defibrillation and synchronized cardioversion are not indicated for asystole (a non-shockable rhythm)
+  ---
+  duration_ms: 0.226617
+  type: 'test'
+  ...
+# Subtest: defibrillate is preferred and converts vfib to sinus; acceptable-but-less-ideal for vtach
+ok 415 - defibrillate is preferred and converts vfib to sinus; acceptable-but-less-ideal for vtach
+  ---
+  duration_ms: 0.10775
+  type: 'test'
+  ...
+# Subtest: defibrillate is harmful and does not change an organized, perfusing rhythm
+ok 416 - defibrillate is harmful and does not change an organized, perfusing rhythm
+  ---
+  duration_ms: 0.091126
+  type: 'test'
+  ...
+# Subtest: synchronized cardioversion is preferred for vtach but ineffective for vfib (no QRS to sync to)
+ok 417 - synchronized cardioversion is preferred for vtach but ineffective for vfib (no QRS to sync to)
+  ---
+  duration_ms: 0.09434
+  type: 'test'
+  ...
+# Subtest: arrest-dose epinephrine is an acceptable adjunct in vtach/vfib but does not itself convert the rhythm
+ok 418 - arrest-dose epinephrine is an acceptable adjunct in vtach/vfib but does not itself convert the rhythm
+  ---
+  duration_ms: 0.083995
+  type: 'test'
+  ...
+# Subtest: chest compressions: ineffective when ECMO flow is adequate, preferred when flow is lost, regardless of rhythm
+ok 419 - chest compressions: ineffective when ECMO flow is adequate, preferred when flow is lost, regardless of rhythm
+  ---
+  duration_ms: 0.198866
+  type: 'test'
+  ...
+# Subtest: an unrecognized actionId resolves to null so a caller can fall through to other handling
+ok 420 - an unrecognized actionId resolves to null so a caller can fall through to other handling
+  ---
+  duration_ms: 0.06753
+  type: 'test'
+  ...
+# Subtest: RHYTHM_ORDER is the single source of truth for escalation order
+ok 421 - RHYTHM_ORDER is the single source of truth for escalation order
+  ---
+  duration_ms: 0.582617
+  type: 'test'
+  ...
+# Subtest: ELSO domain assignment alone never equals clinical validation
+ok 422 - ELSO domain assignment alone never equals clinical validation
+  ---
+  duration_ms: 1.799849
+  type: 'test'
+  ...
+# Subtest: clinical validation requires source extraction, expert review, and regression
+ok 423 - clinical validation requires source extraction, expert review, and regression
+  ---
+  duration_ms: 0.147669
+  type: 'test'
+  ...
+# Subtest: numeric ELSO standard claim requires exact source support
+ok 424 - numeric ELSO standard claim requires exact source support
+  ---
+  duration_ms: 0.112537
+  type: 'test'
+  ...
+# Subtest: runtime director queues eligible events and respects concurrent-event limit
+ok 425 - runtime director queues eligible events and respects concurrent-event limit
+  ---
+  duration_ms: 1.285323
+  type: 'test'
+  ...
+# Subtest: director mode changes orchestration capacity without clinical knowledge
+ok 426 - director mode changes orchestration capacity without clinical knowledge
+  ---
+  duration_ms: 0.276862
+  type: 'test'
+  ...
+# Subtest: snapshot restore does not release the same complication twice
+ok 427 - snapshot restore does not release the same complication twice
+  ---
+  duration_ms: 0.248841
+  type: 'test'
+  ...
+# Subtest: educator scenario stores runtime orchestration separately from clinical knowledge
+ok 428 - educator scenario stores runtime orchestration separately from clinical knowledge
+  ---
+  duration_ms: 0.631039
+  type: 'test'
+  ...
+# Subtest: engine routes eligible complications through director instead of activating all at start
+ok 429 - engine routes eligible complications through director instead of activating all at start
+  ---
+  duration_ms: 5.679844
+  type: 'test'
+  ...
+# Subtest: turnaround defaults are explicit placeholders rather than invented final times
+ok 430 - turnaround defaults are explicit placeholders rather than invented final times
+  ---
+  duration_ms: 0.560444
+  type: 'test'
+  ...
+# Subtest: xray can be bedside-ready but blocked by an active code, then acquired when code clears
+ok 431 - xray can be bedside-ready but blocked by an active code, then acquired when code clears
+  ---
+  duration_ms: 6.380677
+  type: 'test'
+  ...
+# Subtest: educator builder emits the same canonical structure and selected learning plan
+ok 432 - educator builder emits the same canonical structure and selected learning plan
+  ---
+  duration_ms: 1.049952
+  type: 'test'
+  ...
+# Subtest: educator-generated scenario remains frozen until Start Scenario
+ok 433 - educator-generated scenario remains frozen until Start Scenario
+  ---
+  duration_ms: 4.485066
+  type: 'test'
+  ...
+# Subtest: study information pipeline is exposed in learner presentation and survives snapshot restore
+ok 434 - study information pipeline is exposed in learner presentation and survives snapshot restore
+  ---
+  duration_ms: 1.689435
+  type: 'test'
+  ...
+# Subtest: dTT 0.54 (Frank's real data point) resolves to no-change under the neonate standard goal
+ok 435 - dTT 0.54 (Frank's real data point) resolves to no-change under the neonate standard goal
+  ---
+  duration_ms: 0.961251
+  type: 'test'
+  ...
+# Subtest: dTT 0.35 resolves to increase15 under the neonate standard table
+ok 436 - dTT 0.35 resolves to increase15 under the neonate standard table
+  ---
+  duration_ms: 0.216562
+  type: 'test'
+  ...
+# Subtest: a below-floor dTT escalates across repeated low readings: increase, increase again, then consult attending
+ok 437 - a below-floor dTT escalates across repeated low readings: increase, increase again, then consult attending
+  ---
+  duration_ms: 0.210072
+  type: 'test'
+  ...
+# Subtest: a dTT above 1.5 in the standard table requires renal function to resolve, and resolves correctly when given
+ok 438 - a dTT above 1.5 in the standard table requires renal function to resolve, and resolves correctly when given
+  ---
+  duration_ms: 0.323471
+  type: 'test'
+  ...
+# Subtest: hemorrhagic/operative context uses its own (tighter) goal band, not the standard one
+ok 439 - hemorrhagic/operative context uses its own (tighter) goal band, not the standard one
+  ---
+  duration_ms: 0.266347
+  type: 'test'
+  ...
+# Subtest: pediatric and neonate high-thrombosis-risk contexts are refused, not guessed at
+ok 440 - pediatric and neonate high-thrombosis-risk contexts are refused, not guessed at
+  ---
+  duration_ms: 0.18827
+  type: 'test'
+  ...
+# Subtest: buildTitrationMission produces a mission the (forked) evidence-review engine can actually score
+ok 441 - buildTitrationMission produces a mission the (forked) evidence-review engine can actually score
+  ---
+  duration_ms: 0.830597
+  type: 'test'
+  ...
+# Subtest: generic trigger engine supports at-start, time, context, and action-count eligibility without clinical hard-coding
+ok 442 - generic trigger engine supports at-start, time, context, and action-count eligibility without clinical hard-coding
+  ---
+  duration_ms: 1.462978
+  type: 'test'
+  ...
+# Subtest: educator scenario activates selected complication through trigger policy rather than embedded or copied rules
+ok 443 - educator scenario activates selected complication through trigger policy rather than embedded or copied rules
+  ---
+  duration_ms: 3.631585
+  type: 'test'
+  ...
+# Subtest: trigger state survives save/restore without firing the same policy twice
+ok 444 - trigger state survives save/restore without firing the same policy twice
+  ---
+  duration_ms: 3.024015
+  type: 'test'
+  ...
+# Subtest: troubleshooting pack exposes educator labels separately from learner-neutral labels
+ok 445 - troubleshooting pack exposes educator labels separately from learner-neutral labels
+  ---
+  duration_ms: 0.749515
+  type: 'test'
+  ...
+# Subtest: each troubleshooting preset builds one exact registry-backed complication without embedded behavior
+ok 446 - each troubleshooting preset builds one exact registry-backed complication without embedded behavior
+  ---
+  duration_ms: 1.536858
+  type: 'test'
+  ...
+# Subtest: learner presentation exposes neutral briefing but not educator scenario metadata
+ok 447 - learner presentation exposes neutral briefing but not educator scenario metadata
+  ---
+  duration_ms: 2.119154
+  type: 'test'
+  ...
+# Subtest: blind low-flow scenario selection is deterministic by seed and remains learner-blind
+ok 448 - blind low-flow scenario selection is deterministic by seed and remains learner-blind
+  ---
+  duration_ms: 1.015552
+  type: 'test'
+  ...
+# Subtest: all six troubleshooting scenarios can start and enter a live clinical state
+ok 449 - all six troubleshooting scenarios can start and enter a live clinical state
+  ---
+  duration_ms: 9.447531
+  type: 'test'
+  ...
+# Subtest: air emergency bubble detector lifecycle is physically coherent
+ok 450 - air emergency bubble detector lifecycle is physically coherent
+  ---
+  duration_ms: 6.782816
+  type: 'test'
+  ...
+# Subtest: lf-01-preload final acceptance contract
+ok 451 - lf-01-preload final acceptance contract
+  ---
+  duration_ms: 6.676998
+  type: 'test'
+  ...
+# Subtest: lf-02-tamponade final acceptance contract
+ok 452 - lf-02-tamponade final acceptance contract
+  ---
+  duration_ms: 1.39076
+  type: 'test'
+  ...
+# Subtest: lf-03-position final acceptance contract
+ok 453 - lf-03-position final acceptance contract
+  ---
+  duration_ms: 1.524479
+  type: 'test'
+  ...
+# Subtest: lf-04-kink final acceptance contract
+ok 454 - lf-04-kink final acceptance contract
+  ---
+  duration_ms: 1.741973
+  type: 'test'
+  ...
+# Subtest: lf-05-circuit-obstruction final acceptance contract
+ok 455 - lf-05-circuit-obstruction final acceptance contract
+  ---
+  duration_ms: 0.922894
+  type: 'test'
+  ...
+# Subtest: lf-06-pump-failure final acceptance contract
+ok 456 - lf-06-pump-failure final acceptance contract
+  ---
+  duration_ms: 0.780271
+  type: 'test'
+  ...
+# Subtest: ce-01-air-emergency final acceptance contract
+ok 457 - ce-01-air-emergency final acceptance contract
+  ---
+  duration_ms: 1.07492
+  type: 'test'
+  ...
+# Subtest: ce-02-circuit-breach final acceptance contract
+ok 458 - ce-02-circuit-breach final acceptance contract
+  ---
+  duration_ms: 0.993819
+  type: 'test'
+  ...
+# Subtest: ce-03-oxygenator final acceptance contract
+ok 459 - ce-03-oxygenator final acceptance contract
+  ---
+  duration_ms: 1.624929
+  type: 'test'
+  ...
+# Subtest: ce-04-sweep-gas final acceptance contract
+ok 460 - ce-04-sweep-gas final acceptance contract
+  ---
+  duration_ms: 1.107198
+  type: 'test'
+  ...
+# Subtest: ce-05-hemolysis final acceptance contract
+ok 461 - ce-05-hemolysis final acceptance contract
+  ---
+  duration_ms: 0.86021
+  type: 'test'
+  ...
+# Subtest: ce-06-major-bleeding final acceptance contract
+ok 462 - ce-06-major-bleeding final acceptance contract
+  ---
+  duration_ms: 0.621726
+  type: 'test'
+  ...
+# Subtest: va-01-differential-hypoxemia final acceptance contract
+ok 463 - va-01-differential-hypoxemia final acceptance contract
+  ---
+  duration_ms: 0.789455
+  type: 'test'
+  ...
+# Subtest: va-02-lv-distension final acceptance contract
+ok 464 - va-02-lv-distension final acceptance contract
+  ---
+  duration_ms: 0.815294
+  type: 'test'
+  ...
+# Subtest: va-03-limb-ischemia final acceptance contract
+ok 465 - va-03-limb-ischemia final acceptance contract
+  ---
+  duration_ms: 1.044725
+  type: 'test'
+  ...
+# Subtest: va-04-thrombosis final acceptance contract
+ok 466 - va-04-thrombosis final acceptance contract
+  ---
+  duration_ms: 0.572502
+  type: 'test'
+  ...
+# Subtest: vv-01-recirculation final acceptance contract
+ok 467 - vv-01-recirculation final acceptance contract
+  ---
+  duration_ms: 0.77257
+  type: 'test'
+  ...
+# Subtest: vv-02-oxygenator final acceptance contract
+ok 468 - vv-02-oxygenator final acceptance contract
+  ---
+  duration_ms: 0.708455
+  type: 'test'
+  ...
+# Subtest: vv-03-gas-exchange final acceptance contract
+ok 469 - vv-03-gas-exchange final acceptance contract
+  ---
+  duration_ms: 1.938826
+  type: 'test'
+  ...
+# Subtest: vv-04-pneumothorax final acceptance contract
+ok 470 - vv-04-pneumothorax final acceptance contract
+  ---
+  duration_ms: 0.578671
+  type: 'test'
+  ...
+# Subtest: vv-04-airway final acceptance contract
+ok 471 - vv-04-airway final acceptance contract
+  ---
+  duration_ms: 0.508337
+  type: 'test'
+  ...
+# Subtest: pe-01-arrhythmia-arrest final acceptance contract
+ok 472 - pe-01-arrhythmia-arrest final acceptance contract
+  ---
+  duration_ms: 0.808674
+  type: 'test'
+  ...
+# Subtest: pe-02-ich final acceptance contract
+ok 473 - pe-02-ich final acceptance contract
+  ---
+  duration_ms: 0.566203
+  type: 'test'
+  ...
+# Subtest: pe-03-vasoplegia final acceptance contract
+ok 474 - pe-03-vasoplegia final acceptance contract
+  ---
+  duration_ms: 0.562237
+  type: 'test'
+  ...
+# Subtest: pe-03-sepsis final acceptance contract
+ok 475 - pe-03-sepsis final acceptance contract
+  ---
+  duration_ms: 0.557069
+  type: 'test'
+  ...
+# Subtest: pe-04-aki-fluid final acceptance contract
+ok 476 - pe-04-aki-fluid final acceptance contract
+  ---
+  duration_ms: 0.623799
+  type: 'test'
+  ...
+# Subtest: pe-05-metabolic final acceptance contract
+ok 477 - pe-05-metabolic final acceptance contract
+  ---
+  duration_ms: 0.63853
+  type: 'test'
+  ...
+# Subtest: pe-06-ph-crisis final acceptance contract
+ok 478 - pe-06-ph-crisis final acceptance contract
+  ---
+  duration_ms: 0.785319
+  type: 'test'
+  ...
+# Subtest: acceptance inventory contains exactly 28 supported scenarios
+ok 479 - acceptance inventory contains exactly 28 supported scenarios
+  ---
+  duration_ms: 0.097445
+  type: 'test'
+  ...
+# Subtest: all exact-comparison dossiers carry explicit reviewer status
+ok 480 - all exact-comparison dossiers carry explicit reviewer status
+  ---
+  duration_ms: 1.980658
+  type: 'test'
+  ...
+# Subtest: unpromoted/partial rules remain explicitly marked pending rather than validated
+ok 481 - unpromoted/partial rules remain explicitly marked pending rather than validated
+  ---
+  duration_ms: 0.863085
+  type: 'test'
+  ...
+# Subtest: validation artifacts do not claim placeholder timers are ELSO standards
+ok 482 - validation artifacts do not claim placeholder timers are ELSO standards
+  ---
+  duration_ms: 1.169851
+  type: 'test'
+  ...
+# Subtest: unmatched clinical action feedback names what learner did and avoids anonymous no-change
+ok 483 - unmatched clinical action feedback names what learner did and avoids anonymous no-change
+  ---
+  duration_ms: 5.545418
+  type: 'test'
+  ...
+# Subtest: clinical registry does not contain bare anonymous action-rule feedback
+ok 484 - clinical registry does not contain bare anonymous action-rule feedback
+  ---
+  duration_ms: 0.907641
+  type: 'test'
+  ...
+# Subtest: lf-01-preload exposes startup context and rhythm to learner presentation
+ok 485 - lf-01-preload exposes startup context and rhythm to learner presentation
+  ---
+  duration_ms: 3.312631
+  type: 'test'
+  ...
+# Subtest: ce-01-air-emergency exposes startup context and rhythm to learner presentation
+ok 486 - ce-01-air-emergency exposes startup context and rhythm to learner presentation
+  ---
+  duration_ms: 0.706952
+  type: 'test'
+  ...
+# Subtest: va-01-differential-hypoxemia exposes startup context and rhythm to learner presentation
+ok 487 - va-01-differential-hypoxemia exposes startup context and rhythm to learner presentation
+  ---
+  duration_ms: 0.547635
+  type: 'test'
+  ...
+# Subtest: vv-01-recirculation exposes startup context and rhythm to learner presentation
+ok 488 - vv-01-recirculation exposes startup context and rhythm to learner presentation
+  ---
+  duration_ms: 0.654945
+  type: 'test'
+  ...
+# Subtest: pe-01-arrhythmia-arrest exposes startup context and rhythm to learner presentation
+ok 489 - pe-01-arrhythmia-arrest exposes startup context and rhythm to learner presentation
+  ---
+  duration_ms: 0.65205
+  type: 'test'
+  ...
+# Subtest: position actions tell learner current and documented pre-event positions
+ok 490 - position actions tell learner current and documented pre-event positions
+  ---
+  duration_ms: 4.412928
+  type: 'test'
+  ...
+# Subtest: generic turn explains that it is not the same as restoring pre-event position
+ok 491 - generic turn explains that it is not the same as restoring pre-event position
+  ---
+  duration_ms: 0.624219
+  type: 'test'
+  ...
+# Subtest: position no-change feedback states the intervention performed
+ok 492 - position no-change feedback states the intervention performed
+  ---
+  duration_ms: 1.22319
+  type: 'test'
+  ...
+# Subtest: lf-01-preload post-cockpit acceptance
+ok 493 - lf-01-preload post-cockpit acceptance
+  ---
+  duration_ms: 8.873657
+  type: 'test'
+  ...
+# Subtest: lf-02-tamponade post-cockpit acceptance
+ok 494 - lf-02-tamponade post-cockpit acceptance
+  ---
+  duration_ms: 3.487361
+  type: 'test'
+  ...
+# Subtest: lf-03-position post-cockpit acceptance
+ok 495 - lf-03-position post-cockpit acceptance
+  ---
+  duration_ms: 1.890163
+  type: 'test'
+  ...
+# Subtest: lf-04-kink post-cockpit acceptance
+ok 496 - lf-04-kink post-cockpit acceptance
+  ---
+  duration_ms: 1.851155
+  type: 'test'
+  ...
+# Subtest: lf-05-circuit-obstruction post-cockpit acceptance
+ok 497 - lf-05-circuit-obstruction post-cockpit acceptance
+  ---
+  duration_ms: 3.349015
+  type: 'test'
+  ...
+# Subtest: lf-06-pump-failure post-cockpit acceptance
+ok 498 - lf-06-pump-failure post-cockpit acceptance
+  ---
+  duration_ms: 1.672279
+  type: 'test'
+  ...
+# Subtest: ce-01-air-emergency post-cockpit acceptance
+ok 499 - ce-01-air-emergency post-cockpit acceptance
+  ---
+  duration_ms: 1.768903
+  type: 'test'
+  ...
+# Subtest: ce-02-circuit-breach post-cockpit acceptance
+ok 500 - ce-02-circuit-breach post-cockpit acceptance
+  ---
+  duration_ms: 1.502657
+  type: 'test'
+  ...
+# Subtest: ce-03-oxygenator post-cockpit acceptance
+ok 501 - ce-03-oxygenator post-cockpit acceptance
+  ---
+  duration_ms: 1.788963
+  type: 'test'
+  ...
+# Subtest: ce-04-sweep-gas post-cockpit acceptance
+ok 502 - ce-04-sweep-gas post-cockpit acceptance
+  ---
+  duration_ms: 2.292652
+  type: 'test'
+  ...
+# Subtest: ce-05-hemolysis post-cockpit acceptance
+ok 503 - ce-05-hemolysis post-cockpit acceptance
+  ---
+  duration_ms: 1.412372
+  type: 'test'
+  ...
+# Subtest: ce-06-major-bleeding post-cockpit acceptance
+ok 504 - ce-06-major-bleeding post-cockpit acceptance
+  ---
+  duration_ms: 0.941651
+  type: 'test'
+  ...
+# Subtest: va-01-differential-hypoxemia post-cockpit acceptance
+ok 505 - va-01-differential-hypoxemia post-cockpit acceptance
+  ---
+  duration_ms: 0.984385
+  type: 'test'
+  ...
+# Subtest: va-02-lv-distension post-cockpit acceptance
+ok 506 - va-02-lv-distension post-cockpit acceptance
+  ---
+  duration_ms: 0.984205
+  type: 'test'
+  ...
+# Subtest: va-03-limb-ischemia post-cockpit acceptance
+ok 507 - va-03-limb-ischemia post-cockpit acceptance
+  ---
+  duration_ms: 0.958346
+  type: 'test'
+  ...
+# Subtest: va-04-thrombosis post-cockpit acceptance
+ok 508 - va-04-thrombosis post-cockpit acceptance
+  ---
+  duration_ms: 1.210382
+  type: 'test'
+  ...
+# Subtest: vv-01-recirculation post-cockpit acceptance
+ok 509 - vv-01-recirculation post-cockpit acceptance
+  ---
+  duration_ms: 1.3438
+  type: 'test'
+  ...
+# Subtest: vv-02-oxygenator post-cockpit acceptance
+ok 510 - vv-02-oxygenator post-cockpit acceptance
+  ---
+  duration_ms: 1.564669
+  type: 'test'
+  ...
+# Subtest: vv-03-gas-exchange post-cockpit acceptance
+ok 511 - vv-03-gas-exchange post-cockpit acceptance
+  ---
+  duration_ms: 1.066177
+  type: 'test'
+  ...
+# Subtest: vv-04-pneumothorax post-cockpit acceptance
+ok 512 - vv-04-pneumothorax post-cockpit acceptance
+  ---
+  duration_ms: 1.114669
+  type: 'test'
+  ...
+# Subtest: vv-04-airway post-cockpit acceptance
+ok 513 - vv-04-airway post-cockpit acceptance
+  ---
+  duration_ms: 1.191203
+  type: 'test'
+  ...
+# Subtest: pe-01-arrhythmia-arrest post-cockpit acceptance
+ok 514 - pe-01-arrhythmia-arrest post-cockpit acceptance
+  ---
+  duration_ms: 1.231483
+  type: 'test'
+  ...
+# Subtest: pe-02-ich post-cockpit acceptance
+ok 515 - pe-02-ich post-cockpit acceptance
+  ---
+  duration_ms: 0.829925
+  type: 'test'
+  ...
+# Subtest: pe-03-vasoplegia post-cockpit acceptance
+ok 516 - pe-03-vasoplegia post-cockpit acceptance
+  ---
+  duration_ms: 0.98106
+  type: 'test'
+  ...
+# Subtest: pe-03-sepsis post-cockpit acceptance
+ok 517 - pe-03-sepsis post-cockpit acceptance
+  ---
+  duration_ms: 0.977265
+  type: 'test'
+  ...
+# Subtest: pe-04-aki-fluid post-cockpit acceptance
+ok 518 - pe-04-aki-fluid post-cockpit acceptance
+  ---
+  duration_ms: 1.191563
+  type: 'test'
+  ...
+# Subtest: pe-05-metabolic post-cockpit acceptance
+ok 519 - pe-05-metabolic post-cockpit acceptance
+  ---
+  duration_ms: 0.985477
+  type: 'test'
+  ...
+# Subtest: pe-06-ph-crisis post-cockpit acceptance
+ok 520 - pe-06-ph-crisis post-cockpit acceptance
+  ---
+  duration_ms: 1.039538
+  type: 'test'
+  ...
+# Subtest: all 28 supported scenarios covered
+ok 521 - all 28 supported scenarios covered
+  ---
+  duration_ms: 0.183913
+  type: 'test'
+  ...
+# Subtest: standalone explicitly binds ECG canvas instead of relying on named-window globals
+ok 522 - standalone explicitly binds ECG canvas instead of relying on named-window globals
+  ---
+  duration_ms: 0.859008
+  type: 'test'
+  ...
+# Subtest: standalone explicitly binds primary vital display elements
+ok 523 - standalone explicitly binds primary vital display elements
+  ---
+  duration_ms: 0.970284
+  type: 'test'
+  ...
+# Subtest: ECG renderer has explicit asystole, vfib, vtach and junctional branches
+ok 524 - ECG renderer has explicit asystole, vfib, vtach and junctional branches
+  ---
+  duration_ms: 0.575757
+  type: 'test'
+  ...
+# Subtest: ECG renderer is called from presentation rhythm and monitored HR
+ok 525 - ECG renderer is called from presentation rhythm and monitored HR
+  ---
+  duration_ms: 0.706081
+  type: 'test'
+  ...
+1..525
+# tests 525
+# suites 0
+# pass 525
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2316.164701
+
+TIME wall=2.34 user=5.38 sys=1.08 maxrss_kb=68688 exit=0

@@ -1,0 +1,26 @@
+EXTERNAL CANNULA HYDRAULIC OVERLAY — DOES NOT MODIFY PATIENT ENGINE
+Pressure losses are interpolation estimates from manufacturer water-bench anchors.
+Pump head estimate = drainage cannula loss + patient RA-to-aorta gradient + return cannula loss.
+
+Fr  Flow       L/min   Drain dP  Return dP  Patient dP  Total head  Anchor range
+    mL/kg/min          mmHg      mmHg       mmHg        mmHg
+ 9         0   0.000       0.0        0.0        48.1        48.1  yes
+ 9        50   0.175       6.2        6.2        54.7        67.0  yes
+ 9       100   0.350      29.6       29.6        61.2       120.3  yes
+ 9       150   0.525      74.0       74.0        67.7       215.6  yes
+ 9       200   0.700     141.7      141.7        74.2       357.5  EXTRAP
+11         0   0.000       0.0        0.0        48.1        48.1  yes
+11        50   0.175       1.3        1.3        54.7        57.3  yes
+11       100   0.350       6.2        6.2        61.2        73.5  yes
+11       150   0.525      15.4       15.4        67.7        98.6  yes
+11       200   0.700      29.6       29.6        74.2       133.3  yes
+13         0   0.000       0.0        0.0        48.1        48.1  yes
+13        50   0.175       0.6        0.6        54.7        55.8  yes
+13       100   0.350       2.5        2.5        61.2        66.1  yes
+13       150   0.525       5.8        5.8        67.7        79.3  yes
+13       200   0.700      10.7       10.7        74.2        95.6  yes
+15         0   0.000       0.0        0.0        48.1        48.1  yes
+15        50   0.175       0.3        0.3        54.7        55.3  yes
+15       100   0.350       1.3        1.3        61.2        63.9  yes
+15       150   0.525       3.1        3.1        67.7        73.9  yes
+15       200   0.700       5.6        5.6        74.2        85.5  yes

@@ -1,0 +1,23 @@
+{
+  "schema": "Standalone Lung PEEP-CO2 NorthStar v1",
+  "rules": [
+    "Static PEEP is not counted as tidal ventilation",
+    "PEEP may only modestly alter effective alveolar ventilation via capped recruitment",
+    "Pulmonary perfusion is an explicit boundary input to gas exchange",
+    "Lower pulmonary perfusion reduces effective CO2 clearance",
+    "Standalone lung behavior must be frozen before cardiopulmonary reintegration"
+  ],
+  "peep_checkpoints": [
+    0,
+    5,
+    8,
+    12
+  ],
+  "perfusion_fraction_checkpoints": [
+    1.2,
+    1.0,
+    0.8,
+    0.6,
+    0.4
+  ]
+}

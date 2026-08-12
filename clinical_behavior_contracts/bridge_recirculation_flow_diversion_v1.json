@@ -1,0 +1,68 @@
+{
+  "contract_id": "cbc.ecmo.bridge-recirculation-flow-diversion.v1",
+  "status": "automated-behavior-contract",
+  "clinical_review_status": "expert-review-pending",
+  "preconditions": {
+    "weight_kg": 3.0,
+    "baseline_map_mmhg": 42.0,
+    "cvp_mmhg": 5.0,
+    "native_cardiac_output_ml_min": 300.0,
+    "native_venous_saturation": 0.65,
+    "native_venous_paco2_mmhg": 55.0,
+    "rpm": 3000,
+    "sweep_gas_flow_ml_min": 600,
+    "fdo2": 1.0,
+    "bridge_target_flow_probe_ml_min": [
+      0,
+      25,
+      50,
+      75,
+      100,
+      150
+    ]
+  },
+  "expected_behavior": [
+    "solved bridge flow tracks requested target under live patient pressure boundaries",
+    "patient-directed ECMO flow decreases as bridge recirculation increases",
+    "settled VA MAP support decreases as bridge recirculation increases",
+    "venous CDI recirculation fraction increases",
+    "venous CDI saturation shifts toward post-oxygenator blood",
+    "venous CDI pCO2 shifts toward post-oxygenator blood",
+    "total circuit flow remains the sum of patient, shunt, and bridge flow and is not equivalent to patient support"
+  ],
+  "restoration_model": "return bridge target flow to zero and re-evaluate the same immutable patient/control boundary",
+  "restoration_scope": "deterministic control reversal; not stateful bridge-fault recovery",
+  "not_modeled": [
+    "persistent accidental bridge-opening fault state",
+    "clinically validated bridge target-flow prescription",
+    "bridge thrombosis propagation or embolization",
+    "automated learner scoring for bridge-management errors"
+  ],
+  "future_retest_conditions": [
+    "persistent bridge-opening or bridge-clot fault state is introduced",
+    "bridge management becomes a scored scenario action",
+    "device/circuit-specific bridge flow targets are clinically validated"
+  ],
+  "tolerances": {
+    "bridge_target_absolute_ml_min": 0.05,
+    "branch_conservation_absolute_ml_min": 0.1
+  },
+  "evidence_scope": {
+    "external_evidence_packet": "validation_packets/CBC09_BRIDGE_RECIRCULATION_FLOW_DIVERSION_EVIDENCE_REVIEW_2026-08-10.md",
+    "supported_directionally": [
+      "an arterial-to-venous bridge can preserve circuit/oxygenator flow while reducing patient-directed flow",
+      "total circuit flow is not equivalent to patient support when bridge recirculation is present",
+      "recirculated post-oxygenator blood can bias venous-line oxygen saturation upward"
+    ],
+    "mechanistic_inference_only": [
+      "recirculated post-oxygenator blood can bias venous-line pCO2 downward at the modeled sensor location"
+    ],
+    "not_supported_as_quantitative_claims": [
+      "canonical bridge target-flow values as neonatal prescriptions",
+      "exact clamp positions or bridge resistance coefficients as device-validated values",
+      "exact MAP, CDI saturation, pCO2, or recirculation-fraction magnitudes",
+      "bridge flush or flash intervals"
+    ],
+    "status": "external evidence packet complete; expert sign-off pending"
+  }
+}

@@ -1,0 +1,14 @@
+Phase-6 complete baseline nodes: 514
+Phase-7 current nodes: 519
+New nodes: 5
+Missing Phase-6 nodes: 0
+
+NEW NODES
+tests/test_phase7_7a_read_only_debrief.py::test_phase7_debrief_contract_has_no_score_interpretation_or_replay_fields
+tests/test_phase7_7a_read_only_debrief.py::test_phase7_debrief_is_read_only_projection_of_canonical_event_stream
+tests/test_phase7_7a_read_only_debrief.py::test_phase7_debrief_retains_tier_a_disclosure_and_does_not_expose_hidden_diagnosis
+tests/test_phase7_7a_read_only_debrief.py::test_phase7_gui_presents_debrief_without_scoring_or_replay_controls
+tests/test_phase7_7a_read_only_debrief.py::test_phase7_live_tk_debrief_renders_event_stream_without_mutation
+
+MISSING PHASE-6 NODES
+(none)

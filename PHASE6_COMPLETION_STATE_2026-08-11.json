@@ -1,0 +1,27 @@
+{
+  "roadmap": "FIX_MAP_v5_AUTHORIZED_2026-08-10.md",
+  "phase": "6",
+  "status": "complete-closed",
+  "baseline_version": "v0.21.0",
+  "baseline_node_count": 497,
+  "baseline_nodes_pass_accounted": 497,
+  "fresh_baseline_nodes_this_continuation": 434,
+  "carried_direct_zero_exit_nodes": 63,
+  "post_node_count": 514,
+  "new_phase6_nodes": 17,
+  "missing_baseline_nodes": 0,
+  "phase6_tests": {
+    "passed": 17,
+    "total": 17,
+    "live_tk_xvfb": true
+  },
+  "act_observe_rows": {
+    "passed": 7,
+    "total": 7
+  },
+  "reference_window": "1360x820",
+  "capability_matrix_rows": 99,
+  "known_failure": null,
+  "timeout_counted_as_pass": 0,
+  "next_gate": "STOP; explicit user confirmation required before Phase 7 or Phase 8."
+}

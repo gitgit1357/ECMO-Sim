@@ -1,0 +1,80 @@
+{
+  "contract_id": "cbc.ecmo.fdo2-oxygen-fraction-control.v1",
+  "status": "automated-behavior-contract",
+  "clinical_review_status": "expert-review-pending",
+  "preconditions": {
+    "rpm": 2200,
+    "sweep_gas_flow_ml_min": 600,
+    "bridge_clamp_position": 0.0,
+    "representative_inlet_venous_saturation": 0.65,
+    "representative_inlet_paco2_mmhg": 58.0,
+    "baseline_fdo2": 1.0,
+    "graded_probe_fdo2": [
+      1.0,
+      0.8,
+      0.6,
+      0.4,
+      0.21
+    ]
+  },
+  "stimulus": {
+    "action": "reduce authoritative ECMO FdO2 with sweep flow held nonzero and fixed",
+    "lowest_fdo2": 0.21
+  },
+  "expected_behavior": [
+    "post-oxygenator pO2 decreases monotonically as FdO2 is reduced",
+    "post-oxygenator oxygen saturation is derived from the same modeled outlet O2 state and remains coherent with post-oxygenator pO2",
+    "post-oxygenator pCO2 is materially unchanged by an FdO2-only change when sweep flow is fixed",
+    "solved blood/circuit flow is materially unchanged by an FdO2-only change",
+    "with authoritative native mixed-venous oxygen supplying the membrane inlet, coupled-patient PaO2 decreases directionally as FdO2 is reduced at fixed sweep and blood-side conditions",
+    "returning FdO2 to baseline in the same runtime restores the coupled-patient oxygenation result without changing patient-directed ECMO flow"
+  ],
+  "restoration_model": "return FdO2 to baseline and re-evaluate the immutable control state",
+  "restoration_scope": "deterministic control re-evaluation; not a stateful gas-source fault recovery test",
+  "not_modeled": [
+    "persistent blender or oxygen-source fault state",
+    "oxygen source depletion or wall-gas failure",
+    "gas-line disconnection clues beyond the resulting control state",
+    "device-specific oxygen-transfer curve validation",
+    "patient-specific quantitative prediction of the magnitude or time course of FdO2-driven oxygenation change",
+    "differential upper-body/lower-body oxygenation or mixing-point migration (Phase 11 territory)"
+  ],
+  "future_retest_conditions": [
+    "a persistent FdO2/blender/oxygen-source fault mechanism is introduced",
+    "the ownership or derivation of native mixed-venous oxygen changes",
+    "device-specific oxygenator gas-transfer data replace the provisional transfer targets",
+    "Phase 11 introduces differential VA mixing and upper-body/lower-body oxygenation states"
+  ],
+  "tolerances": {
+    "oxygen_state_coherence_absolute": 1e-09,
+    "paco2_absolute_mmhg": 0.5,
+    "flow_relative": 0.005
+  },
+  "notes": [
+    "FdO2 values are regression control settings, not a patient oxygenation prescription.",
+    "CBC08 isolates oxygen fraction from sweep flow: FdO2 controls modeled O2 transfer while fixed sweep preserves modeled CO2 clearance.",
+    "The post-oxygenator saturation and pO2 pair must describe one internally consistent modeled O2 state rather than two independent transfer approximations.",
+    "Phase 9a supplies authoritative native mixed-venous oxygen at the patient boundary; Phase 10b protects the resulting directional coupled-patient FdO2 response without adding a second oxygen solver.",
+    "Phase 10b validates direction, separation from hydraulics/CO2, and same-runtime reversibility only; exact patient or device magnitudes remain non-validated.",
+    "Phase 11 differential hypoxemia physiology remains explicitly outside this contract."
+  ],
+  "evidence_scope": {
+    "supported_directionally": [
+      "lower oxygen fraction delivered to the membrane lung can lower post-oxygenator oxygenation",
+      "FdO2 oxygenation control is distinct from sweep-flow control of carbon-dioxide removal",
+      "an FdO2-only change is not a blood-side pump-speed or resistance command",
+      "once the simulator uses authoritative native mixed-venous inlet oxygen, lower modeled ECMO return oxygenation can directionally lower the mixed coupled-patient arterial oxygen state"
+    ],
+    "model_consistency_only": [
+      "post-oxygenator saturation is derived from the same modeled pO2 state"
+    ],
+    "not_supported_as_quantitative_claims": [
+      "canonical FdO2 probe values as neonatal prescriptions",
+      "exact post-oxygenator pO2 or saturation magnitudes as device-specific performance",
+      "strict real-world pCO2 equality for every FdO2-only change",
+      "exact coupled-patient PaO2 or saturation magnitude, time course, or bedside prediction",
+      "differential upper-body/lower-body oxygenation behavior"
+    ],
+    "external_evidence_packet": "validation_packets/CBC08_FDO2_OXYGEN_FRACTION_EVIDENCE_REVIEW_2026-08-10.md"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-08-10",
+  "purpose": "Independent facility-educator clinical review packet for external-training/go-live gating.",
+  "current_project_review_state": "Single-reviewer clinical review complete by project author/practicing ECMO specialist; independent external review pending.",
+  "gate_rule": "External-training/go-live remains blocked until all current CBCs receive an independent disposition and no unresolved REJECT_REWORK disposition remains.",
+  "reviewer_role": "facility ECMO educator",
+  "items": [
+    {
+      "contract_id": "cbc.lowflow.hypovolemia.v1",
+      "priority": "A",
+      "learner_exposure": "direct \u2014 generic intravascular volume and ECMO RPM are learner-operable",
+      "contract_file": "clinical_behavior_contracts/hypovolemia_preload_low_flow_v1.json",
+      "evidence_packet": "validation_packets/CBC01_HYPOVOLEMIA_PRELOAD_EVIDENCE_REVIEW_2026-08-10.md",
+      "current_internal_review": "single-reviewer-clinical-review-complete",
+      "independent_reviewer_role": "facility ECMO educator",
+      "independent_disposition": "PENDING",
+      "allowed_dispositions": [
+        "ACCEPT",
+        "ACCEPT_WITH_LIMITATION",
+        "REJECT_REWORK",
+        "NOT_APPLICABLE"
+      ],
+      "review_domains": [
+        "ECMO bedside practice",
+        "pediatric/neonatal hemodynamics"
+      ],
+      "review_questions": [
+        "Are the preconditions a plausible non-chattering teaching baseline?",
+        "Are the expected directions for preload, patient flow, MAP, CVP and drainage pressure appropriate?",
+        "Is RPM escalation correctly framed as non-definitive/worsening drainage under preload limitation?",
+        "Are allowed exceptions and non-claims sufficient to prevent treating the regression stimulus as a treatment threshold?"
+      ],
+      "device_or_policy_evidence": "not required for directional contract; local volume-resuscitation policy must be separate from regression stimuli",
+      "external_training_gate": "BLOCKED_PENDING_INDEPENDENT_REVIEW"
+    },
+    {
+      "contract_id": "cbc.ecmo.sweep-gas-failure.v1",
+      "priority": "A",
+      "learner_exposure": "direct \u2014 sweep is learner-operable",
+      "contract_file": "clinical_behavior_contracts/sweep_gas_failure_v1.json",
+      "evidence_packet": "validation_packets/CBC02_SWEEP_GAS_FAILURE_EVIDENCE_REVIEW_2026-08-10.md",
+      "current_internal_review": "single-reviewer-clinical-review-complete",
+      "independent_reviewer_role": "facility ECMO educator",
+      "independent_disposition": "PENDING",
+      "allowed_dispositions": [
+        "ACCEPT",
+        "ACCEPT_WITH_LIMITATION",
+        "REJECT_REWORK",
+        "NOT_APPLICABLE"
+      ],
+      "review_domains": [
+        "ECMO bedside practice",
+        "oxygenator gas-path physiology"
+      ],
+      "review_questions": [
+        "Is complete zero sweep correctly represented as loss of both membrane O2 addition and CO2 removal?",
+        "Are nonzero sweep and FdO2 roles kept appropriately separate?",
+        "Is the membrane-boundary validation acceptable while coupled-patient venous-state limitations remain disclosed?"
+      ],
+      "device_or_policy_evidence": "device/manufacturer gas-path operating evidence desirable before device-specific claims",
+      "external_training_gate": "BLOCKED_PENDING_INDEPENDENT_REVIEW"
+    },
+    {
+      "contract_id": "cbc.ecmo.ckrt-net-ultrafiltration.v1",
+      "priority": "A",
+      "learner_exposure": "direct \u2014 CKRT Qb and net UF are learner-operable",
+      "contract_file": "clinical_behavior_contracts/ckrt_net_ultrafiltration_v1.json",
+      "evidence_packet": "validation_packets/CBC06_CKRT_NET_ULTRAFILTRATION_EVIDENCE_REVIEW_2026-08-10.md",
+      "current_internal_review": "single-reviewer-clinical-review-complete",
+      "independent_reviewer_role": "facility ECMO educator",
+      "independent_disposition": "PENDING",
+      "allowed_dispositions": [
+        "ACCEPT",
+        "ACCEPT_WITH_LIMITATION",
+        "REJECT_REWORK",
+        "NOT_APPLICABLE"
+      ],
+      "review_domains": [
+        "ECMO bedside practice",
+        "CKRT practice",
+        "pediatric/neonatal fluid management"
+      ],
+      "review_questions": [
+        "Is UF gating on CKRT selected + Qb>0 appropriate for the intended simulator workflow?",
+        "Are matched-control volume/preload consequences appropriate?",
+        "Is stopping UF correctly distinguished from replacing lost volume?",
+        "Are the current Qb/net-UF values clearly retained as regression stimuli rather than prescriptions?"
+      ],
+      "device_or_policy_evidence": "validated prescription ranges/institutional CKRT practice required before dose/range claims",
+      "external_training_gate": "BLOCKED_PENDING_INDEPENDENT_REVIEW"
+    },
+    {
+      "contract_id": "cbc.patient.positive-airway-pressure-hemodynamics.v1",
+      "priority": "A",
+      "learner_exposure": "direct \u2014 pressure-control ventilation including PEEP is learner-operable",
+      "contract_file": "clinical_behavior_contracts/positive_airway_pressure_hemodynamics_v1.json",
+      "evidence_packet": "validation_packets/CBC07_POSITIVE_AIRWAY_PRESSURE_HEMODYNAMICS_EVIDENCE_REVIEW_2026-08-10.md",
+      "current_internal_review": "single-reviewer-clinical-review-complete",
+      "independent_reviewer_role": "facility ECMO educator",
+      "independent_disposition": "PENDING",
+      "allowed_dispositions": [
+        "ACCEPT",
+        "ACCEPT_WITH_LIMITATION",
+        "REJECT_REWORK",
+        "NOT_APPLICABLE"
+      ],
+      "review_domains": [
+        "neonatal/pediatric respiratory care",
+        "hemodynamics",
+        "ECMO bedside practice"
+      ],
+      "review_questions": [
+        "Is higher positive airway pressure correctly taught as capable of lowering native output/MAP while measured CVP rises?",
+        "Is the non-volume interpretation of CVP clear?",
+        "Is the PEEP-to-ECMO drainage block adequate until transmural preload exists?",
+        "Are re-equilibration and recruitment/derecruitment limitations clearly separated?"
+      ],
+      "device_or_policy_evidence": "device-specific ventilator accuracy not required for directional contract; local ventilation policy separate",
+      "external_training_gate": "BLOCKED_PENDING_INDEPENDENT_REVIEW"
+    },
+    {
+      "contract_id": "cbc.ecmo.fdo2-oxygen-fraction-control.v1",
+      "priority": "A",
+      "learner_exposure": "direct \u2014 FdO2 is learner-operable",
+      "contract_file": "clinical_behavior_contracts/fdo2_oxygen_fraction_control_v1.json",
+      "evidence_packet": "validation_packets/CBC08_FDO2_OXYGEN_FRACTION_EVIDENCE_REVIEW_2026-08-10.md",
+      "current_internal_review": "single-reviewer-clinical-review-complete",
+      "independent_reviewer_role": "facility ECMO educator",
+      "independent_disposition": "PENDING",
+      "allowed_dispositions": [
+        "ACCEPT",
+        "ACCEPT_WITH_LIMITATION",
+        "REJECT_REWORK",
+        "NOT_APPLICABLE"
+      ],
+      "review_domains": [
+        "ECMO bedside practice",
+        "oxygenator gas exchange"
+      ],
+      "review_questions": [
+        "Is the separation of FdO2-driven O2 effect from sweep-driven CO2 effect appropriate?",
+        "Is deriving saturation from the same modeled PO2 state acceptable as a consistency rule?",
+        "Is coupled-patient oxygenation correctly blocked until true venous inlet state exists?"
+      ],
+      "device_or_policy_evidence": "device-specific transfer data required before quantitative transfer claims",
+      "external_training_gate": "BLOCKED_PENDING_INDEPENDENT_REVIEW"
+    },
+    {
+      "contract_id": "cbc.ecmo.bridge-recirculation-flow-diversion.v1",
+      "priority": "A",
+      "learner_exposure": "direct \u2014 bridge control is learner-operable",
+      "contract_file": "clinical_behavior_contracts/bridge_recirculation_flow_diversion_v1.json",
+      "evidence_packet": "validation_packets/CBC09_BRIDGE_RECIRCULATION_FLOW_DIVERSION_EVIDENCE_REVIEW_2026-08-10.md",
+      "current_internal_review": "single-reviewer-clinical-review-complete",
+      "independent_reviewer_role": "facility ECMO educator",
+      "independent_disposition": "PENDING",
+      "allowed_dispositions": [
+        "ACCEPT",
+        "ACCEPT_WITH_LIMITATION",
+        "REJECT_REWORK",
+        "NOT_APPLICABLE"
+      ],
+      "review_domains": [
+        "ECMO circuit bedside practice"
+      ],
+      "review_questions": [
+        "Is total-flow-versus-patient-flow diversion represented in the right direction?",
+        "Is venous CDI contamination by recirculated post-oxygenator blood an appropriate teaching relationship?",
+        "Are bridge target flows clearly regression stimuli rather than bedside targets?"
+      ],
+      "device_or_policy_evidence": "institution/circuit-specific bridge management and sensor-location policy required before target-flow, flush/flash, or device-specific CDI claims",
+      "external_training_gate": "BLOCKED_PENDING_INDEPENDENT_REVIEW"
+    },
+    {
+      "contract_id": "cbc.ecmo.fixed-shunt-configuration.v1",
+      "priority": "A",
+      "learner_exposure": "direct \u2014 shunt configuration is learner-operable",
+      "contract_file": "clinical_behavior_contracts/fixed_shunt_configuration_v1.json",
+      "evidence_packet": "validation_packets/CBC10_FIXED_SHUNT_CONFIGURATION_EVIDENCE_REVIEW_2026-08-10.md",
+      "current_internal_review": "single-reviewer-clinical-review-complete",
+      "independent_reviewer_role": "facility ECMO educator",
+      "independent_disposition": "PENDING",
+      "allowed_dispositions": [
+        "ACCEPT",
+        "ACCEPT_WITH_LIMITATION",
+        "REJECT_REWORK",
+        "NOT_APPLICABLE"
+      ],
+      "review_domains": [
+        "ECMO circuit bedside practice",
+        "hemofilter/CKRT circuit setup"
+      ],
+      "review_questions": [
+        "Does OPEN vs inline HEMOFILTER vs side-port CKRT match the intended circuit topology?",
+        "Is filter presence correctly separated from scuffing activity?",
+        "Is leaving hemofilter patient UF blocked appropriate until a bounded prescription exists?"
+      ],
+      "device_or_policy_evidence": "device-specific filter resistance and institutional setup evidence needed before quantitative/device claims",
+      "external_training_gate": "BLOCKED_PENDING_INDEPENDENT_REVIEW"
+    },
+    {
+      "contract_id": "cbc.ecmo.oxygenator-dysfunction.v1",
+      "priority": "B",
+      "learner_exposure": "indirect/headless \u2014 no complete persistent oxygenator-fault action yet",
+      "contract_file": "clinical_behavior_contracts/oxygenator_dysfunction_v1.json",
+      "evidence_packet": null,
+      "current_internal_review": "single-reviewer-clinical-review-complete",
+      "independent_reviewer_role": "facility ECMO educator",
+      "independent_disposition": "PENDING",
+      "allowed_dispositions": [
+        "ACCEPT",
+        "ACCEPT_WITH_LIMITATION",
+        "REJECT_REWORK",
+        "NOT_APPLICABLE"
+      ],
+      "review_domains": [
+        "ECMO bedside practice",
+        "oxygenator performance"
+      ],
+      "review_questions": [
+        "Is separating hydraulic obstruction from gas-transfer impairment correct?",
+        "Are universal Delta-P thresholds appropriately excluded?",
+        "Are restoration semantics correctly identified as deterministic while no persistent fault state exists?"
+      ],
+      "device_or_policy_evidence": "device-specific pressure/transfer curves required before thresholds or change criteria",
+      "external_training_gate": "BLOCKED_PENDING_INDEPENDENT_REVIEW"
+    },
+    {
+      "contract_id": "cbc.patient.ongoing-major-bleeding.v1",
+      "priority": "B",
+      "learner_exposure": "indirect/headless \u2014 blood-loss mechanism exists but no learner bleeding-source control",
+      "contract_file": "clinical_behavior_contracts/ongoing_major_bleeding_v1.json",
+      "evidence_packet": null,
+      "current_internal_review": "single-reviewer-clinical-review-complete",
+      "independent_reviewer_role": "facility ECMO educator",
+      "independent_disposition": "PENDING",
+      "allowed_dispositions": [
+        "ACCEPT",
+        "ACCEPT_WITH_LIMITATION",
+        "REJECT_REWORK",
+        "NOT_APPLICABLE"
+      ],
+      "review_domains": [
+        "ECMO bedside practice",
+        "pediatric/neonatal critical care"
+      ],
+      "review_questions": [
+        "Are serial blood-loss and partial-replacement relationships appropriate?",
+        "Is cessation correctly represented only as absence of further loss events in the current model?",
+        "Are coagulation/transfusion/source-control limitations explicit enough?"
+      ],
+      "device_or_policy_evidence": "institutional transfusion/coagulation policies required before treatment claims",
+      "external_training_gate": "BLOCKED_PENDING_INDEPENDENT_REVIEW"
+    },
+    {
+      "contract_id": "cbc.ecmo.drainage-path-resistance.v1",
+      "priority": "B",
+      "learner_exposure": "indirect/headless \u2014 no typed kink/position fault action",
+      "contract_file": "clinical_behavior_contracts/drainage_path_resistance_v1.json",
+      "evidence_packet": null,
+      "current_internal_review": "single-reviewer-clinical-review-complete",
+      "independent_reviewer_role": "facility ECMO educator",
+      "independent_disposition": "PENDING",
+      "allowed_dispositions": [
+        "ACCEPT",
+        "ACCEPT_WITH_LIMITATION",
+        "REJECT_REWORK",
+        "NOT_APPLICABLE"
+      ],
+      "review_domains": [
+        "ECMO bedside practice",
+        "cannula/circuit hydraulics"
+      ],
+      "review_questions": [
+        "Is the always-open-shunt interpretation of patient-flow/shunt-fraction changes appropriate?",
+        "Is omitting a mandatory more-negative P1 response correct for this topology?",
+        "Are kink, common pre-pump obstruction and positional maldrainage correctly kept separate/blocked?"
+      ],
+      "device_or_policy_evidence": "device-specific cannula curves required before quantitative claims",
+      "external_training_gate": "BLOCKED_PENDING_INDEPENDENT_REVIEW"
+    },
+    {
+      "contract_id": "cbc.patient.myocardial-dysfunction.v1",
+      "priority": "B",
+      "learner_exposure": "headless/runtime mechanism \u2014 no learner inotrope or myocardial control",
+      "contract_file": "clinical_behavior_contracts/myocardial_dysfunction_v1.json",
+      "evidence_packet": null,
+      "current_internal_review": "single-reviewer-clinical-review-complete",
+      "independent_reviewer_role": "facility ECMO educator",
+      "independent_disposition": "PENDING",
+      "allowed_dispositions": [
+        "ACCEPT",
+        "ACCEPT_WITH_LIMITATION",
+        "REJECT_REWORK",
+        "NOT_APPLICABLE"
+      ],
+      "review_domains": [
+        "neonatal/pediatric cardiac physiology",
+        "critical care hemodynamics"
+      ],
+      "review_questions": [
+        "Are LV and RV directional failure phenotypes appropriate?",
+        "Is the nonlinear response across contractility scales acceptable for teaching?",
+        "What labels, if any, can be safely attached to scale values?",
+        "Are filling-pressure/chamber-volume interpretations appropriately bounded?"
+      ],
+      "device_or_policy_evidence": "not device-specific; clinical phenotype/severity mapping requires expert review",
+      "external_training_gate": "BLOCKED_PENDING_INDEPENDENT_REVIEW"
+    }
+  ]
+}

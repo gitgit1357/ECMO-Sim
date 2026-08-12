@@ -1,0 +1,70 @@
+{
+  "contract_id": "cbc.ecmo.fixed-shunt-configuration.v1",
+  "status": "automated-behavior-contract",
+  "clinical_review_status": "expert-review-pending",
+  "preconditions": {
+    "weight_kg": 3.0,
+    "baseline_map_mmhg": 42.0,
+    "cvp_mmhg": 5.0,
+    "native_cardiac_output_ml_min": 300.0,
+    "native_venous_saturation": 0.65,
+    "native_venous_paco2_mmhg": 55.0,
+    "rpm": 2600,
+    "sweep_gas_flow_ml_min": 600,
+    "fdo2": 1.0
+  },
+  "expected_behavior": [
+    "inline HEMOFILTER lowers fixed-shunt flow and shunt fraction relative to OPEN",
+    "inline HEMOFILTER redistributes some circuit flow toward the patient branch at fixed RPM",
+    "closed-loop VA MAP support does not fall when shunt diversion is reduced by filter resistance",
+    "HEMOFILTER scuffing_active does not alter hydraulics when filter presence is unchanged",
+    "CKRT shunt configuration is hydraulically equivalent to OPEN in the current side-port model",
+    "branch conservation remains total equals patient plus shunt plus bridge flow"
+  ],
+  "restoration_model": "return shunt configuration from HEMOFILTER to OPEN and re-evaluate the same immutable boundary",
+  "restoration_scope": "deterministic configuration reversal; not stateful filter insertion/removal recovery",
+  "blocked_behavior": [
+    "hemofilter net-fluid removal in the coupled patient until a clinically bounded prescription and coupling path exist"
+  ],
+  "not_modeled": [
+    "validated hemofilter ultrafiltration prescription or TMP-driven removal",
+    "stateful filter insertion/removal procedure",
+    "filter priming-volume or blood sequestration effects",
+    "hemoconcentration or solute/electrolyte clearance",
+    "device-specific filter resistance",
+    "non-negligible CKRT side-port hydraulic interaction"
+  ],
+  "future_retest_conditions": [
+    "learner-settable hemofilter ultrafiltration prescription is introduced",
+    "hemofilter removal is coupled to the patient volume ledger",
+    "TMP-driven or device-specific hemofilter behavior is introduced",
+    "filter insertion/removal becomes persistent scenario state",
+    "CKRT side-port blood-flow interaction is modeled as non-negligible"
+  ],
+  "tolerances": {
+    "branch_conservation_absolute_ml_min": 0.1,
+    "hydraulic_equivalence_absolute_ml_min": 1e-06
+  },
+  "evidence_scope": {
+    "external_evidence_packet": "validation_packets/CBC10_FIXED_SHUNT_CONFIGURATION_EVIDENCE_REVIEW_2026-08-10.md",
+    "supported_directionally": [
+      "inline hemofilter and side-port renal-support configurations are physically distinct ECMO circuit topologies",
+      "adding an inline blood-path component can alter resistance and pressure-flow behavior",
+      "filter hardware presence is conceptually separable from prescribed filtrate removal"
+    ],
+    "mechanistic_inference_only": [
+      "increased modeled inline shunt resistance reduces shunt diversion and redistributes some flow toward the patient branch"
+    ],
+    "reduced_order_assumption_only": [
+      "side-port CKRT is hydraulically equivalent to OPEN in the current fixed-shunt model",
+      "scuffing_active is hydraulically neutral when filter presence is unchanged"
+    ],
+    "not_supported_as_quantitative_claims": [
+      "device-specific hemofilter resistance or pressure-flow curve",
+      "exact patient-flow, shunt-flow, shunt-fraction, or MAP changes",
+      "universal hydraulic equivalence of side-port CKRT and OPEN",
+      "hemofilter ultrafiltration dose or TMP-driven removal"
+    ],
+    "status": "external evidence packet complete; expert sign-off pending"
+  }
+}

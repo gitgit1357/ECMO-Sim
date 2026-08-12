@@ -1,0 +1,17 @@
+{
+  "schema": "Renal Fluid Feedback NorthStar v1",
+  "rules": [
+    "net body fluid is distinct from immediate intravascular volume",
+    "only a configured intravascular fraction changes blood volume immediately",
+    "blood volume enters/exits through venous reservoirs",
+    "pressure and output are never directly assigned"
+  ],
+  "scenarios": [
+    "baseline",
+    "fluid_input",
+    "diuresis",
+    "external_fluid_removal",
+    "CV_only",
+    "CV_plus_lung"
+  ]
+}

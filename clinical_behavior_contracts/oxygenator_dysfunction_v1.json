@@ -1,0 +1,68 @@
+{
+  "contract_id": "cbc.ecmo.oxygenator-dysfunction.v1",
+  "scenario_family": "circuit-oxygenator-dysfunction",
+  "legacy_scenario_id": "ce-03-oxygenator",
+  "status": "automated-behavior-contract",
+  "clinical_review_status": "expert-review-pending",
+  "hydraulic_branch": {
+    "preconditions": {
+      "rpm": 2200.0,
+      "sweep_gas_flow_ml_min": 600.0,
+      "fdo2": 1.0,
+      "bridge_clamp_position": 0.0,
+      "representative_inlet_venous_saturation": 0.65,
+      "representative_inlet_paco2_mmhg": 58.0,
+      "baseline_obstruction_fraction": 0.0
+    },
+    "stimulus": {
+      "obstruction_fraction": 0.60
+    },
+    "expected": [
+      "oxygenator blood-side pressure drop increases at fixed RPM",
+      "solved total circuit flow decreases at fixed RPM",
+      "patient-directed ECMO flow decreases at fixed RPM",
+      "restoring clean hydraulic parameters returns the operating point approximately to baseline"
+    ]
+  },
+  "gas_transfer_branch": {
+    "preconditions": {
+      "blood_flow_ml_min": 1400.0,
+      "inlet_saturation": 0.65,
+      "inlet_paco2_mmhg": 58.0,
+      "fdo2": 1.0,
+      "sweep_gas_flow_ml_min": 600.0,
+      "baseline_obstruction_fraction": 0.0
+    },
+    "stimulus": {
+      "obstruction_fraction": 0.60
+    },
+    "expected": [
+      "effective membrane oxygen transfer decreases at fixed blood flow and gas settings",
+      "post-oxygenator oxygen saturation decreases",
+      "post-oxygenator pO2 decreases",
+      "carbon dioxide clearance decreases",
+      "post-oxygenator pCO2 increases",
+      "restoring clean gas-transfer parameters returns outputs approximately to baseline"
+    ]
+  },
+  "tolerances": {
+    "restoration_relative": 1e-09
+  },
+  "explicit_non_rules": [
+    "there is no universal oxygenator delta-P failure threshold in this contract",
+    "a high pressure gradient alone does not diagnose oxygenator failure",
+    "hydraulic obstruction and gas-transfer impairment are not required to progress one-for-one",
+    "the obstruction fraction is an internal model proxy, not a clinically measurable clot percentage"
+  ],
+  "allowed_exceptions": [
+    "complete sweep-gas loss is governed by CBC02",
+    "FdO2-only failure is a distinct mechanism",
+    "device-specific pressure-flow and gas-transfer magnitudes remain provisional",
+    "the current unified-patient venous gas limitation is outside this contract",
+    "gas-exchange failure may occur without a dramatic pressure-gradient rise"
+  ],
+  "notes": [
+    "CBC03 intentionally separates hydraulic and membrane-transfer branches so the test does not force one synthetic combined failure signature.",
+    "The 0.60 obstruction values and representative inlet conditions are regression fixtures, not clinical thresholds or treatment targets."
+  ]
+}

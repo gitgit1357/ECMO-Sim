@@ -1,0 +1,94 @@
+{
+  "schema": "gas-northstar-v1",
+  "cases": [
+    {
+      "id": "normal_room_air",
+      "alveolar_ventilation_ml_min": 376.279,
+      "alveolar_po2_mmhg": 101.566,
+      "arterial_po2_mmhg": 96.241,
+      "arterial_pco2_mmhg": 40.713,
+      "arterial_saturation_pct": 98.9247
+    },
+    {
+      "id": "fio2_0_40",
+      "alveolar_ventilation_ml_min": 376.279,
+      "alveolar_po2_mmhg": 237.036,
+      "arterial_po2_mmhg": 220.873,
+      "arterial_pco2_mmhg": 40.713,
+      "arterial_saturation_pct": 99.99
+    },
+    {
+      "id": "fio2_1_00",
+      "alveolar_ventilation_ml_min": 376.279,
+      "alveolar_po2_mmhg": 664.836,
+      "arterial_po2_mmhg": 614.449,
+      "arterial_pco2_mmhg": 40.713,
+      "arterial_saturation_pct": 99.99
+    },
+    {
+      "id": "hypoventilation_low_effort",
+      "alveolar_ventilation_ml_min": 91.163,
+      "alveolar_po2_mmhg": 0.0,
+      "arterial_po2_mmhg": 2.8,
+      "arterial_pco2_mmhg": 153.89,
+      "arterial_saturation_pct": 1.9329
+    },
+    {
+      "id": "tachypnea_60",
+      "alveolar_ventilation_ml_min": 332.676,
+      "alveolar_po2_mmhg": 95.254,
+      "arterial_po2_mmhg": 90.433,
+      "arterial_pco2_mmhg": 45.456,
+      "arterial_saturation_pct": 98.5078
+    },
+    {
+      "id": "high_dead_space",
+      "alveolar_ventilation_ml_min": 160.191,
+      "alveolar_po2_mmhg": 36.596,
+      "arterial_po2_mmhg": 36.469,
+      "arterial_pco2_mmhg": 89.527,
+      "arterial_saturation_pct": 79.1057
+    },
+    {
+      "id": "high_vq_mismatch",
+      "alveolar_ventilation_ml_min": 225.018,
+      "alveolar_po2_mmhg": 69.19,
+      "arterial_po2_mmhg": 66.454,
+      "arterial_pco2_mmhg": 65.039,
+      "arterial_saturation_pct": 95.4322
+    },
+    {
+      "id": "low_vq_mismatch",
+      "alveolar_ventilation_ml_min": 376.279,
+      "alveolar_po2_mmhg": 101.566,
+      "arterial_po2_mmhg": 74.96,
+      "arterial_pco2_mmhg": 41.361,
+      "arterial_saturation_pct": 96.2647
+    },
+    {
+      "id": "shunt_10pct",
+      "alveolar_ventilation_ml_min": 376.279,
+      "alveolar_po2_mmhg": 101.566,
+      "arterial_po2_mmhg": 83.155,
+      "arterial_pco2_mmhg": 41.145,
+      "arterial_saturation_pct": 97.1514
+    },
+    {
+      "id": "shunt_30pct",
+      "alveolar_ventilation_ml_min": 376.279,
+      "alveolar_po2_mmhg": 101.566,
+      "arterial_po2_mmhg": 57.731,
+      "arterial_pco2_mmhg": 42.224,
+      "arterial_saturation_pct": 92.7181
+    },
+    {
+      "id": "diffusion_60pct",
+      "alveolar_ventilation_ml_min": 376.279,
+      "alveolar_po2_mmhg": 101.566,
+      "arterial_po2_mmhg": 74.94,
+      "arterial_pco2_mmhg": 42.552,
+      "arterial_saturation_pct": 96.8774
+    }
+  ],
+  "manifest_sha256": "980165b8d965c88afa7889461257de1814e7f3653c8f75f63b767d65e397f496"
+}

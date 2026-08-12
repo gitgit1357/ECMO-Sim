@@ -1,0 +1,257 @@
+{
+  "manifest": {
+    "schema_version": "1.0",
+    "bench_id": "neonatal-circulation-northstar-v1",
+    "patient_profile": "normal-term-neonate-3.5kg-72h",
+    "fixed_flow_steps_ml_kg_min": [
+      0,
+      50,
+      100,
+      150,
+      200
+    ],
+    "rpm_steps": [
+      2000,
+      3000,
+      4000,
+      5000
+    ],
+    "cannula_sizes_fr": [
+      9,
+      11,
+      13,
+      15
+    ],
+    "pump_fixture_id": "northstar-synthetic-centrifugal-v1",
+    "notes": [
+      "Patient physiology owns no cannula or pump models.",
+      "Cannula and pump fixtures are external regression equipment.",
+      "Synthetic pump fixture is deterministic and not a clinical manufacturer model.",
+      "Manufacturer cannula curves remain external water-bench approximations."
+    ],
+    "manifest_hash": "fea40f7e7937c2ba"
+  },
+  "generated_at_utc": "2026-07-24T12:47:26.021216+00:00",
+  "baseline": {
+    "systolic_aortic_mmhg": 68.75058353136707,
+    "diastolic_aortic_mmhg": 39.76339769814856,
+    "mean_aortic_mmhg": 51.48691144992981,
+    "pulse_pressure_mmhg": 28.98718583321851,
+    "cardiac_output_ml_min": 770.7777170805015,
+    "mean_ra_pressure_mmhg": 3.6248170432448017,
+    "mean_pa_pressure_mmhg": 16.76988155299277,
+    "total_blood_volume_ml": 300.99999999999994
+  },
+  "va_fixed_flow": [
+    {
+      "pump_flow_ml_kg_min": 0.0,
+      "delivered_pump_flow_ml_min": 0.0,
+      "native_rv_output_ml_min": 840.0704779748928,
+      "native_lv_output_ml_min": 821.6540038736853,
+      "circuit_fraction_of_aortic_inflow": 0.0,
+      "aortic_valve_open_fraction": 0.16216216216216217,
+      "mean_aortic_mmhg": 51.74882010951004,
+      "pulse_pressure_mmhg": 28.879082346954625,
+      "mean_ra_pressure_mmhg": 3.605764031563579,
+      "mean_la_pressure_mmhg": 3.5608790688265675,
+      "mean_pa_pressure_mmhg": 16.987152924121492,
+      "mean_lv_volume_ml": 4.254934787069233,
+      "mean_rv_volume_ml": 4.308512908162407,
+      "volume_conservation_error_ml": 1.1368683772161603e-12
+    },
+    {
+      "pump_flow_ml_kg_min": 50.0,
+      "delivered_pump_flow_ml_min": 175.00000000000003,
+      "native_rv_output_ml_min": 778.4529621001884,
+      "native_lv_output_ml_min": 770.3223791244629,
+      "circuit_fraction_of_aortic_inflow": 0.1851220322976816,
+      "aortic_valve_open_fraction": 0.15135135135135136,
+      "mean_aortic_mmhg": 58.12871865906772,
+      "pulse_pressure_mmhg": 26.54787181947588,
+      "mean_ra_pressure_mmhg": 3.4492835098918673,
+      "mean_la_pressure_mmhg": 3.4299383969299826,
+      "mean_pa_pressure_mmhg": 15.872263129774105,
+      "mean_lv_volume_ml": 4.160096965600963,
+      "mean_rv_volume_ml": 4.065022661582261,
+      "volume_conservation_error_ml": 5.684341886080801e-13
+    },
+    {
+      "pump_flow_ml_kg_min": 100.0,
+      "delivered_pump_flow_ml_min": 350.00000000000006,
+      "native_rv_output_ml_min": 716.3961405453283,
+      "native_lv_output_ml_min": 726.6444996312363,
+      "circuit_fraction_of_aortic_inflow": 0.32508409239993263,
+      "aortic_valve_open_fraction": 0.15135135135135136,
+      "mean_aortic_mmhg": 64.4753009486902,
+      "pulse_pressure_mmhg": 24.375670345686316,
+      "mean_ra_pressure_mmhg": 3.2939699758195977,
+      "mean_la_pressure_mmhg": 3.2998628762706863,
+      "mean_pa_pressure_mmhg": 14.750871332233984,
+      "mean_lv_volume_ml": 4.063943737568168,
+      "mean_rv_volume_ml": 3.8215592387184447,
+      "volume_conservation_error_ml": 1.7053025658242404e-13
+    },
+    {
+      "pump_flow_ml_kg_min": 150.0,
+      "delivered_pump_flow_ml_min": 525.0,
+      "native_rv_output_ml_min": 654.3730946968655,
+      "native_lv_output_ml_min": 664.1089045864736,
+      "circuit_fraction_of_aortic_inflow": 0.4415070797763261,
+      "aortic_valve_open_fraction": 0.15135135135135136,
+      "mean_aortic_mmhg": 70.81255239322256,
+      "pulse_pressure_mmhg": 22.128715506652696,
+      "mean_ra_pressure_mmhg": 3.1387437891528407,
+      "mean_la_pressure_mmhg": 3.1695191867634844,
+      "mean_pa_pressure_mmhg": 13.629745820974735,
+      "mean_lv_volume_ml": 3.966238416451653,
+      "mean_rv_volume_ml": 3.578217184273213,
+      "volume_conservation_error_ml": 1.7053025658242404e-13
+    },
+    {
+      "pump_flow_ml_kg_min": 200.0,
+      "delivered_pump_flow_ml_min": 700.0000000000001,
+      "native_rv_output_ml_min": 592.3811849061595,
+      "native_lv_output_ml_min": 584.4429816901563,
+      "circuit_fraction_of_aortic_inflow": 0.5449833196012275,
+      "aortic_valve_open_fraction": 0.14594594594594595,
+      "mean_aortic_mmhg": 77.15537750145279,
+      "pulse_pressure_mmhg": 20.011041222522323,
+      "mean_ra_pressure_mmhg": 2.983602780606569,
+      "mean_la_pressure_mmhg": 3.038938323840009,
+      "mean_pa_pressure_mmhg": 12.508891683296701,
+      "mean_lv_volume_ml": 3.8661252017894343,
+      "mean_rv_volume_ml": 3.3349929570199333,
+      "volume_conservation_error_ml": -1.1937117960769683e-12
+    }
+  ],
+  "hardware_fixture": [
+    {
+      "rpm": 2000,
+      "cannula_size_fr": 9,
+      "equilibrium_flow_l_min": 0.2166721583568415,
+      "pump_head_mmhg": 76.24425406343903,
+      "estimated_load_head_mmhg": 76.24425406343904,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 3000,
+      "cannula_size_fr": 9,
+      "equilibrium_flow_l_min": 0.4412365489783787,
+      "pump_head_mmhg": 164.42482462765207,
+      "estimated_load_head_mmhg": 164.4248246276521,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 4000,
+      "cannula_size_fr": 9,
+      "equilibrium_flow_l_min": 0.622883163150918,
+      "pump_head_mmhg": 288.9613252050485,
+      "estimated_load_head_mmhg": 288.9613252050486,
+      "manufacturer_anchor_extrapolated": true
+    },
+    {
+      "rpm": 5000,
+      "cannula_size_fr": 9,
+      "equilibrium_flow_l_min": 0.7929175821487888,
+      "pump_head_mmhg": 449.7025366335455,
+      "estimated_load_head_mmhg": 449.70253663354544,
+      "manufacturer_anchor_extrapolated": true
+    },
+    {
+      "rpm": 2000,
+      "cannula_size_fr": 11,
+      "equilibrium_flow_l_min": 0.3302149733275527,
+      "pump_head_mmhg": 71.2766457112227,
+      "estimated_load_head_mmhg": 71.27664571122271,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 3000,
+      "cannula_size_fr": 11,
+      "equilibrium_flow_l_min": 0.7241581094545504,
+      "pump_head_mmhg": 138.0476026008969,
+      "estimated_load_head_mmhg": 138.0476026008969,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 4000,
+      "cannula_size_fr": 11,
+      "equilibrium_flow_l_min": 1.069779351788768,
+      "pump_head_mmhg": 228.4457710789123,
+      "estimated_load_head_mmhg": 228.44577107891246,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 5000,
+      "cannula_size_fr": 11,
+      "equilibrium_flow_l_min": 1.378795938551551,
+      "pump_head_mmhg": 347.9137407866998,
+      "estimated_load_head_mmhg": 347.91374078669986,
+      "manufacturer_anchor_extrapolated": true
+    },
+    {
+      "rpm": 2000,
+      "cannula_size_fr": 13,
+      "equilibrium_flow_l_min": 0.3823443658206557,
+      "pump_head_mmhg": 68.30502287401605,
+      "estimated_load_head_mmhg": 68.30502287401606,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 3000,
+      "cannula_size_fr": 13,
+      "equilibrium_flow_l_min": 0.9190313274638306,
+      "pump_head_mmhg": 112.43051353120555,
+      "estimated_load_head_mmhg": 112.43051353120555,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 4000,
+      "cannula_size_fr": 13,
+      "equilibrium_flow_l_min": 1.3872983188617107,
+      "pump_head_mmhg": 166.0322699586777,
+      "estimated_load_head_mmhg": 166.03226995867766,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 5000,
+      "cannula_size_fr": 13,
+      "equilibrium_flow_l_min": 1.8141630013264827,
+      "pump_head_mmhg": 236.70500836944706,
+      "estimated_load_head_mmhg": 236.7050083694471,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 2000,
+      "cannula_size_fr": 15,
+      "equilibrium_flow_l_min": 0.4052371209929613,
+      "pump_head_mmhg": 66.86263006154688,
+      "estimated_load_head_mmhg": 66.86263006154688,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 3000,
+      "cannula_size_fr": 15,
+      "equilibrium_flow_l_min": 1.0104008912523934,
+      "pump_head_mmhg": 98.32720311650952,
+      "estimated_load_head_mmhg": 98.32720311650957,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 4000,
+      "cannula_size_fr": 15,
+      "equilibrium_flow_l_min": 1.5344801706808546,
+      "pump_head_mmhg": 131.6296484629804,
+      "estimated_load_head_mmhg": 131.62964846298047,
+      "manufacturer_anchor_extrapolated": false
+    },
+    {
+      "rpm": 5000,
+      "cannula_size_fr": 15,
+      "equilibrium_flow_l_min": 2.014810048666151,
+      "pump_head_mmhg": 175.2432374235122,
+      "estimated_load_head_mmhg": 175.24323742351243,
+      "manufacturer_anchor_extrapolated": false
+    }
+  ]
+}

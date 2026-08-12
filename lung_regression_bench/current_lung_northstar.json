@@ -1,0 +1,41 @@
+{
+  "schema": "lung-northstar-v1",
+  "cases": {
+    "baseline": {
+      "tidal_volume_ml_per_kg": 5.144958264319358,
+      "minute_ventilation_ml_min": 720.2941570047102,
+      "min_pleural_pressure_cmh2o": -10.999946288027862,
+      "end_expiratory_volume_ml": 105.19100215104706
+    },
+    "low_compliance": {
+      "tidal_volume_ml_per_kg": 4.16975927869197,
+      "minute_ventilation_ml_min": 583.7662990168758,
+      "min_pleural_pressure_cmh2o": -10.999946288027862,
+      "end_expiratory_volume_ml": 105.01523156587425
+    },
+    "high_airway_resistance": {
+      "tidal_volume_ml_per_kg": 3.1971645081965017,
+      "minute_ventilation_ml_min": 447.60303114751025,
+      "min_pleural_pressure_cmh2o": -10.999946288027862,
+      "end_expiratory_volume_ml": 106.28947078657434
+    },
+    "tachypnea": {
+      "tidal_volume_ml_per_kg": 3.9833372268253453,
+      "minute_ventilation_ml_min": 836.5008176333225,
+      "min_pleural_pressure_cmh2o": -10.99951660379229,
+      "end_expiratory_volume_ml": 105.70472447079925
+    },
+    "reduced_effort": {
+      "tidal_volume_ml_per_kg": 2.143732610133063,
+      "minute_ventilation_ml_min": 300.1225654186288,
+      "min_pleural_pressure_cmh2o": -7.4999776200116095,
+      "end_expiratory_volume_ml": 105.07958422960293
+    },
+    "peep_5": {
+      "tidal_volume_ml_per_kg": 5.144958264319395,
+      "minute_ventilation_ml_min": 720.2941570047153,
+      "min_pleural_pressure_cmh2o": -10.999946288027862,
+      "end_expiratory_volume_ml": 131.441002151047
+    }
+  }
+}

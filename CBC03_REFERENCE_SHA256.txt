@@ -1,0 +1,11 @@
+f6fe35e33892f56e36b7a17fee0aade3048661d1350fc27d630d4fecb2c15792  clinical_behavior_contracts/OXYGENATOR_DYSFUNCTION_V1.md
+9524b9c709bb58be48d373807a4fee848047a7c6aa711c30f21fda2770fe358c  clinical_behavior_contracts/oxygenator_dysfunction_v1.json
+2d3038a6b02a212ba457205abba92b655fbd29afb39918024b7ddf5a5919c2b5  tests/test_clinical_behavior_contract_oxygenator_dysfunction.py
+34ade58610a958b181140d6e6e9ec7a359e55cfc0b72b6afa5dd891b9c9111e2  CAPABILITY_MATRIX.json
+
+Verification summary (2026-08-10):
+- CBC01/CBC02/CBC03 + oxygenator/gas/console/full-circuit/preload group: 84 passed, 0 failed.
+- coupling/cache/async/bridge/shunt/workspace group: 75 passed, 0 failed.
+- Fresh total: 159 passed, 0 failed.
+- Exact-tree collection: 360 tests.
+- Non-generated src tree matches v0.17.5 baseline byte-for-byte (93 files).

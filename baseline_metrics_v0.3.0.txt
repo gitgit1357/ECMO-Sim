@@ -1,0 +1,15 @@
+{
+  "heart_rate_bpm": 130.0,
+  "systolic_aortic_mmhg": 68.78849001877093,
+  "diastolic_aortic_mmhg": 39.78370314343522,
+  "mean_aortic_mmhg": 51.68759542482434,
+  "pulse_pressure_mmhg": 29.00478687533571,
+  "mean_ra_mmhg": 3.6139032367143034,
+  "mean_pa_mmhg": 16.916670595352763,
+  "mean_la_mmhg": 3.5680845205663725,
+  "native_output_ml_min": 812.2606310644547,
+  "pulmonary_output_ml_min": 812.2051549757653,
+  "total_volume_start_ml": 301.0,
+  "total_volume_end_ml": 301.00000000000045,
+  "conservation_error_ml": 4.547473508864641e-13
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "Unified Patient NorthStar v1",
+  "scenarios": [
+    "normal",
+    "PEEP8",
+    "fluid_removal"
+  ],
+  "rule": "Unified shell orchestrates modules; it does not replace or duplicate organ physiology.",
+  "equipment_ports": [
+    "airway",
+    "vascular_support",
+    "renal_therapy"
+  ]
+}

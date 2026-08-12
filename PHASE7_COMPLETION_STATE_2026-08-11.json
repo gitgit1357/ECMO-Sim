@@ -1,0 +1,17 @@
+{
+  "date": "2026-08-11",
+  "phase": "7",
+  "status": "closed_at_authorized_boundary",
+  "phase6_baseline_nodes": 514,
+  "current_nodes": 519,
+  "phase7_added_nodes": 5,
+  "missing_phase6_nodes": 0,
+  "acceptance_live_tk_passed": 29,
+  "affected_regression_passed": 43,
+  "full_suite_monolithic": "incomplete_timeout_not_counted",
+  "7a": "complete_read_only_event_stream_debrief",
+  "7b": "audit_complete_replay_gate_failed_rescope_required",
+  "7c": "hold",
+  "7d": "deferred",
+  "physiology_changed": false
+}

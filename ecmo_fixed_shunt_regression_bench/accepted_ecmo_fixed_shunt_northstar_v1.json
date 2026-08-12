@@ -1,0 +1,85 @@
+{
+  "schema": "ecmo-fixed-shunt-northstar-v1",
+  "cases": {
+    "no_filter": {
+      "-50": {
+        "solved_flow_ml_min": 272.7363226143413
+      },
+      "0": {
+        "solved_flow_ml_min": 204.55224196075596
+      },
+      "50": {
+        "solved_flow_ml_min": 136.36816130717065
+      },
+      "100": {
+        "solved_flow_ml_min": 68.18408065358533
+      },
+      "150": {
+        "solved_flow_ml_min": 0.0
+      },
+      "200": {
+        "solved_flow_ml_min": -68.18408065358533
+      }
+    },
+    "filter_inactive": {
+      "-50": {
+        "solved_flow_ml_min": 260.2425444494571
+      },
+      "0": {
+        "solved_flow_ml_min": 195.5112633521272
+      },
+      "50": {
+        "solved_flow_ml_min": 130.56189801994853
+      },
+      "100": {
+        "solved_flow_ml_min": 65.39222926369159
+      },
+      "150": {
+        "solved_flow_ml_min": 0.0
+      },
+      "200": {
+        "solved_flow_ml_min": -65.39222926369159
+      }
+    },
+    "filter_active": {
+      "-50": {
+        "solved_flow_ml_min": 260.2425444494571
+      },
+      "0": {
+        "solved_flow_ml_min": 195.5112633521272
+      },
+      "50": {
+        "solved_flow_ml_min": 130.56189801994853
+      },
+      "100": {
+        "solved_flow_ml_min": 65.39222926369159
+      },
+      "150": {
+        "solved_flow_ml_min": 0.0
+      },
+      "200": {
+        "solved_flow_ml_min": -65.39222926369159
+      }
+    },
+    "ckrt": {
+      "-50": {
+        "solved_flow_ml_min": 272.7363226143413
+      },
+      "0": {
+        "solved_flow_ml_min": 204.55224196075596
+      },
+      "50": {
+        "solved_flow_ml_min": 136.36816130717065
+      },
+      "100": {
+        "solved_flow_ml_min": 68.18408065358533
+      },
+      "150": {
+        "solved_flow_ml_min": 0.0
+      },
+      "200": {
+        "solved_flow_ml_min": -68.18408065358533
+      }
+    }
+  }
+}

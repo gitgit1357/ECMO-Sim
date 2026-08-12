@@ -1,0 +1,73 @@
+{
+  "schema": "ecmo-gas-exchange-northstar-v1",
+  "cases": {
+    "clean_membrane": {
+      "100": {
+        "outlet_saturation": 0.99,
+        "outlet_paco2_mmhg": 20.0
+      },
+      "250": {
+        "outlet_saturation": 0.99,
+        "outlet_paco2_mmhg": 20.0
+      },
+      "500": {
+        "outlet_saturation": 0.99,
+        "outlet_paco2_mmhg": 20.0
+      },
+      "800": {
+        "outlet_saturation": 0.99,
+        "outlet_paco2_mmhg": 28.75
+      },
+      "1200": {
+        "outlet_saturation": 0.99,
+        "outlet_paco2_mmhg": 37.5
+      },
+      "1500": {
+        "outlet_saturation": 0.99,
+        "outlet_paco2_mmhg": 41.0
+      },
+      "2000": {
+        "outlet_saturation": 0.905,
+        "outlet_paco2_mmhg": 44.5
+      },
+      "3000": {
+        "outlet_saturation": 0.8200000000000001,
+        "outlet_paco2_mmhg": 48.0
+      }
+    },
+    "clotted_membrane": {
+      "100": {
+        "outlet_saturation": 0.99,
+        "outlet_paco2_mmhg": 20.0
+      },
+      "250": {
+        "outlet_saturation": 0.99,
+        "outlet_paco2_mmhg": 20.0
+      },
+      "500": {
+        "outlet_saturation": 0.99,
+        "outlet_paco2_mmhg": 34.0
+      },
+      "800": {
+        "outlet_saturation": 0.96875,
+        "outlet_paco2_mmhg": 41.875
+      },
+      "1200": {
+        "outlet_saturation": 0.8625,
+        "outlet_paco2_mmhg": 46.25
+      },
+      "1500": {
+        "outlet_saturation": 0.8200000000000001,
+        "outlet_paco2_mmhg": 48.0
+      },
+      "2000": {
+        "outlet_saturation": 0.7775000000000001,
+        "outlet_paco2_mmhg": 49.75
+      },
+      "3000": {
+        "outlet_saturation": 0.735,
+        "outlet_paco2_mmhg": 51.5
+      }
+    }
+  }
+}

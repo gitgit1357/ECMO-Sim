@@ -1,0 +1,92 @@
+{
+  "weight_kg": {
+    "name": "weight_kg",
+    "value": 3.5,
+    "units": "kg",
+    "classification": "observed_target",
+    "confidence": "high",
+    "rationale": "Reference term neonate size.",
+    "source_note": "Reference-patient definition; source synthesis pending formal bibliography."
+  },
+  "postnatal_age_hours": {
+    "name": "postnatal_age_hours",
+    "value": 72.0,
+    "units": "h",
+    "classification": "observed_target",
+    "confidence": "high",
+    "rationale": "Avoids immediate transitional circulation while remaining neonatal.",
+    "source_note": "Reference-patient definition."
+  },
+  "heart_rate_bpm": {
+    "name": "heart_rate_bpm",
+    "value": 130.0,
+    "units": "beats/min",
+    "classification": "observed_target",
+    "confidence": "high",
+    "rationale": "Central resting target for a stable term neonate.",
+    "source_note": "Clinical target to be source-weighted in the evidence register."
+  },
+  "total_blood_volume_ml": {
+    "name": "total_blood_volume_ml",
+    "value": 301.0,
+    "units": "mL",
+    "classification": "derived",
+    "confidence": "moderate",
+    "rationale": "3.5 kg multiplied by approximately 86 mL/kg.",
+    "source_note": "Derived from commonly used term-neonate blood-volume range."
+  },
+  "systemic_flow_ml_s": {
+    "name": "systemic_flow_ml_s",
+    "value": 13.125,
+    "units": "mL/s",
+    "classification": "derived",
+    "confidence": "moderate",
+    "rationale": "225 mL/kg/min for a 3.5 kg reference patient.",
+    "source_note": "Derived calibration target."
+  },
+  "systemic_arterial_compliance_scale": {
+    "name": "systemic_arterial_compliance_scale",
+    "value": 1.0,
+    "units": "multiplier",
+    "classification": "calibrated",
+    "confidence": "moderate",
+    "rationale": "Produces the selected pulse pressure with conserved volume.",
+    "source_note": "Hidden reduced-order calibration parameter."
+  },
+  "systemic_resistance_scale": {
+    "name": "systemic_resistance_scale",
+    "value": 1.0,
+    "units": "multiplier",
+    "classification": "calibrated",
+    "confidence": "moderate",
+    "rationale": "Produces the selected MAP at baseline flow.",
+    "source_note": "Hidden reduced-order calibration parameter."
+  },
+  "pulmonary_resistance_scale": {
+    "name": "pulmonary_resistance_scale",
+    "value": 1.0,
+    "units": "multiplier",
+    "classification": "calibrated",
+    "confidence": "moderate",
+    "rationale": "Produces the selected mean pulmonary pressure.",
+    "source_note": "Hidden reduced-order calibration parameter."
+  },
+  "lv_contractility_scale": {
+    "name": "lv_contractility_scale",
+    "value": 1.0,
+    "units": "multiplier",
+    "classification": "calibrated",
+    "confidence": "moderate",
+    "rationale": "Scales LV maximum elastance without pinning output.",
+    "source_note": "Hidden reduced-order calibration parameter."
+  },
+  "rv_contractility_scale": {
+    "name": "rv_contractility_scale",
+    "value": 1.0,
+    "units": "multiplier",
+    "classification": "calibrated",
+    "confidence": "moderate",
+    "rationale": "Scales RV maximum elastance without pinning output.",
+    "source_note": "Hidden reduced-order calibration parameter."
+  }
+}

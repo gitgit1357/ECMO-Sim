@@ -1,0 +1,66 @@
+{
+  "contract_id": "cbc.patient.positive-airway-pressure-hemodynamics.v1",
+  "status": "automated-behavior-contract",
+  "clinical_review_status": "external-evidence-packet-complete-expert-signoff-pending",
+  "preconditions": {
+    "weight_kg": 3.0,
+    "vascular_support": "disabled for canonical contract",
+    "baseline_peep_cmh2o": 0.0,
+    "canonical_elevated_peep_cmh2o": 8.0,
+    "graded_probe_peep_cmh2o": [
+      0.0,
+      5.0,
+      8.0,
+      12.0
+    ],
+    "coupled_ecmo_probe": {
+      "mode": "VA",
+      "rpm": 3000.0,
+      "sweep_gas_flow_ml_min": 600.0
+    }
+  },
+  "stimulus": {
+    "action": "set authoritative AirwayPort.peep_cmh2o",
+    "canonical_peep_cmh2o": 8.0
+  },
+  "expected_behavior": [
+    "within the canonical isolated regression path, native cardiac output falls as PEEP rises across the graded probe",
+    "within the canonical isolated regression path, MAP falls as PEEP rises across the graded probe",
+    "measured CVP rises as PEEP rises across the canonical graded probe",
+    "total blood volume and blood-volume fraction do not change merely because PEEP changed",
+    "static PEEP does not create a large artificial hypocapnia response",
+    "the intrathoracic-relative preload proxy falls as PEEP rises across the canonical graded probe",
+    "at fixed VA-ECMO controls in the canonical coupled regression probe, patient-directed ECMO flow falls as PEEP rises even though measured CVP rises"
+  ],
+  "interpretive_guardrail": "a higher measured CVP during positive airway pressure is not evidence that intravascular volume or effective drainage preload increased; Phase 10a uses the explicitly derived intrathoracic-relative preload proxy for ECMO drainage, and its quantitative PEEP-to-flow magnitude remains an educational regression behavior rather than a validated bedside prediction",
+  "recovery_model": "return AirwayPort.peep_cmh2o to baseline and re-equilibrate the same patient",
+  "recovery_scope": "deterministic cardiopulmonary re-equilibration after control reversal; not a history-dependent recruitment/derecruitment recovery test",
+  "not_modeled": [
+    "advanced ventilator modes beyond the implemented pressure-control pathway",
+    "history-dependent recruitment or derecruitment",
+    "barotrauma or ventilator-induced lung injury",
+    "pneumothorax physiology",
+    "a validated patient/device-specific transmural central venous pressure measurement",
+    "a clinically validated quantitative PEEP-to-ECMO-drainage dose-response"
+  ],
+  "future_retest_conditions": [
+    "advanced ventilator modes or synchrony mechanisms materially change mean-airway-pressure/hemodynamic behavior",
+    "dynamic recruitment/derecruitment or lung injury state is introduced",
+    "pneumothorax mechanism is introduced",
+    "the Phase 10a intrathoracic-relative preload proxy is replaced by a more physiologically explicit venous/transmural model",
+    "cannula-collapse or intrathoracic drainage mechanics are materially expanded"
+  ],
+  "notes": [
+    "PEEP values are regression stimuli, not a neonatal ventilator prescription.",
+    "Phase 2d implemented learner-operable pressure-control ventilation (PIP/PEEP/rate/Ti/FiO2); CBC07 remains specifically a PEEP/hemodynamic contract rather than a full ventilator-validation contract.",
+    "External pediatric/neonatal evidence shows the hemodynamic response to PEEP is heterogeneous and often modest; the monotonic CO/MAP response is retained as the simulator canonical isolated regression path, not a universal clinical prediction.",
+    "Phase 10a migrates the ECMO drainage boundary from measured CVP to the Phase 9a intrathoracic-relative preload proxy; measured CVP remains independently displayed and authoritative as a measured pressure.",
+    "The coupled drainage direction is now protected as a bounded/reversible simulator teaching behavior; exact magnitude is not clinically validated."
+  ],
+  "evidence_scope": {
+    "external_evidence_packet": "validation_packets/CBC07_POSITIVE_AIRWAY_PRESSURE_HEMODYNAMICS_EVIDENCE_REVIEW_2026-08-10.md",
+    "supported": "positive airway pressure can alter venous return/right-heart loading and can reduce cardiac output; measured CVP can rise with increased intrathoracic pressure",
+    "not_supported_as_universal": "a fixed or necessarily clinically important fall in cardiac output or MAP at each PEEP increment in every ventilated neonate/child",
+    "status": "external evidence packet complete; expert sign-off pending"
+  }
+}

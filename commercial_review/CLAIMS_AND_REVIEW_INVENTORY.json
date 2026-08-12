@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-08-10",
+  "intended_use": {
+    "current": "Simulation and training only for ECMO-related education.",
+    "not_intended_for": [
+      "real-patient diagnosis",
+      "real-patient treatment recommendation",
+      "real-time patient monitoring",
+      "control of real medical devices",
+      "patient-specific predictive decision support"
+    ],
+    "change_requires_formal_re_review": true
+  },
+  "current_dispositions": {
+    "independent_clinical_review": "PENDING",
+    "external_training_go_live": "BLOCKED_PENDING_INDEPENDENT_CLINICAL_REVIEW",
+    "regulatory_status": "PENDING_FORMAL_REVIEW",
+    "legal_ip_clearance": "PENDING_FORMAL_REVIEW",
+    "institutional_deployment_approval": "PENDING_FACILITY_REVIEW"
+  },
+  "claims_allowed_now": [
+    {
+      "claim": "Software regression and CBC tests pass for the explicitly defined simulator behaviors.",
+      "boundary": "Does not imply patient-specific clinical validity, device equivalence, or regulatory approval."
+    },
+    {
+      "claim": "All 11 current CBCs received single-reviewer clinical review by the project author/practicing ECMO specialist.",
+      "boundary": "Not independent external attestation."
+    },
+    {
+      "claim": "Priority-A CBCs have seven external-evidence packets.",
+      "boundary": "Evidence supports stated directional relationships only within each packet\u2019s non-claims."
+    }
+  ],
+  "claims_not_cleared": [
+    "FDA/non-device determination",
+    "FDA clearance/approval",
+    "medical-device classification conclusion",
+    "device equivalence",
+    "institutional policy compliance",
+    "trademark clearance",
+    "freedom to operate",
+    "copyright registration",
+    "commercial legal clearance",
+    "external-training/go-live approval"
+  ],
+  "official_source_inventory": [
+    {
+      "authority": "FDA",
+      "topic": "device determination/intended use",
+      "url": "https://www.fda.gov/medical-devices/classify-your-medical-device/how-determine-if-your-product-medical-device"
+    },
+    {
+      "authority": "FDA",
+      "topic": "device software functions",
+      "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/device-software-functions-including-mobile-medical-applications"
+    },
+    {
+      "authority": "FDA",
+      "topic": "clinical decision support software",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+    },
+    {
+      "authority": "FDA",
+      "topic": "computational model credibility",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/assessing-credibility-computational-modeling-and-simulation-medical-device-submissions"
+    },
+    {
+      "authority": "U.S. Copyright Office",
+      "topic": "computer program copyright registration",
+      "url": "https://www.copyright.gov/circs/circ61.pdf"
+    },
+    {
+      "authority": "USPTO",
+      "topic": "trademark basics/search",
+      "url": "https://www.uspto.gov/trademarks"
+    }
+  ]
+}

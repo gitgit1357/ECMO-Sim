@@ -1,0 +1,94 @@
+{
+  "schema": "ecmo-main-circuit-full-northstar-v1",
+  "cases": {
+    "rpm_sweep_bridge_closed": {
+      "0": {
+        "solved_total_flow_ml_min": 0.0,
+        "solved_shunt_flow_ml_min": 0.0,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 0.0,
+        "shunt_fraction": 0.0
+      },
+      "1500": {
+        "solved_total_flow_ml_min": 209.09722700397663,
+        "solved_shunt_flow_ml_min": 74.69496462258876,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 134.40226238138786,
+        "shunt_fraction": 0.35722599334695243
+      },
+      "2000": {
+        "solved_total_flow_ml_min": 336.15016104815516,
+        "solved_shunt_flow_ml_min": 125.18469472483108,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 210.9654663233241,
+        "shunt_fraction": 0.3724070645526115
+      },
+      "2500": {
+        "solved_total_flow_ml_min": 477.8817341512201,
+        "solved_shunt_flow_ml_min": 185.32941409585158,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 292.5523200553685,
+        "shunt_fraction": 0.38781439182859884
+      },
+      "3000": {
+        "solved_total_flow_ml_min": 630.4199954332848,
+        "solved_shunt_flow_ml_min": 253.98713361985585,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 376.43286181342893,
+        "shunt_fraction": 0.40288559287414677
+      },
+      "3500": {
+        "solved_total_flow_ml_min": 791.3096074229223,
+        "solved_shunt_flow_ml_min": 330.25766682704636,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 461.051940595876,
+        "shunt_fraction": 0.4173558158893138
+      },
+      "4000": {
+        "solved_total_flow_ml_min": 958.9100382249708,
+        "solved_shunt_flow_ml_min": 413.40101331530053,
+        "solved_bridge_flow_ml_min": 0.0,
+        "solved_patient_flow_ml_min": 545.5090249096702,
+        "shunt_fraction": 0.4311155341334659
+      }
+    },
+    "clamp_sweep_at_3000rpm": {
+      "0.00": {
+        "solved_total_flow_ml_min": 630.4199954332848,
+        "shunt_fraction": 0.40288559287414677,
+        "bridge_fraction": 0.0,
+        "patient_fraction": 0.5971144071258532
+      },
+      "0.05": {
+        "solved_total_flow_ml_min": 914.254849229826,
+        "shunt_fraction": 0.17045432347873987,
+        "bridge_fraction": 0.5521011020135658,
+        "patient_fraction": 0.2774445745076944
+      },
+      "0.10": {
+        "solved_total_flow_ml_min": 1125.4678940465935,
+        "shunt_fraction": 0.06343624809846304,
+        "bridge_fraction": 0.8218793578946262,
+        "patient_fraction": 0.1146843940069107
+      },
+      "0.30": {
+        "solved_total_flow_ml_min": 1264.3384444165079,
+        "shunt_fraction": 0.008360954752275999,
+        "bridge_fraction": 0.974919970246128,
+        "patient_fraction": 0.016719075001595977
+      },
+      "0.60": {
+        "solved_total_flow_ml_min": 1281.5707578082936,
+        "shunt_fraction": 0.0021301686111082105,
+        "bridge_fraction": 0.9935439099921101,
+        "patient_fraction": 0.004325921396781759
+      },
+      "1.00": {
+        "solved_total_flow_ml_min": 1285.3759777766963,
+        "shunt_fraction": 0.000770038182302827,
+        "bridge_fraction": 0.9976606526966498,
+        "patient_fraction": 0.0015693091210474954
+      }
+    }
+  }
+}

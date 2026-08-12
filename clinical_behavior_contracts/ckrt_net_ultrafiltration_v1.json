@@ -1,0 +1,63 @@
+{
+  "contract_id": "cbc.ecmo.ckrt-net-ultrafiltration.v1",
+  "status": "automated-behavior-contract",
+  "clinical_review_status": "expert-review-pending",
+  "preconditions": {
+    "weight_kg": 3.0,
+    "va_ecmo": true,
+    "rpm": 2200,
+    "sweep_gas_flow_ml_min": 600,
+    "bridge_clamp_position": 0.0,
+    "shunt_configuration": "CKRT",
+    "ckrt_blood_flow_ml_min": 30.0
+  },
+  "stimulus": {
+    "net_ultrafiltration_rate_ml_min": 0.4,
+    "active_duration_min": 20.0,
+    "replacement_duration_min": 20.0
+  },
+  "activation_gate": [
+    "shunt configuration must be CKRT",
+    "CKRT blood flow must be greater than zero"
+  ],
+  "expected_during_active_uf_vs_matched_zero_uf": [
+    "cumulative CKRT removal increases by configured net UF rate times elapsed time",
+    "cumulative net body fluid is lower",
+    "blood volume and preload are lower",
+    "patient-directed ECMO flow is lower",
+    "drainage pressure is lower/more negative",
+    "MAP and CVP are lower in the isolated canonical path"
+  ],
+  "stop_model": "set authoritative CKRT net-UF rate to zero",
+  "expected_after_stop": [
+    "cumulative CKRT removal no longer increases",
+    "endogenous urine and unrelated fluid changes may continue",
+    "stopping removal alone does not imply immediate volume restoration"
+  ],
+  "recovery_model": "return the previously removed net fluid through authoritative renal-therapy fluid input over a matched interval and compare with a no-UF counterfactual",
+  "tolerances": {
+    "counterfactual_recovery_relative": 0.001,
+    "counterfactual_recovery_absolute": 0.01
+  },
+  "not_modeled": [
+    "CKRT solute clearance or dialysis dose",
+    "CKRT anticoagulation",
+    "CKRT access pressure or recirculation",
+    "CKRT circuit-volume effects",
+    "replacement-fluid or dialysate composition physiology",
+    "device-specific CKRT prescription bounds or complete CKRT machine state model"
+  ],
+  "future_retest_conditions": [
+    "stateful CKRT device running/stopped/alarm model added",
+    "solute-clearance or dialysis-dose physiology added",
+    "CKRT access pressure/recirculation model added",
+    "body-fluid to intravascular partition model revised",
+    "expanded learner-operable CKRT prescription/device state machine added"
+  ],
+  "notes": [
+    "0.4 mL/min for 20 minutes is a regression stimulus, not a validated neonatal CKRT prescription.",
+    "Matched-control comparisons separate CKRT UF from endogenous urine loss.",
+    "Historical cumulative CKRT removal is not erased by later replacement.",
+    "Phase 2b made CKRT Qb and net-UF learner-operable; historical no-GUI wording was corrected during Phase 5d without changing CBC06 behavior."
+  ]
+}

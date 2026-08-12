@@ -1,0 +1,11 @@
+Ventilator NorthStar v1 — external pressure-control fixture
+name                 PIP PEEP RR  Ti    VTml  ml/kg  MVml/min  MAPaw  autoPEEP
+pc_baseline           10    5  40 0.35   18.7   5.34      747   6.03     0.03
+pc_low_drive           8    5  40 0.35   11.2   3.20      448   5.62     0.02
+pc_high_drive         18    5  40 0.35   48.4  13.83     1936   7.69     0.07
+pc_high_peep          13    8  40 0.35   18.7   5.34      747   9.03     0.03
+pc_low_rate           10    5  25 0.35   18.8   5.36      469   5.62     0.00
+pc_high_rate          10    5  60 0.30   16.5   4.71      989   6.30     0.16
+pc_long_ti            10    5  40 0.50   22.0   6.29      880   6.53     0.06
+pc_stiff_lung         10    5  40 0.35   14.8   4.23      592   6.03     0.00
+pc_high_resistance    10    5  40 0.35   11.8   3.38      473   6.03     0.21
